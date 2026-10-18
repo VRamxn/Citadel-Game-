@@ -21,7 +21,7 @@ const HELP = `commands:
 export function Terminal({ lines }: { lines: string[] }) {
   const g = useGame();
   const [input, setInput] = useState("");
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(() => window.innerWidth > 900);
   const [hist, setHist] = useState<string[]>([]);
   const [hi, setHi] = useState(-1);
   const end = useRef<HTMLDivElement>(null);

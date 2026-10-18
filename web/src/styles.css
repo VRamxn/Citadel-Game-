@@ -93,6 +93,9 @@ main { display: grid; grid-template-columns: 1fr 440px; min-height: 0; }
 .chk { display: block; }
 table.bld { width: 100%; border-collapse: collapse; }
 table.bld td { padding: 2px 4px; border-bottom: 1px solid #151c25; }
+.ladder thead td { color: var(--dim); font-size: 11px; }
+.ladder tr.me td { color: var(--amber); }
+.ladder .dot { display: inline-block; width: 8px; height: 8px; margin-right: 1px; }
 .siegebar { border: 1px solid var(--red); color: #ffb3b3; padding: 6px; margin: 6px 0; }
 .pilot { padding: 2px 0; }
 .branch ol { margin: 2px 0 8px; padding-left: 22px; }
@@ -119,8 +122,12 @@ table.bld td { padding: 2px 4px; border-bottom: 1px solid #151c25; }
 .boot { padding: 40px; max-width: 640px; }
 
 @media (max-width: 900px) {
-  main { grid-template-columns: 1fr; grid-template-rows: 55vh auto; }
-  .side { border-left: 0; border-top: 1px solid var(--line); }
-  .termout { height: 90px; }
-  .toasts { left: 16px; right: 16px; bottom: 140px; }
+  .app { display: block; height: auto; min-height: 100%; }
+  main { display: block; }
+  .map { height: 58vh; }
+  .side { border-left: 0; border-top: 1px solid var(--line); min-height: 50vh; }
+  .panel { overflow: visible; padding: 4px 16px 24px; }
+  .termout { height: 110px; }
+  .toasts { left: 16px; right: 16px; bottom: 16px; }
+  .legend { font-size: 10px; gap: 6px; }
 }
