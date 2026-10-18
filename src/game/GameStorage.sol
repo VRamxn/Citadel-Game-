@@ -184,5 +184,10 @@ abstract contract GameStorage is Ownable2Step {
 
     uint256 internal _nonce;
 
+    /// @notice Building levels of a CITADEL that left the grid peacefully. They travel with the NFT — the whitepaper's
+    /// "a lvl 10 CITADEL [is] more valuable than a lvl 1 CITADEL ... extracted on secondary markets" — and come back
+    /// when it is lit again. Being leveled in a siege wipes them.
+    mapping(uint256 => uint8[6]) public savedLevels;
+
     constructor(address owner_) Ownable(owner_) {}
 }

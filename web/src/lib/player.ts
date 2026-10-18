@@ -17,7 +17,7 @@ export type Player = {
   eth: bigint;
   score: bigint;
   level: bigint;
-  walletCitadels: { id: bigint; traits: CitadelTraits; pilotClaimed: boolean }[];
+  walletCitadels: { id: bigint; traits: CitadelTraits; pilotClaimed: boolean; levels: number[] }[];
   walletPilots: PilotInfo[];
   walletMentats: { id: bigint; level: number }[];
   dripped: boolean;
@@ -82,6 +82,7 @@ export async function loadPlayer(c: Chain_, who: Address): Promise<Player> {
       id,
       traits: await citadelTraits(c, id),
       pilotClaimed: id < 1024n ? await c.read<boolean>("technocracy", "citadelClaimedPilot", [id]) : true,
+      levels: await Promise.all([0, 1, 2, 3, 4, 5].map(async (b) => Number(await c.read("game", "savedLevels", [id, b])))),
     })),
   );
   const walletPilots = await Promise.all(pils.map((id) => pilotInfo(c, id)));

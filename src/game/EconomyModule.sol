@@ -82,7 +82,8 @@ contract EconomyModule is GameBase {
     }
 
     /// @notice Take a CITADEL off the grid. Not while any march or siege involves it. The vault is paid out if a claim
-    /// is available, otherwise forfeited; garrison, training, construction and building levels are lost.
+    /// is available, otherwise forfeited; garrison, training and any construction in progress are lost. Building levels
+    /// stay with the CITADEL and return when it is lit again.
     function unlite(uint256 citadelId) external nonReentrant {
         Citadel storage c = _owned(citadelId);
         if (c.incoming != 0 || c.outgoing != 0 || c.besieged != 0) revert Engaged();

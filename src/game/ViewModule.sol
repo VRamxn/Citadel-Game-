@@ -23,7 +23,7 @@ contract ViewModule is GameBase, IGameView {
     constructor() GameStorage(msg.sender) {}
 
     function selectors() external pure returns (bytes4[] memory s) {
-        s = new bytes4[](28);
+        s = new bytes4[](29);
         s[0] = this.getConfig.selector;
         s[1] = this.citadel.selector;
         s[2] = this.statsOf.selector;
@@ -52,6 +52,7 @@ contract ViewModule is GameBase, IGameView {
         s[25] = this.siegeOf.selector;
         s[26] = this.researchRate.selector;
         s[27] = this.controllerOfMentat.selector;
+        s[28] = this.savedLevels.selector;
     }
 
     // ================================================================ views

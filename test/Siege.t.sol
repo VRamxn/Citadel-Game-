@@ -24,6 +24,7 @@ contract SiegeTest is Base {
     }
 
     function test_successfulSiegeCapturesTheTile() public {
+        _buildTo(bob, 1, B_CITADEL, 1); // upgrades that the siege will wipe
         _army(alice, 0, SIF, 2_000);
         skip(1 days);
         vm.prank(alice);
@@ -43,8 +44,9 @@ contract SiegeTest is Base {
         assertFalse(g.active);
         assertGe(g.waves, 48);
 
-        // bob's GEN0 CITADEL is leveled and back in his wallet; alice got his vault
+        // bob's GEN0 CITADEL is leveled and back in his wallet, its upgrades gone; alice got his vault
         assertEq(d.citadel.ownerOf(1), bob);
+        assertEq(d.game.savedLevels(1, 0), 0);
         assertFalse(view_.citadel(1).lit);
         assertGt(d.drakma.balanceOf(alice), aliceDk);
         // alice's PILOT founded a GEN1 CITADEL on the tile, garrisoned by the survivors

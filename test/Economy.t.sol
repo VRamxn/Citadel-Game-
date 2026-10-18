@@ -143,6 +143,23 @@ contract EconomyTest is Base {
         assertEq(view_.citadel(1).levels[B_CITADEL], 1);
     }
 
+    function test_levelsTravelWithTheCitadel() public {
+        _lite(bob, 1, 8, 0, 0);
+        _buildTo(bob, 1, B_CITADEL, 3);
+        _buildTo(bob, 1, B_MINE, 2);
+        skip(7 days);
+        vm.prank(bob);
+        eco.unlite(1);
+        assertEq(d.game.walletScore(bob), 0);
+        // sold on the secondary market, lit again by its new owner: the upgrades come with it
+        vm.prank(bob);
+        d.citadel.transferFrom(bob, carol, 1);
+        _lite(carol, 1, -8, 0, 2);
+        assertEq(view_.citadel(1).levels[B_CITADEL], 3);
+        assertEq(view_.citadel(1).levels[B_MINE], 2);
+        assertEq(d.game.walletScore(carol), 50 + 9 + 4);
+    }
+
     function test_walletScoreGrowsNonLinearly() public {
         _lite(bob, 1, 8, 0, 0);
         assertEq(d.game.walletScore(bob), 50);

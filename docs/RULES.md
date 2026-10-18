@@ -37,8 +37,11 @@ Contents: [Assets](#assets) · [Grid](#grid) · [Mining](#mining) · [Buildings]
   (*lever*), and mining starts at once. Factions: 0 NETWORK STATE, 1 AUTONOMOUS ZONE, 2 SANCTION, 3 ANNEXATION.
   `setFaction` / `setResearch` change those later.
 - **`unlite`** returns the CITADEL, PILOT and MENTAT, but not while any march or siege involves the CITADEL. The vault is
-  paid out if a claim is available, otherwise it is forfeited **[designed]**. Garrison, training, construction and
-  building levels are lost.
+  paid out if a claim is available, otherwise it is forfeited **[designed]**. Garrison, training and any construction in
+  progress are lost.
+- **Building levels travel with the CITADEL.** They're kept per id while it's off the grid (`savedLevels`) and return
+  when it's lit again, by whoever owns it then. The whitepaper: "a lvl 10 CITADEL [is] more valuable than a lvl 1
+  CITADEL. This value can be extracted on secondary markets". Only being leveled in a siege wipes them.
 
 ## Mining
 

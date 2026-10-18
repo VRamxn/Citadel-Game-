@@ -58,11 +58,12 @@ export function AssetsPanel() {
 
       <h3>CITADEL in wallet</h3>
       {player.walletCitadels.length === 0 && <p className="dim">None.</p>}
-      {player.walletCitadels.map(({ id, traits: t, pilotClaimed }) => (
+      {player.walletCitadels.map(({ id, traits: t, pilotClaimed, levels }) => (
         <div key={String(id)} className="item">
           <div>
             <b>CITADEL {id.toString()}</b> GEN{t.generation} {t.generation === 0 && SEKT[t.sekt]} · {SHIELDS[t.shield]} /{" "}
             {ENGINES[t.engine]} / {WEAPONS[t.weapon]} · {BRANCHES[t.tech]}
+            {levels.some((l) => l > 0) && <span className="dim"> · levels {levels.join("/")}</span>}
           </div>
           <div className="row wrap">
             <button onClick={() => setLite({ id, faction: 0, research: t.tech, pilots: [] })}>lite…</button>

@@ -326,6 +326,8 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
         c.tech = t.tech;
         c.lastSync = uint64(block.timestamp);
         c.lastClaim = uint64(block.timestamp);
+        c.levels = savedLevels[id];
+        delete savedLevels[id];
         _setPilotBonuses(c, owner_, pilots);
         _pilots[id] = pilots;
         _occupant[k] = id + 1;
@@ -393,6 +395,7 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
 
         techTree.unregister(id);
         walletScore[owner_] -= _citadelScore(c);
+        if (!destroyed) savedLevels[id] = c.levels;
         delete _occupant[Hex.key(c.ao, c.q, c.r)];
         delete _citadels[id];
         delete _garrison[id];
