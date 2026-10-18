@@ -100,6 +100,7 @@ export const emptyWorld = (): World => ({
 });
 
 const LOG_CHUNK = 9_000n;
+const HANDLES = ["@thestatistpm", "@factionistpm", "@thefanaticpm", "@thepinpm"]; // dispatch handles, whitepaper
 
 /** Keeps a World in sync with the chain by reading new game events and re-reading what they touched. */
 export class WorldSync {
@@ -170,7 +171,7 @@ export class WorldSync {
           levels: a.levels,
         });
       const line = this.describe(e);
-      if (line) this.w.dispatch.unshift({ block: e.blockNumber, text: line[0], tone: line[1] });
+      if (line) this.w.dispatch.unshift({ block: e.blockNumber, text: this.voice(e, line[0]), tone: line[1] });
     }
     this.w.dispatch = this.w.dispatch.slice(0, 300);
 
@@ -238,6 +239,15 @@ export class WorldSync {
 
   blockTime(b: bigint) {
     return this.blockTimes.get(b);
+  }
+
+  /** The CITADEL DISPATCH is written by the faction leaders: each line carries the handle of the faction it's about. */
+  private voice(e: any, text: string) {
+    const a = e.args ?? {};
+    const id = a.defender ?? a.target ?? a.citadelId ?? a.attacker ?? a.origin;
+    const c = typeof id === "bigint" ? this.w.citadels.get(id) : undefined;
+    const f = c?.faction ?? (typeof a.faction === "number" ? a.faction : undefined);
+    return f === undefined ? text : `${HANDLES[f]}: ${text}`;
   }
 
   private name(id: bigint) {

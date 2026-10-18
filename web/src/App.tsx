@@ -136,6 +136,12 @@ function Game({ dep }: { dep: NonNullable<ReturnType<typeof pickDeployment>> }) 
     if (h) setTab("TILE");
   };
 
+  // hostile marches and sieges headed at the player's CITADEL
+  const myIds = new Set([...world.citadels.values()].filter((c) => c.owner === me).map((c) => c.id));
+  const threats =
+    [...world.marches.values()].filter((m) => (m.kind === 1 || m.kind === 4 || m.kind === 5) && myIds.has(m.target)).length +
+    [...world.sieges.values()].filter((g) => myIds.has(g.target)).length;
+
   const ctx: Ctx = { chain, world, player, me, selected, select: onSelect, placing, setPlacing, act, refresh, log, fog, setFog, ao, setAo: (a: number) => {
     setAo(a);
     select(undefined);
@@ -172,6 +178,7 @@ function Game({ dep }: { dep: NonNullable<ReturnType<typeof pickDeployment>> }) 
               {TABS.map((t) => (
                 <button key={t} className={t === tab ? "on" : ""} onClick={() => setTab(t)}>
                   {t}
+                  {t === "WAR" && threats > 0 && <span className="alert"> {threats}</span>}
                 </button>
               ))}
             </nav>
