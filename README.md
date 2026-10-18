@@ -47,7 +47,7 @@ Requires [Foundry](https://getfoundry.sh) (`mise install` picks up the pinned ve
 ```sh
 git clone --recursive https://github.com/VRamxn/Citadel-Game-.git && cd Citadel-Game-
 anvil &                                                          # local chain
-forge script script/DevDeploy.s.sol --rpc-url local --broadcast  # deploy + seed 8 players
+forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300  # deploy + seed 8 players
 npm --prefix web install && npm --prefix web run dev             # http://localhost:5173
 node keeper/keeper.ts &                                          # optional: auto-resolve marches and sieges
 ```
@@ -57,17 +57,13 @@ On the local chain the client signs with anvil's dev accounts: pick one at the t
 
 ## Deploy to Sepolia
 
-1. **Snapshot the mainnet CITADEL traits.** This is a one-time download, and the Pinata gateway rate-limits, so it
-   takes a while:
+1. **Traits:** `data/citadel-traits.bin` (and the readable `data/citadel-traits.json`) already hold the traits of all 1024
+   mainnet CITADEL, so skip this step. To rebuild them from the original IPFS metadata (it takes hours, because Pinata
+   rate-limits):
    ```sh
-   mkdir -p data/raw
-   for i in $(seq 0 1023); do
-     curl -sL "https://gateway.pinata.cloud/ipfs/QmXXC2PHUeiFtUFVdLNnYodWUNdZnK2jbT8prE6R51mGT6/$i" -o data/raw/$i.json
-     sleep 0.5
-   done
-   python3 script/pack_traits.py   # -> data/citadel-traits.bin (commit it)
+   script/fetch_traits.sh          # -> data/raw/<id>.json, honours Retry-After
+   python3 script/pack_traits.py   # -> data/citadel-traits.bin + .json
    ```
-   If `data/citadel-traits.bin` is already in the repo, skip this step.
 2. **Fund a deployer** with Sepolia ETH (the full deploy is ~76M gas across its transactions; a dry run without `--broadcast` simulates it on a Sepolia fork), then import its key into Foundry's encrypted
    keystore:
    ```sh

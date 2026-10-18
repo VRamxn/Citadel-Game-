@@ -9,7 +9,8 @@ import {GameStorage} from "../src/game/GameStorage.sol";
 /// @notice LOCAL ONLY (anvil). Deploys the system, then seeds a living world: eight anvil accounts take their faucet
 /// kit, light CITADEL around the grid in all four factions and start building. Uses the real trait snapshot if
 /// data/citadel-traits.bin exists, synthetic traits otherwise.
-///   anvil &  forge script script/DevDeploy.s.sol --rpc-url local --broadcast
+///   anvil &  forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300
+/// (forge simulates all seeding txs in one block, which underestimates gas once they land in separate blocks)
 contract DevDeploy is Deploy {
     string constant MNEMONIC = "test test test test test test test test test test test junk";
 
