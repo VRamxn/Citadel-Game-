@@ -30,36 +30,6 @@
   "sovereign": true
  },
  {
-  "relik": 6,
-  "pilot": 0,
-  "sovereign": true
- },
- {
-  "relik": 7,
-  "pilot": 0,
-  "sovereign": true
- },
- {
-  "relik": 8,
-  "pilot": 0,
-  "sovereign": true
- },
- {
-  "relik": 9,
-  "pilot": 0,
-  "sovereign": true
- },
- {
-  "relik": 10,
-  "pilot": 0,
-  "sovereign": true
- },
- {
-  "relik": 11,
-  "pilot": 0,
-  "sovereign": true
- },
- {
   "relik": 12,
   "pilot": 784,
   "sovereign": true
@@ -117,11 +87,6 @@
  {
   "relik": 23,
   "pilot": 256,
-  "sovereign": true
- },
- {
-  "relik": 24,
-  "pilot": 0,
   "sovereign": true
  },
  {

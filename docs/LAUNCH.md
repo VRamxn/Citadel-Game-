@@ -29,10 +29,10 @@ unbridged: they sit in a vault on Ethereum while their copies play on Base, and 
 ## What carries over
 
 **PILOT keep what was bought on mainnet** (`data/pilot-traits.json`):
-- **LEVEL** (0–9, paid in old DRAKMA), read from the original contract's `levels(id)`.
-- **SOVEREIGNTY**: the 63 RELIK-born sovereigns (`data/born-sovereigns.json`; RELIK #36 never claimed) and every
-  bought seat, read from `getSovereign(id)`. Sovereigns keep their KULT. `Technocracy.seedSovereigns` fills their
-  seats at launch.
+- **LEVEL** (0–9, paid in old DRAKMA), read from the original contract's `levels(id)`: 111 PILOT were upleveled.
+- **SOVEREIGNTY**: 118 sovereigns, read from `getSovereign(id)`. That's 56 RELIK-born (`data/born-sovereigns.json`)
+  and 62 seats bought with old DRAKMA. Sovereigns keep their KULT, and `Technocracy.seedSovereigns` fills their seats
+  at launch. The 10 empty seats (8 born, 2 bought) can be bought or won by overthrow.
 - **Revealed SUBJUGATION and DEATH** from the original metadata. PILOT that were never revealed (metadata name
   "PILOT <id>") get them rolled from `keccak256("CITADEL PILOT", id)` with THE PILOT post's rarities. That's a public,
   fixed formula nobody can steer, and the same goes for KULT on non-sovereigns.

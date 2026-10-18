@@ -224,8 +224,8 @@ target's garrison**. There's no recall **[designed]**. A CITADEL under siege can
 
 `Technocracy.sol` (THE WARLORD TECHNOCRACY post):
 
-- **Carried over:** every original PILOT already claimed (and every seat bought) on mainnet. The 63 PILOT claimed by
-  RELIK are **born sovereign**, and bought seats and levels carry over (`Technocracy.seedSovereigns`).
+- **Carried over:** the 118 sovereigns of the original PILOT contract keep their seats: 56 PILOT claimed by RELIK
+  (**born sovereign**) and 62 seats bought with old DRAKMA (`Technocracy.seedSovereigns`). Their levels carry over too.
 - **Sovereignty:** 128 seats = 64 born + 64 bought for **4M DK**.
 - **Sovereign powers:** can't be sieged, leads sieges at 2×, and takes a cut of the DK sinks.
   - Seat purchases and overthrows pay 70% to the collective, 25% to the treasury, and burn 5%.

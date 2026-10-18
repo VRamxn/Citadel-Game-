@@ -9,7 +9,7 @@ import { createPublicClient, http, keccak256, encodeAbiParameters, concat, parse
 import { mainnet } from "../web/node_modules/viem/_esm/chains/index.js";
 
 const DK = "0x927ce35c89ab901eEfBC0675336Ae4A31e658B0e";
-const CITADEL = "0xaF08134eA12494dC3AAA7f1EFB23A8753B7F84c9";
+const CITADEL = "0xaF08134eA12494dc3AAA7f1EFB23A8753B7F84c9";
 const PILOT = "0xD653B9f4ec70658402B9634E7E0eAFcc64138Cad";
 const EXORDIUM = "0xFBF5a1F788E5F107D25Fc0824ed5E105b90fE027";
 const abi = parseAbi([
@@ -40,9 +40,12 @@ async function withRetry(fn) {
 const client = clients[0];
 const config = JSON.parse(readFileSync("data/snapshot-config.json", "utf8"));
 const excluded = new Set(Object.keys(config.exclude).map((a) => a.toLowerCase()));
-const block = process.argv[2] ? BigInt(process.argv[2]) : await client.getBlockNumber();
-const read = (address, functionName, args = []) =>
-  withRetry((c) => c.readContract({ address, abi, functionName, args, blockNumber: block }));
+// `latest` = a quick preview with non-archive public RPCs (balances from Blockscout, state at the latest block).
+// A launch snapshot names a block and needs an archive RPC: RPC_URL=https://eth-mainnet.g.alchemy.com/v2/<key>.
+const preview = !process.argv[2] || process.argv[2] === "latest";
+const block = preview ? await client.getBlockNumber() : BigInt(process.argv[2]);
+const at = preview ? {} : { blockNumber: block };
+const read = (address, functionName, args = []) => withRetry((c) => c.readContract({ address, abi, functionName, args, ...at }));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function inBatches(items, fn, size = 20) {
   const out = [];
@@ -55,23 +58,23 @@ async function inBatches(items, fn, size = 20) {
 
 // old DRAKMA holders: candidate list from Blockscout, balances read at the snapshot block
 async function dkHolders() {
-  const out = [];
+  const out = []; // [address, Blockscout's current balance]
   let params = "";
   for (;;) {
     const res = await fetch(`https://eth.blockscout.com/api/v2/tokens/${DK}/holders${params}`, { headers: { "user-agent": "curl/8" } });
     const d = await res.json();
-    out.push(...d.items.map((i) => i.address.hash));
+    out.push(...d.items.map((i) => [i.address.hash, BigInt(i.value)]));
     if (!d.next_page_params) return out;
     params = "?" + new URLSearchParams(d.next_page_params).toString();
     await sleep(300);
   }
 }
 
-console.log(`snapshot at block ${block}`);
+console.log(`snapshot at block ${block}${preview ? " (preview: latest state, Blockscout balances)" : ""}`);
 const balances = new Map();
 const candidates = await dkHolders();
-const bals = await inBatches(candidates, (a) => read(DK, "balanceOf", [a]));
-candidates.forEach((a, i) => bals[i] > 0n && balances.set(a.toLowerCase(), bals[i]));
+const bals = preview ? candidates.map(([, v]) => v) : await inBatches(candidates, ([a]) => read(DK, "balanceOf", [a]));
+candidates.forEach(([a], i) => bals[i] > 0n && balances.set(a.toLowerCase(), bals[i]));
 console.log(`old DRAKMA: ${balances.size} holders`);
 
 const wallets = new Set(balances.keys());
@@ -87,7 +90,7 @@ console.log(`NFT holders: ${new Set(citadelOwners.map((a) => a.toLowerCase())).s
 // people's wallets only: EOAs (incl. EIP-7702 delegated code 0xef0100...) and Safe multisigs; other contracts are out
 const kind = new Map();
 await inBatches([...wallets], async (w) => {
-  const code = await withRetry((c) => c.getCode({ address: w, blockNumber: block }));
+  const code = await withRetry((c) => c.getCode({ address: w, ...at }));
   if (!code || code === "0x" || code.startsWith("0xef0100")) return kind.set(w, "wallet");
   // a Safe answers getThreshold(); any other contract reverts or returns nothing
   try {
@@ -130,7 +133,7 @@ const proofOf = (index) => {
   return proof;
 };
 const total = claims.reduce((s, [, v]) => s + v, 0n);
-const out = { block: block.toString(), root, flatPerWallet: config.flatPerWallet, wallets: claims.length, total: total.toString(), claims: {} };
+const out = { block: block.toString(), preview, root, flatPerWallet: config.flatPerWallet, wallets: claims.length, total: total.toString(), claims: {} };
 claims.forEach(([a, v], i) => (out.claims[a] = { amount: v.toString(), proof: proofOf(i) }));
 writeFileSync("data/claims.json", JSON.stringify(out, null, 1));
 console.log(`root ${root}\n${claims.length} wallets, ${(Number(total / 10n ** 18n)).toLocaleString()} DRAKMA claimable (cap 10B)`);
