@@ -1,0 +1,100 @@
+
+## Game Play
+
+0xCITADEL is a dystopian post-human war game built on the blockchain. 100% of the game occurs and can be verified on Ethereum making CITADEL one of the most complex games ever made on a blockchain. 
+0xCITADEL alpha will be launched on the Goerli test network of Ethereum this May. Members of the Sovereign Collective will be invited to play this 0.1 version shortly. To get access to the alpha of the game, you must be a member of the sovereign collective, or overthrow (https://thestatist.substack.com/i/79394839/becoming-sovereign) a standing PILOT of the collective. Access to the beta will be available to all.
+Game play is an MVP of our whitepaper (https://thestatist.substack.com/p/citadel-whitepaper) released at the beginning of 2022. There are some features in the whitepaper that will not be released in version 0.1 like the siege. There are features in the alpha that have not been shared with the community like raid reinforcements and grid distortion. Read ahead to learn about these features and how you can play the alpha in May.
+
+[image: https://substackcdn.com/image/fetch/$s_!DyTr!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcf63933f-df33-4181-967f-f0cf5d55ece0_1024x1024.png]
+
+- 
+- 
+ (https://substackcdn.com/image/fetch/$s_!DyTr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcf63933f-df33-4181-967f-f0cf5d55ece0_1024x1024.png)
+### Approve your Assets
+
+The first step in playing CITADEL is to approve your assets for gameplay. We have opted for an approve all function which will give a warning in metamask. You are approving deposit of your CITADEL, PILOT, and Drakma to the game contract. You must approve all 3 asset types to play.
+
+### Lite to the Grid
+
+The second step in our game is to lite your CITADEL & PILOT to the grid. You will do this grid by grid until all of your CITADEL have been lit. You can stack as many or as few PILOT into a CITADEL as you choose. Each PILOT gives an approximate 20% buff to the CITADEL it is lit to. All properties of the CITADEL and PILOT are active in game play. This includes the CITADEL weapon system, shield, engine, and PILOT subjugation. These attributes are essential to the strategy you play.
+The initial placement of your CITADEL is as critical to game play as placing your first settlements in Catan. Where you place your CITADEL and how you insulate it will determine how much Drakma (DK) you mine and how much will be raided by your enemy. Sections of the grid are hot zones for DK production. These grid tiles will be highly coveted but also frequent targets. 
+As soon as your CITADEL is lit to the grid, it begins mining DK.
+
+### Train Fleet
+
+Wallets will want to immediately train fleet to raid nearby CITADEL whilst protecting their CITADEL from raids. The game is launching with three fleet type (https://thestatist.substack.com/i/63322051/fleet-type), Sif Gattaca, Mhrudvog Throt, and Drebentraakht. The table below contains their OP/DP, unit costs in Drakma, and the time it takes to train one unit. In short, Sif Gattaca are swarm all-purpose fleet ideal for raiding. Mhrudvog Throt are defensive fleet and can gain fortification bonus when stationed in a CITADEL. Drebentraakht are siege fleet and will be instrumental in tearing down the defenses of a CITADEL when the siege mechanic is released. 
+Sif Gattaca 
+10 OP, 5 DP, 20 DK / unit, 5 minute training time
+
+Mhrudvog Throt
+5 OP, 40 DP, 40 DK / unit, 15 minute training time
+
+Drebentraakht
+500 OP, 250 DP, 800 DK / unit, 1 hour training time
+The cost & training time for fleet is dynamic and will be one of the many levers we use to balance the economy. Expect these values to change. 
+
+### Mining / Claiming
+
+Your CITADEL begins mining DK when it is lit to the grid. The mining rate depends on several factors. Some grid is more productive than others and each grid contains a mining multiple between 1X and 1.25X. Click on the map to see the mining multiple of each grid. 
+The characteristics of your CITADEL and PILOT also determine mining rate. A PILOT with Dredge Nobility subjugation will increase DK production. CITADEL characteristics like the Mysterium shield boost DK production. Please see the full list of CITADEL attributes (https://thestatist.substack.com/i/63322051/shield-weapon-system-engine) and their boosts.
+A CITADEL can perform one claim each week. This takes the DK earned in the CITADEL from mining & raiding and transfers it to the claiming wallet. DK sitting in CITADEL is susceptible to loss when raided by enemy fleet. 
+
+### Raid
+
+Raiding a CITADEL is the most effective way to earn DK. Click on the target CITADEL you want to raid, observe the fleet lit to the CITADEL, and if you believe your attacking fleet have an advantage, click the raid button, select the fleet you wish to send, and complete the tx by sending the raid.
+Raiding a CITADEL lit to a grid adjacent to your CITADEL exploits subgrid distortion. Fleet do not incur travel time when the subgrid is distorted. Neighboring CITADEL will nearly always be in distortion, meaning, you can raid your neighbors immediately. We consider this mechanic the trench warfare of the game, and expect large and continuous battles between factions occurring on these lines.
+Raiding outside of your neighboring CITADEL incurs travel time. The base time for fleet to move a single grid is 30 minutes. The further away a target is, the longer it takes to traverse the grid and raid the target. This allows for the defender to call in re-enforcements which we will discuss in a subsequent section.
+
+### Raid Resolution
+
+Raids harnessing subgrid distortion resolve immediately. The attacking fleet, defending fleet, and all bonuses from the defending CITADEL are calculated by the combat engine, and both defensive and offensive fleet are destroyed. The remaining offensive fleet are then able to carry DK back to the offensive CITADEL as loot. The more offensive fleet that survive, the more DK that can be carried back.
+A raid to a non-adjacent CITADEL requires traversal time and raid resolution. The moment the fleet arrive at the target, anyone in the game can resolve the raid by clicking the resolve button in the UI. This action will calculate damage to offensive & defensive fleet, and determine how much DK will be carried back. 10% of the raid DK is given to the wallet resolving the raid as an incentive. We expect this mechanic to materialize as an automated market making function.
+
+### Defection
+
+If a raid is not resolved within 24 hours, the attacking fleet will defect to the defending CITADEL. This incentivizes the attacking fleet to always resolve a raid, even if the outcome is suboptimal. It incentivizes the defending CITADEL to resolve the raid after 24 hours.
+
+### Raid Reports
+
+Raid reports detail the fleet damage inflicted to both the offensive and defensive fleet. They show how much DK was carried away from the raid. Raid reports are emitted as an event from the blockchain allowing anyone to listen for the results and are also displayed in the UI menu of the defending CITADEL.
+
+### Reinforcements
+
+Fleet reinforcements are a critical enhancement to the game design. They allow wallets to send Fleet from a CITADEL to any other CITADEL on the grid. Reinforcing fleet require the same grid traversal time as fleet require during a raid. This makes the CITADEL with friendly neighbors a strategic advantage.
+You can reinforce fleet in your own CITADEL, in a CITADEL lit to your faction, or any other CITADEL for any reason. 
+An attacking CITADEL far away from its raid target risks neighbors detecting the attack, and reinforcing the defending CITADEL before the attacking fleet arrive. This mechanic is critical to CITADEL’s cooperative gameplay. A distant CITADEL is much harder to successfully raid than a CITADEL adjacent to your own. 
+Factions should carefully choose where to place their CITADEL and form a defensive wall around the most productive CITADEL in the faction. Wallets controlling more than one CITADEL should do the same and cluster their CITADEL into a defensive block.
+
+### Fleet Points
+
+Fleet points accrue when you destroy fleet in battle. The amount of fleet points you earn paves the path to minting a gen1 PILOT, which can be used to create a gen1 CITADEL in-game. Although this mechanic is not available in v0.1 of the game, fleet points are put in place to measure and gauge the the points required once the siege is launched. 
+
+## Game Additions
+
+Several additions to the game have been made that are not included in the whitepaper. These additions are grid distortion, mining hotspots, & raid reinforcements. Since raid reinforcements have been already detailed, we will dive into grid distortion and the ability of the sovereign collective to control mining hotspots in the game.
+
+[image: https://substackcdn.com/image/fetch/$s_!EGI_!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2dd0d02-efd8-4c56-8612-7cb8a72a9294_1024x1024.png]
+
+- 
+- 
+ (https://substackcdn.com/image/fetch/$s_!EGI_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2dd0d02-efd8-4c56-8612-7cb8a72a9294_1024x1024.png)
+### Grid Distortion
+
+Fleet in the game can harness subgrid distortion eliminating grid traversal time. This allows fleet to attack CITADEL without a timing penalty and more importantly, without the ability of defenders to send reinforcements. Easy targets will be hit immediately. 
+There will be times in the game when the grid is completely distorted enabling all-out warfare. These times will be infrequent and may or may not be announced. The grid is sovereign to the whims of the CITADEL lit to it. 
+
+### Grid Hotspots
+
+The game will start with the center of the grid as a hotspot. Around 10% of the grid will have a mining multiple greater than 1X, making these grid coveted. Ultimately, when the game is enhanced to include the siege, these hotspots can be claimed by a rival who defeats a CITADEL in a siege, ejecting the CITADEL from the grid. For the alpha of the game, CITADEL remain lit to the grid.
+From time to time, grid hotspots will shift and offer new zones of productivity. These hotspots may favor factions struggling to compete, or may favor a dominant faction encouraging defection. The sovereign collective will ultimately control grid hotspots.
+
+## Playing 0xCITADEL
+
+0xCITADEL alpha will be conducted on the Goerli testnet of Ethereum and be offered to members of the sovereign collective. Please join our discord to get involved, report bugs, offer suggestions, and collaborate with your faction.
+Members of the sovereign collective will receive 2 CITADEL, 2 PILOT, and 5M DK at the start of the game. Some may receive more as we want to test the broadest range of functionality possible. Please reach out to Max to receive your Goerli assets.
+
+## Terms of Service
+
+Holders of CITADEL hold pieces of blockchain art with commercial usage rights given. No future utility is conveyed. DRAKMA is an in-game energy and has no utility outside of the world of CITADEL.
+All forward looking statements and plans represent the current ideas of Maelstrom surrounding the world of CITADEL. The Maelstrom fully reserves the right to halt or alter our plans as we build out this strange and mysterious world.
+

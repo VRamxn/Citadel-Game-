@@ -1,0 +1,94 @@
+The CITADEL EXORDIUM launches on Saturday, August 27th, 2022 and concludes on January 28th, 2023. During this period, 2.5B DRAKMA will be freely distributed to GEN0 CITADEL mining the grid. The EXORDIUM launches the CITADEL tech tree (https://thestatist.substack.com/i/63322051/tech-tree), a key pillar in our post-human war game. 
+
+## DRAKMA
+
+The in-game currency for the game of CITADEL is DRAKMA (https://citadel.pm/drakma.html). DRAKMA has a total circulation of 10 billion. The EXORDIUM will distribute 2.5 billion DRAKMA on-chain to each CITADEL owner according to the CITADEL SEKT. Any DRAKMA remaining at the conclusion of the EXORDIUM will be burned. 
+RELIK
+16X multiplier, 64,000Ð / day, 9.6M Ð / RELIK
+
+DROTH XYL
+8X multiplier, 32,000Ð / day, 4.8M Ð / DROTH XYL
+
+IONSLAUGHT
+4X multiplier, 16,000Ð / day, 2.4M Ð / IONSLAUGHT
+
+ELEKT
+2X multiplier, 8,000 Ð / day, 1.2M Ð / ELEKT
+100 million in DRAKMA will be distributed to the faction first to complete the CITADEL tech tree.
+
+## Mining DRAKMA
+
+Lite your CITADEL to the grid by using citadel os. You must make two choices when staking your CITADEL. The first choice is your faction. There are currently four factions in the world of CITADEL.
+annexation
+autonomous zone
+network state
+sanction
+The second choice is the technology your staked CITADEL will research. Each CITADEL is equipped with a tech property. Staking your CITADEL to the technology your CITADEL possesses will give each CITADEL you stake a 2X research multiple. The eight technology branches in CITADEL are as follows.
+preservative algorithms
+militant algorithms
+antimatter annihilation
+propulsion
+posthumanism
+ecological extraction
+technocracy
+proginator psi
+Staking a CITADEL is a two step process. When you stake your CITADEL, it is transferred to the EXORDIUM contract. You must first approve your CITADEL to be transferred. Follow these examples to start mining DRAKMA, an ERC20 token, through our EXORDIUM contract. Each command triggers an Ethereum transaction. You must wait for each transaction to be confirmed before starting the next. 
+
+#### Stake 1 CITADEL (#40) to the network state, posthumanism
+
+citadel os> approve 40
+citadel os> stake network state, posthumanism, 40
+
+#### Stake 1 CITADEL (#750) to the sanction, militant algorithms
+
+citadel os> approve 750
+citadel os> stake sanction, militant algorithms, 750
+Wallets with many CITADEL can stake them all at once.
+
+#### Stake 4 CITADEL (#0, #10, #56, #88) to the autonomous zone, propulsion
+
+citadel os> approve 0
+citadel os> approve 10
+citadel os> approve 56
+citadel os> approve 88
+citadel os> stake autonomous zone, propulsion, 0 10 56 88
+
+#### Stake 2 CITADEL (#800, #801) to the annexation, proginator psi
+
+citadel os> approve 800
+citadel os> approve 801
+citadel os> stake annexation, proginator psi, 800 801
+
+## Claiming DRAKMA
+
+To claim your DRAKMA, you must already have CITADEL staked to the EXORDIUM contract. You are free to claim DRAKMA from the contract as frequently as you like. The claim command in citadel os will transfer the DRAKMA you have earned to your wallet, and register the research your CITADEL have conducted for your faction. Claiming DRAKMA leaves your CITADEL staked to the contract.
+citadel os> claim
+
+## Withdrawing CITADEL
+
+You can withdraw your CITADEL at any point during the EXORDIUM. Withdrawing your CITADEL transfers them from the EXORDIUM contract back to your wallet. 
+
+#### Withdraw 1 CITADEL (#750)
+
+citadel os> withdraw 750
+
+#### Withdraw 4 CITADEL (#0, #10, #56, #88)
+
+citadel os> withdraw 0 10 56 88
+
+## Tips
+
+The EXORDIUM contract is optimized for low gas transactions. There are a few tips to follow to maximize research gained when claiming. 
+
+#### Staking and Withdrawing
+
+Staking and withdrawing CITADEL resets your techTreeMultiple. Therefor, it is advised to stake and withdraw all of your CITADEL at once. Meaning, if you have 4 CITADEL, it is advised to stake them all at once, and withdraw them all at once. You are able to add CITADEL to your staking pool, or withdraw individual CITADEL from your staking pool, but doing so will reset your tech multiplier. It will not affect the DRAKMA you gain.
+
+#### Claiming
+
+Claim as frequently as you like, but if you plan to withdraw, claim just before you withdraw. This will preserve your tech multiplier, if you have one.
+
+#### Approving
+
+Token approval is removed from the NFT when you stake. You need to approve your NFT for staking EACH time you stake. So if you approve, stake, and withdraw, you will need to approve again before you stake for a second time.
+

@@ -1,0 +1,82 @@
+
+[image: https://substackcdn.com/image/fetch/$s_!W2Hz!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8bda1bb8-54da-4c5b-99c5-f7b08a7d9a72_1024x1024.png]
+
+- 
+- 
+ (https://substackcdn.com/image/fetch/$s_!W2Hz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8bda1bb8-54da-4c5b-99c5-f7b08a7d9a72_1024x1024.png)CITADEL is a post-human war game built on the blockchain. CITADEL innovates the strategy game genre through tokenization. Players of the game of CITADEL are able to capture value from the game, creating outcomes that transcend the game.  A game played for real stakes, real outcomes, and tangible assets is more immersive than a game lacking tangible outcomes.
+Today, we announce the WARLORD TECHNOCRACY, a tokenized political system where PILOT gain a distribution of DRAKMA by maintaining a seat in the SOVEREIGN COLLECTIVE. To maintain power, the PILOT must bribe one of the 8 KULT of CITADEL. This creates a circular economy where PILOT risk DRAKMA in the present to guarantee future disbursements while also multiplying their in-game power.
+
+## The SOVEREIGN COLLECTIVE
+
+The WARLORD TECHNOCRACY is ruled by the SOVEREIGN COLLECTIVE, a mobilization of 128 PILOT. The SOVEREIGN COLLECTIVE commands the game of CITADEL and will ultimately control its economic levers, manipulating them to serve their own interests and prosperity. 
+64 PILOT are born into the collective when they are claimed by a CITADEL RELIK. The remaining 64 sovereign attain their position through insurgency. All sovereign must bribe a KULT of CITADEL to maintain their power. Any of the 2048 PILOT can overthrow an existing sovereign, but it will take precious DRAKMA to do it.
+
+#### Becoming SOVEREIGN
+
+Sovereignty is an on-chain property limited to 128 PILOT. There are three ways to become sovereign.
+- Claim a PILOT through a RELIK.
+
+- Be one of the first 64 PILOT to pay 4M DRAKMA to become sovereign.
+
+- Overthrow an existing PILOT. To overthrow an existing PILOT, you must pay off all members of the SOVEREIGN COLLECTIVE with DRAKMA. 
+
+#### Bribery
+
+The sitting collective can resist insurgency through bribery. A payment of 100,000 DRAKMA to one of the 8 KULT of CITADEL will create an on-chain charge on the PILOT.
+The effects of bribery wear thin. A bribe decays after 90 days. Once a bribe has decayed, the PILOT must either bribe the KULT again, or risk insurgency.
+KULT BRIBE PAYOUT
+60% to PILOT in KULT
+25% to game treasury
+5% to SOVEREIGN COLLECTIVE
+5% burned
+
+#### Overthrow
+
+The world of CITADEL is violent and chaotic. As such, a SOVEREIGN can be overthrown on-chain. To overthrow a SOVEREIGN, a PILOT must allocate DRAKMA to the existing SOVEREIGN COLLECTIVE, targeting the SOVEREIGN they wish to overthrow.
+To overthrow a SOVEREIGN, an insurgent must pay the base fee of 4M DK plus ten times the bribe amount, multiplied by the number of bribes attached to the PILOT. 
+If a PILOT has made 8 bribes, it will require 12M DRAKMA to overthrow the PILOT and enter the collective. This mechanic makes it possible to overthrow any PILOT, but incentivizes insurgency against the least protected sovereigns.
+SOVEREIGN COST
+Base 4M 
+Bribe 100k 
+Bribe Multiple 10 
+Decay 90 days
+
+Cost to overthrow SOVEREIGN with 0 bribes
+4M
+
+Cost to overthrow SOVEREIGN with 4 bribes
+4M + (4 bribes * 10 * 100,000) = 8M
+
+Cost to overthrow SOVEREIGN with 8 bribes
+4M + (8 bribes * 10 * 100,000) = 12M
+
+#### DRAKMA DISPERSEMENT
+
+Sovereigns rule the game of CITADEL. As conquering warlords, they will take their cut of many of the game’s token sinks. At the launch of the PILOT contract, DRAKMA taken in through these actions will be pooled into a contract and claimable every 30 days by members of the SOVEREIGN COLLECTIVE.
+SOVEREIGNTY / OVERTHROW
+70% to SOVEREIGN COLLECTIVE
+25% to game treasury
+5% burned
+As the game grows, so will the influence of the WARLORD TECHNOCRACY. CITADEL is a fully on-chain game marching towards full decentralization. The SOVEREIGN COLLECTIVE will rule and control every aspect of the game, especially its economy, where the absolute power resides. This is all to say that as the game matures, so will the DRAKMA collected by the SOVEREIGN COLLECTIVE. 
+
+#### SOVEREIGN In-game
+
+Regular deposits of DRAKMA are not the only reason to become sovereign. Sovereign PILOT have two key in-game benefits. 
+- A CITADEL hosting a sovereign cannot be sieged. To siege a CITADEL containing a sovereign, the sovereign first must be overthrown.
+
+- A sovereign conducting a siege multiplies the offensive power of the siege army by 2, making a sovereign led siege twice as powerful as a siege led by a PILOT.
+
+## KULT
+
+KULT is an on-chain property of each PILOT. There are 8 KULT (https://thestatist.substack.com/i/74833084/kult) in the world of CITADEL. 
+The warlords of the SOVEREIGN COLLECTIVE control much of the game, but must keep their KULT appeased or risk insurgency. KULT is the militant armament of each SOVEREIGN in the collective. They act as a check and balance to the power of the collective.
+KULT will grow in power and influence through extortion. If a KULT sees its power slipping through a lack of bribery to its members, it is incentivized to overthrow sovereigns from rival KULT and place a PILOT of its own into the collective. 
+
+## Closure
+
+The WARLORD TECHNOCRACY creates an intricate game of power, corruption, and insurgency. As importantly, it creates the game’s first circular supply / burn sink of the in-game token DRAKMA. 
+Whereas most 4X games mimic ancient and current political systems, CITADEL invents its own, filling it to the brim with betrayal, extortion, bribery, and insurgency. All glued together into one circular system of power ruling the GRID.
+
+## Terms of Service
+
+Holders of CITADEL and PILOT NFT hold pieces of blockchain art with commercial usage rights given. No future utility is conveyed. All forward looking statements and plans represent the current ideas of THE NETWORK STATE surrounding the world of CITADEL. THE NETWORK STATE fully reserves the right to halt or alter our plans as we build out this strange and mysterious world.

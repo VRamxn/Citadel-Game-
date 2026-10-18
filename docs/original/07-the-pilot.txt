@@ -1,0 +1,102 @@
+
+
+- 
+- 
+PILOT are post-human anti-heroes. They are subjugated, subordinated, and born into the GRID. PILOT are a powerful piece in the game of CITADEL. A PILOT can create a CITADEL by successfully sieging a rival CITADEL, or by founding a CITADEL on unclaimed GRID. A PILOT remains tethered to that CITADEL providing bonuses and multipliers based on its subjugation and on-chain level.
+Future generation of PILOT will be destructible on-chain assets. A GEN0 PILOT is indestructible. There will be 2048 total PILOT, 1024 allocated to current CITADEL holders, 1024 allocated to a public mint.
+
+## PILOT Public Mint
+
+PILOT will be launched with a public mint in October. A minimum of 128 PILOT will be sold for approximately .125 ETH per PILOT. Wallets do not need to hold a CITADEL to participate in the public mint.
+The PILOT mint will be a series. Each series will have its art revealed a day after the mint. 
+
+## Claim for CITADEL
+
+Each GEN0 CITADEL can claim a PILOT for 64,000 DRAKMA. All 1024 CITADEL holders have until the end of the EXORDIUM to claim their PILOT. A CITADEL must be staked to the EXORDIUM to both earn the DRAKMA required to claim, and perform the claim. 
+PILOT art will be revealed in bands according to their KULT.
+
+## On-Chain Properties
+
+PILOT have 5 on-chain properties at the time of their mint. These properties are SOVEREIGNTY, SUBJUGATION, KULT, LEVEL, and DEATH.
+
+#### SOVEREIGNTY
+
+The 64 PILOT claimed from a RELIK are born sovereign. 64 additional SOVEREIGNS can be created in-game by distributing a vast sum of DRAKMA to the existing SOVEREIGN. 
+The 128 total SOVEREIGNS govern the post-human political system of CITADEL, the WARLORD TECHNOCRACY. SOVEREIGN will have the ability to alter and tweak on-chain rules and operate the series of levers used to control the game economy.
+The world of CITADEL is violent and chaotic. As such, a SOVEREIGN can be overthrown on-chain. To overthrow a SOVEREIGN, a PILOT must allocate DRAKMA to the existing SOVEREIGN COLLECTIVE, targeting the SOVEREIGN they wish to overthrow. 
+Since the PILOT commits more DRAKMA than the PILOT they are usurping, the SOVEREIGN COLLECTIVE oblige and permit the new PILOT to join the COLLECTIVE at the expense of the overthrown. 
+A CITADEL lit by a sovereign cannot be sieged. To remove a sovereign from the GRID, its PILOT first must be overthrown. A sovereign can protect themselves from  overthrow by paying off their assigned KULT. 
+sovereign incremental cost (64 slots)
+5M DK
+
+sovereign overthrow cost
+5M + 10 * number of bribes * 100,000 DK
+
+bribe cost
+100k DK
+
+#### SUBJUGATION
+
+Each PILOT will be randomly attributed a subjugation, which denotes their occupation / specialty in the world of CITADEL. Each subjugation will provide in-game multiples in battle, research, mining, etc. 
+HERMETIC STRACHT
+x1024, alien to the world of CITADEL, work hostile DRAKMA mines where they provide a boost.
+
+POTENTATE COERCION 
+x512, the militant arm of the warlord technocracy. Provides boost to KULT.
+
+DREDGE NOBILITY 
+x256, specialists in the ecological extraction of DRAKMA.
+
+ALKAHEST DRIFT
+x128, aid research and development of the tech tree.
+
+CRHONA THROT 
+x64, commanders of CITADEL defense, provide defensive fleet multiples.
+
+SIF COMMANDER 
+x32, commanders of the SIF GATICA, provide offensive fleet multiples. 
+
+PSIONIC FUROR
+x16, provide psi-ops and aid the intelligence network of CITADEL.
+
+TECHNOCRAT ARMAMENT 
+x16, the militant commanders of the warlord technocracy. Gives boost to KULT.
+
+#### KULT
+
+The warlords of the SOVEREIGN COLLECTIVE control much of the game, but must keep their KULT appeased or risk insurgency. KULT is the militant armament of each SOVEREIGN in the collective. They act as a check and balance to the power of the collective.
+KULT is both an aesthetic and political characteristic and will be revealed with the art of your PILOT.
+KULT GEHEIM x512
+DØD ENGEL x256
+STALKROTH x256
+KULT GOR x256
+KLINGE x256
+DALK STRACHT x256
+YS DIABOLI x128
+GRÅTER DJEVEL x128
+
+#### LEVEL
+
+PILOT act as a multiplier to the CITADEL they are staked. A PILOT gives the fleet in a raid or siege a 20% offensive multiplier. A PILOT fortified to a CITADEL gives the fleet in the CITADEL a 20% defensive multiplier. A PILOT gives a 20% multiplier based on their SUBJUGATION. 
+A PILOT is minted at level 0 and can be upgraded to level 9. The NFT holder must deposit 100,000 DK multiplied by the level number to upgrade their PILOT. The first level costs 100k DK. Level 2 costs 200k DK. Level 3 costs 300k… etc.
+Each level of PILOT provides a 2% increase to the PILOT’s multiple. PILOT can be stacked in a CITADEL.
+LEVEL 0 => 20% offense, 20% defense, 20% subjugation
+LEVEL 1 => 100k DK, 22% offense, 22% defense, 22% subjugation
+LEVEL 2 => 200k DK, 24% offense, 24% defense, 24% subjugation
+LEVEL 3 => 300k DK, 26% offense, 26% defense, 26% subjugation
+LEVEL 4 => 400k DK, 28% offense, 28% defense, 28% subjugation
+LEVEL 5 => 500k DK, 30% offense, 30% defense, 30% subjugation
+LEVEL 6 => 600k DK, 32% offense, 32% defense, 32% subjugation
+LEVEL 7 => 700k DK, 34% offense, 34% defense, 34% subjugation
+LEVEL 8 => 800k DK, 36% offense, 36% defense, 36% subjugation
+LEVEL 9 => 900k DK, 38% offense, 38% defense, 38% subjugation
+
+#### DEATH PILOT
+
+64 DEATH PILOT will be minted or claimed. DEATH PILOT distribution will be random. The DEATH PILOT represents the reaper in the game of CITADEL. It will be differentiated both artistically and in its in-game ability.
+In-game, a DOOM RIOT erupts when a DEATH PILOT successfully sieges a CITADEL, expelling it from the GRID. The DOOM RIOT provides a 2X multiple to the CITADEL’s productivity in perpetuity. A DOOM RIOT will rage until the DEATH PILOTs CITADEL is ejected from the GRID.
+
+## Terms of Service
+
+Holders of CITADEL and PILOT NFT hold pieces of blockchain art with commercial usage rights given. No future utility is conveyed. All forward looking statements and plans represent the current ideas of THE NETWORK STATE surrounding the world of CITADEL. THE NETWORK STATE fully reserves the right to halt or alter our plans as we build out this strange and mysterious world.
+

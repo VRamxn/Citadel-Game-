@@ -1,0 +1,287 @@
+
+
+- 
+- 
+CITADEL is an original strategy game where CITADEL are minted, controlled, and sieged in a game of survival, destruction, and conquest. Wallets in Citadel upgrade, hold, and defend the game’s most valuable CITADEL while working in FACTIONS to acquire power. 
+NFTs and ERC-20 tokens are at the heart of Citadel gameplay. The key to the game of CITADEL is to survive, grow, and acquire DRAKMA, the in-game currency. 
+Game play is intended to be rewarding, collaborative, original, strategic… and a lot of fun. The CITADEL DISPATCH will be your first morning read and checking on your CITADEL fortifications will be the last thing you do before bed. 
+CITADEL is a multi-user slow play strategy game influenced by 80’s era multi-user-dungeons as well as the genre defining games Civilization and Myst.
+
+## NFT
+
+There are three types of NFT at the launch of the game. These NFT are CITADEL, PILOT, and MENTAT. Expansion NFT will be introduced at the start of new seasons of CITADEL.
+
+## Gameplay
+
+CITADEL is a war game and in war games there can be destruction. This destruction will be balanced through cooperation of your FACTION. If, however, a wallet creates more CITADEL than they can defend, and intelligence reports find this weakness, one of their CITADEL may be sieged. If successful, the CITADEL is leveled. The sieging attacker receives all DRAKMA contained in the CITADEL as well as the GRID the sieged CITADEL is lit to. 
+To siege a CITADEL, another CITADEL owner must mint a PILOT. A PILOT is the only NFT in-game that can siege a CITADEL. A PILOT will need to accompany a large FLEET that overwhelms the CITADELs defenses.  During a siege, anyone in the defending faction can send FLEET to defend the siege and destroy the PILOT’s attack. A PILOT and FLEET sieging a CITADEL will either emerge victoriously or be destroyed in battle. In this event, the GEN0 PILOT will retreat. 
+PILOTs are a rare and powerful NFT. A new PILOT can be minted from a CITADEL using FLEET POINTS. FLEET POINTS are awarded when a CITADEL recruits FLEET, and may have other purposes outside PILOT minting.  The cost in FLEET POINTS for minting a PILOT scales exponentially based on the GENERATION as well as the number of PILOTS already minted by the CITADEL. GEN0 PILOT are indestructible but future generation of PILOT can be destroyed in a failed siege.
+In addition to FLEET POINTS, there will also be WALLET LEVEL. WALLET LEVELS in CITADEL will be based on game score and will be non-linear. Game score is a function of the game resources the wallet owns multiplied by the resources level. Game resources for launch are CITADEL level, mines, shield, engine, weapon system, as well as FLEET academies.
+A PILOT can be used to siege an enemy CITADEL or can create a new CITADEL on faction controlled, unoccupied grid. If a PILOT is used to create a new CITADEL, the CITADEL series will be incremented by one. A GEN0 CITADEL creates a GEN1 PILOT. The PILOT can create a GEN1 CITADEL. 
+CITADEL are placed on grid. Grid corresponds to real space in the CITADEL Metaverse on the surface of giant, DRAKMA-rich ASTRONOMICAL OBJECTS (AOs). A CITADEL lit to the grid enters pVp mode and is then able to mine DRAKMA. 
+GEN0 CITADEL are scarce and difficult to obtain assets. Each subsequent generation of CITADEL will have dramatically less power and output than the generation before it. GEN0 will be the strongest pieces in the game with a 2X multiple to shield, engine, and weapon system power. GEN0 CITADEL will produce 10X more DRAKMA than GEN1 CITADEL. 
+CITADEL is a game that will be played for decades. It is a slow play strategy game in which raids take tens of hours to resolve (depending on distance to the CITADEL being raided). Sieges in CITADEL take at least 48 hours to resolve, often longer, giving factions ample time to defend the siege. Upgrading your CITADEL level, shield, engine, weapon system, grid mines, FLEET academies, and of course, raising a FLEET of troops are time consuming actions and can only be sped up by spending DRAKMA.
+
+## Fully On-Chain / L2
+
+CITADEL intends to create an immersive, action packed game that can be played for very little gas. We believe we need to initially optimize for 2-20 actions per day to keep costs under 10 cents in gas per day for an active player with many CITADEL. Most players will take 1-2 actions per day on average. All assets and actions in the game will be fully on-chain. All rulesets of the game will be on-chain. All outcomes of the game will be decided on-chain.
+
+### ETHEREUM Mainnet NFT
+
+CITADEL
+- ERC-721 token
+
+- Can be lit to the grid to mine DRAKMA
+
+- Can uplevel on-chain
+
+- Can upgrade engine, shield, and weapon system
+
+- Can unlock tech tree branches unlocked by a RELIK
+
+- Can build FLEET academies
+
+- Can recruit FLEET (troops) for raiding, siege, and fortification and is awarded FLEET POINTS when doing so
+
+- Can spend FLEET POINTS to mint a new PILOT of the next generation
+
+- Can initiate raids of CITADEL
+
+- The genesis CITADEL will be capped and scarce. No other genesis CITADEL will ever be minted, regardless of the size of the game.
+
+PILOT
+- ERC-721 token
+
+- Can mint for FLEET POINTS via a CITADEL.
+
+- Can pilot a siege.
+
+- Can capture and claim grid during a successful siege. When sieging a CITADEL, the original CITADEL is leveled and de-lit from the grid. The PILOT forms a CITADEL on the grid it just sieged.
+
+- If a PILOT is destroyed in-siege, another PILOT can be minted for the same amount of DRAKMA.
+
+- A GEN0 PILOT is indestructible.
+
+- Can colonize un-claimed grid and form a CITADEL.
+
+- Give fleet it is attacking with a 50% increase in attacking power.
+
+DRAKMA
+- ERC-20 token
+
+- In-game currency of CITADEL
+
+- Used to purchase game NFT
+
+- Used to upgrade game NFT
+
+- Used to hurry production of game NFT
+
+- Used to build FLEET.
+
+- Capped and deflationary (a portion of spent DRAKMA will be periodically burned)
+
+- Most DRAKMA will be distributed to CITADEL owners during prelude to the game via staking and tech tree discovery.
+
+MENTAT
+- ERC-721 token
+
+- First expansion NFT of the game.
+
+- Establishes intelligence network giving wallet owner access to battle reports they would otherwise not receive. 
+
+- Reveals enemy grid otherwise hidden
+
+- Amplify engine, weapon system, shield, and DRAKMA production of the CITADEL they are lit to
+
+- Will be upgradable on-chain.
+
+- 64 freely claimable by RELIK owners.
+
+- Future generations emitted by RELIK when a branch of the RELIK tech tree is completed.
+
+### On-Chain Game Actions
+
+LITE / CLAIM
+- All NFT will be placed into the game by lighting them to the GRID.
+
+- Claiming an NFT permits the wallet to claim earned DRAKMA.
+
+- Claiming can either keep the NFT on-chain and claim DRAKMA or remove the NFT from the game and claim DRAKMA.
+
+- A CITADEL under siege cannot be removed from the game.
+
+CITADEL On-Chain Upgrades
+- A CITADEL can be upgraded from lvl0 to lvl10 using DRAKMA. This upgrade is on-chain making a lvl 10 CITADEL more valuable than a lvl 1 CITADEL. This value can be extracted on secondary markets.
+
+### Assets
+
+FLEET
+- There will be numerous FLEET type. 
+
+- Only the PILOT is an on-chain FLEET.
+
+- FLEET is the game’s term for troops/army.
+
+- FLEET can raid, siege, and fortify.
+
+- FLEET will have different abilities depending on their type.
+
+- The game will launch with at least 4 FLEET type.
+
+- The more FLEET you control, the better you can defend your CITADEL, the more resources you can raid, and the bigger the FLEET, the higher chance you have at a successful siege.
+
+- FLEET can fortify a CITADEL.
+
+- Fortified FLEET have a distinct defensive advantage.
+
+- FLEET will have a carry attribute, signifying how much DRAKMA a FLEET can carry after raid.
+
+- FLEET will have a speed attribute, signifying how quickly they can travel a GRID.
+
+- FLEET will have offensive and defensive capabilities
+
+- Different type of FLEET will have different capabilities. An example is the siege engine FLEET which specialize in bringing down CITADEL fortification.
+
+GRID
+- Initially unclaimed
+
+- CITADEL may be staked on any unclaimed GRID or unstated GRID of it’s FACTION
+
+- CITADEL can see a radius of 2 GRID around them and share this information with their FACTION
+
+- CITADEL that are visible to an enemy FACTION may be attacked by that FACTION
+
+- CITADEL can CAPTURE visible un-staked GRID of an enemy FACTION if it is touching their FACTON's GRID
+
+- It will automatically be LIT during capture and will receive a temporary DRAKMA harvesting multiplier while simultaneously putting the CITADEL into 100% DRAKMA production
+
+- It will take 2 real-time days for CAPTURE to be completed, after which the CITADEL may be un-staked or UNLIT assuming it is not engaged with other CITADEL
+
+- CITADEL that CAPTURE unclaimed GRID will start with 25% production and will not be LIT automatically
+
+CITADEL and PILOT PASSIVE STATS
+- CITADEL and PILOTS have PASSIVE STATS like SEASON and GENERATION which are influenced by mint conditions, and PASSIVE STATS that are randomly assigned.
+
+- PASSIVE STATS cannot be changed and can make a CITADEL or PILOT inherently stronger or more aesthetically appealing than another.
+
+- We consider NFT upgradable assets and have plans to tie in-game functions to the NFTs appearance in-game.
+
+CITADEL Upgrades
+- A CITADEL can update shields, engine, and weapon systems with DRAKMA.
+
+- A CITADEL can construct and uplevel mines using DRAKMA. The number of mines a CITADEL can build is directly proportional to the CITADEL level.
+
+- A CITADEL can raise FLEET using DRAKMA and are awarded FLEET POINTS when doing so.
+
+- A CITADEL can build FLEET academy to train new FLEET. As a CITADEL uplevels, it will unlock different types of FLEET academy to build, enabling stronger and more specialized FLEET.
+
+### Game Actions
+
+These on-chain actions describe the MVP actions of the game CITADEL. Further actions will be added as the game matures. 
+Raid
+- A CITADEL owner may raid with FLEET. Raiding steals the unclaimed DRAKMA from CITADEL.
+
+- The DRAKMA returned from the RAID depends on unclaimed DRAKMA in the GRID mines, as well as the result of battle. 
+
+- Each surviving fleet will fill up their carry slots with DRAKMA on the return from the raid.
+
+- It will take 1 hour to travel one grid. A raid 4 grid away will take 4 hours travel to and 4 hours travel back.
+
+- DRAKMA is stolen from the GRID owner in a raid.
+
+Siege
+- A CITADEL owner may siege another CITADEL so long as a PILOT is sent with siege.
+
+- A CITADEL owner can send a siege without a PILOT but can only level the CITADEL.
+
+- A PILOT is needed to eject the defeated CITADEL from the grid and claim the newly unoccupied grid as its own.
+
+- A CITADEL can send multiple simultaneous sieges. 
+
+- A CITADEL under siege cannot send reinforcements to other CITADEL. A common strategy to level CITADEL will be to attack many faction CITADEL simultaneously, pinning down support troops.
+
+- The fastest a CITADEL can be sieged is 48 hours. This will give faction members a chance to send reinforcement to prevent the siege and destroy the attacking PILOT.
+
+- Siege time depends on the amount of FLEET sieging compared to the amount of FLEET in fortification defending. A CITADELs weapon system, shields, and engine will factor into the outcome.
+
+- A siege progress will go from 0% to 100%. There will be a battle each hour which will either increase the siege % if the wallet performing the siege wins, or decrease the siege % if the defender wins the battle. The percentage increase or decrease is dependent on how lopsided the outcome of the battle is. When the siege progress reaches 100% the CITADEL is lost to the sieging party. 
+
+- A losing siege (more FLEET defending than sieging) will quickly lose their siege progress. When this progress reaches 0%, the GEN0 PILOT will retreat to the CITADEL it came from. Future generation of PILOT will be destroyed in a failed siege.
+
+- Sieging CITADEL can add FLEET to a siege but the FLEET must travel GRID to reach the siege.
+
+- Sieged CITADEL owners can train and hurry FLEET production from within their CITADEL by spending DRAKMA.
+
+Fortify
+- A CITADEL owner may fortify a CITADEL with FLEET
+
+- A CITADEL owner may upgrade their CITADEL shield.
+
+- Fortified FLEET is at least 50% more powerful than an attacking FLEET.
+
+- Fortifying FLEET protects a CITADEL from siege.
+
+- Certain type and strength of fleet is important in determining the winner of the battle. 
+
+## Game Currency
+
+The game will have 1 in-game currency called DRAKMA. DRAKMA is an ERC-20 token. DRAKMA will be earned by raiding and mining. DRAKMA will be spent upgrading game CITADEL, raising fleet, and building mines. Wallets can claim DRAKMA at a frequency of their choosing.
+DRAKMA is the key to the game and a circular economy of spend, win, destroy has been crafted to ensure a robust and chaotic battle for the lifeblood of CITADEL. Game wallets must choose if they are playing to extract value from the game via DRAKMA, or use DRAKMA to establish a dominant CITADEL. A dominant CITADEL is nearly impossible to siege.
+An important dynamic of the game will be organizing into FACTIONS. FACTIONS allow smaller players to accrue resources slowly while being protected by a collective.
+
+### DRAKMA Distribution
+
+DRAKMA will be finite and deflationary. A portion of DRAKMA will be distributed to CITADEL owners during the prelude to the game by staking CITADEL NFT. A portion of DRAKMA will be withheld by the development team to fund future game and art development. The remaining portion of DRAKMA will remain in the game treasury to be governed by the CITADEL DAO, GRID MAELSTROM.
+
+## FACTIONS
+
+CITADEL will launch with 4 factions. A CITADEL is placed into a faction when lit to the grid. A CITADEL can change factions as much or as little as the wallet desires. FACTIONS are critical to cooperative game play and survival in CITADEL. Wallets may form new factions as the game matures. 
+THE NETWORK STATE
+leader : THE STATIST
+dispatch: @thestatistpm
+raid: GRID MAELSTROM
+Ruthless rule demands absolute obedience. The NETWORK STATE is in absolute control of the grid and intends to squeeze factionists from the productive center to the outer grid. THE STATIST is a cunning and ruthless leader born of privilege and advantage. 
+THE AUTONOMOUS ZONE
+leader : THE FACTIONIST
+dispatch: @factionistpm
+raid: THE OCCUPY
+Each CITADEL is a sovereign state. Lite your CITADEL with THE AUTONOMOUS ZONE as garrison to the ascent of the NETWORK STATE. THE FACTIONIST is a fearless zealot intent on liberty from oppression. She will OCCUPY the NETWORK STATE until it crumbles from within.
+THE SANCTION
+leader : THE FANATIC
+dispatch: @thefanaticpm
+raid: THE INQUISITION
+The FANATIC is a brutal and emotion-filled leader intent on purging the grid through THE INQUISITION. 
+THE ANNEXATION
+leader : THE PIN
+dispatch: @thepinpm
+raid:THE BREACH
+THE ANNEXATION is a syndicate led by the infamous convict, THE PIN. The ANNEXATION breaches the GRID and are the sworn enemies of THE SANCTION. Few have met THE PIN, but everyone knows his exploits.
+
+## Citadel Dispatch
+
+The game starts with a broadcast from the Citadel Dispatch. The Citadel Dispatch is a news syndicate operating an illegal terminal in the NETWORK STATE. 
+The Citadel Dispatch will be a daily cable built into the CITADEL OS. Wallets must attach to a terminal to read the dispatch and learn about the day’s events.
+The Dispatch will relay the outcome of siege, failed siege, notable raids, as well as political and FACTION shifts in the game. The Citadel Dispatch is written by each faction leader.
+
+## SEASONS & Ladder
+
+In order to create a continual fresh experience for new users, SEASONS will be introduced on a continual basis in the form of new ASTRONOMICAL OBJECTS (AOs) being introduced to the universe of CITADEL. At the beginning of the game, there will only be a single AO where all GRID will live.  As this AO becomes saturated and GRID runs out, a new AO will be introduced that will be inaccessible to the previous AOs during the ladder season.  Eventually, the ladder season will end and rewards will be given to participants based on their rank as well as other achievements.  In addition, the new AO will become accessible to all previous existing AOs essentially allowing CITADEL from different AOs to siege or support one another.
+
+## Future NFT
+
+As the game matures, additional types of NFT will be added. An example is the MENTAT NFT. This NFTs purpose is to create an intelligence network giving the wallet owner reports they would not otherwise have access to in-game, grid visibility, and will amplify the production and strength of shields, weapon system, engine, grid production, and fleet production. Only RELIK receive and emit MENTAT.
+Similarly, as Citadel gains wallets, new but less productive grid will be added to the game allowing new wallets to enter the game in a zone with similar competitiveness. Each new generation of NFT will have their capabilities reduced ensuring early NFTs have the highest utility and value. 
+
+## Terms of Use
+
+CITADEL is a game. NFT minted in CITADEL have value for entertainment purposes only and are not an investment. DRAKMA will only have value from within the game. CITADEL and the team behind CITADEL, THE NETWORK STATE are gamers, creators, and developers. That is to say, nothing in this whitepaper should be considered financial advice and this game is for entertainment purposes only. All information in this document is subject to change, be enhanced, or dropped as we enter play-testing.
+
+## Official Links
+
+website:
+http://citadel.pm
+twitter:
+https://twitter.com/citadelpm
+discord:
+type `link citadel` on citadel os > to unlock our discord server

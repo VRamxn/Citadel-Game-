@@ -1,0 +1,67 @@
+
+[image: https://substackcdn.com/image/fetch/$s_!fw-T!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ff7f887af-55e2-4425-bea0-7c3c7be3d452_1722x566.png]
+
+- 
+- 
+ (https://substackcdn.com/image/fetch/$s_!fw-T!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ff7f887af-55e2-4425-bea0-7c3c7be3d452_1722x566.png)CITADEL OS has been upgraded to enable interaction with the PILOT mint and WARLORD TECHNOCRACY. Visit CITADEL OS (https://citadel.pm) on Saturday November 5th at noon PT to use the upgraded terminal. Use this as your guide to the new functionality.
+
+## PILOT Mint
+
+On November 5th at noon PT there will be a public mint of PILOT. Somewhere between 128 and 256 PILOT will be available for mint. There are no restrictions or whitelist and this PILOT mint will be first come / first serve. To mint a PILOT for .125 ETH, simply type the following into CITADEL OS.
+citadel os > mint pilot
+Each wallet can mint up to 5 PILOT per transaction. If you would like to mint more than 1, type the following.
+citadel os > mint pilots [number of pilots]
+
+## PILOT Claim
+
+Each CITADEL staked to the EXORDIUM (https://thestatist.substack.com/p/citadel-exordium) can claim a PILOT for 64,000 DK. You must have your CITADEL staked in order to claim. To claim your PILOT, you must first approve the DRAKMA for the mint then claim.
+citadel os > approve drakma 64000
+citadel os > claim pilot [citadel id]
+You can claim your PILOT up until the EXORDIUM ends at the end of January 2023. 
+
+## Uplevel
+
+PILOT act as a multiplier to the CITADEL they are staked. Up-leveling a PILOT on-chain increases these multiples. The first 64 PILOT to be upleveled will have their art revealed in the next wave. The first wallet to upgrade a PILOT to level 9 will receive a free treasury PILOT. 
+The cost to uplevel a PILOT is 100,000 DK multiplied by the level. lvl 1 => 100k, lvl2 => 200k, lvl 3 => 300k, etc. 
+citadel os > approve drakma 100000
+citadel os > uplevel pilot [pilot id]
+
+## Sovereignty
+
+Sovereignty is the on-chain trait that binds your PILOT to the SOVEREIGN COLLECTIVE, the ruling overlords of the CITADEL political system, the WARLORD TECHNOCRACY (https://thestatist.substack.com/p/the-warlord-technocracy). The first 64 PILOT to pay 4M DRAKMA will make up the SOVEREIGN COLLECTIVE. Type the following commands into CITADEL OS to become sovereign.
+citadel os > approve drakma 4000000
+citadel os > sovereign [pilot id]
+
+## Overthrow
+
+Once the SOVEREIGN COLLECTIVE has been formed with 128 PILOT (64 from RELIK), PILOT must overthrow a sitting sovereign to join the collective. To overthrow a sitting sovereign, you must pay the collective 4M DK + 10 times the number of active bribes the PILOT has made. Use this sequence of commands to overthrow a sovereign with 0 bribes.
+citadel os > approve drakma 4000000
+citadel os > overthrow [sovereign id] with [pilot id]
+You will need an additional DRAKMA to overthrow a PILOT with active bribes. It will take 4M plus 1M per active bribe to overthrow a sovereign with bribes. 
+citadel os > approve drakma 5000000
+citadel os > overthrow [sovereign id] with [pilot id]
+
+example:
+citadel os > overthrow 56 with 850
+
+## Bribery
+
+To stay in power, a sovereign must bribe one of the 8 KULT (https://thestatist.substack.com/i/74833084/kult) of CITADEL. Each bribe costs 100,000 DK and decays after a period of 90 days.
+citadel os > approve drakma 100000
+citadel os > bribe [kult name] [sovereign id]
+
+example: 
+citadel os > bribe stalkroth 40 
+
+## Check
+
+To check the sovereign status or level of a PILOT, simply type the following into CITADEL OS.
+citadel os > check pilot [pilot id]
+
+## Special Thanks
+
+A special thanks to community member jsays (https://twitter.com/j_sayso_) for performing the upgrades. Incredible work from a very talented developer. 
+
+## Terms of Service
+
+Holders of CITADEL and PILOT NFT hold pieces of blockchain art with commercial usage rights given. No future utility is conveyed. All forward looking statements and plans represent the current ideas of THE NETWORK STATE surrounding the world of CITADEL. THE NETWORK STATE fully reserves the right to halt or alter our plans as we build out this strange and mysterious world.

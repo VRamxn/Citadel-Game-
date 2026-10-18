@@ -1,0 +1,275 @@
+
+[image: https://substackcdn.com/image/fetch/$s_!59cF!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0fefd0bd-193c-4b73-a1ab-a4c77f1e11d4_1280x512.png]
+
+- 
+- 
+ (https://substackcdn.com/image/fetch/$s_!59cF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0fefd0bd-193c-4b73-a1ab-a4c77f1e11d4_1280x512.png)
+## EXORDIUM
+
+CITADEL is a post-human war game built on the Ethereum blockchain. The CITADEL EXORDIUM is the preamble to the full game of CITADEL. 
+During the EXORDIUM, the in-game token DRAKMA will be freely distributed to all GEN0 CITADEL owners. Each CITADEL will be able to choose their faction on-chain and contribute research towards the CITADEL tech tree. The CITADEL EXORDIUM will last approximately 150 days.
+
+## DRAKMA
+
+The in-game currency for the game of CITADEL is DRAKMA (https://citadel.pm/drakma.html). DRAKMA has a total circulation of 10 billion. The EXORDIUM will distribute 2.4 billion DRAKMA on-chain to each CITADEL owner according to the CITADEL SEKT.
+RELIK
+16X multiplier, 64,000Ð / day, 9.6M Ð / RELIK
+
+DROTH XYL
+8X multiplier, 32,000Ð / day, 4.8M Ð / DROTH XYL
+
+IONSLAUGHT
+4X multiplier, 16,000Ð / day, 2.4M Ð / IONSLAUGHT
+
+ELEKT
+2X multiplier, 8,000 Ð / day, 1.2M Ð / ELEKT
+100 million in DRAKMA will be distributed to the faction first to complete the CITADEL tech tree.
+
+#### ACE / PILOT
+
+On the 64th day of the EXORDIUM, 400M Ð will be distributed to the ACE and PILOT roles. The ACE role has been granted to community members whom went above and beyond helping the team launch CITADEL. There are 49 ACE roles in our community. Each ACE will receive 2.5M Ð if they are a verified CITADEL owner. Some ACE holders will receive additional DRAKMA based on their contribution.
+The PILOT role is reserved for owners of 5 or more CITADEL. There are 18 current PILOT and each will receive 1M Ð per CITADEL owned. The ACE and PILOT roles are cumulative.
+
+## Tech Tree
+
+[image: https://substackcdn.com/image/fetch/$s_!8fU8!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ffbcf6d2c-0dc7-4cbf-a402-75fbbb696193_1024x1024.png]
+
+- 
+- 
+ (https://substackcdn.com/image/fetch/$s_!8fU8!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ffbcf6d2c-0dc7-4cbf-a402-75fbbb696193_1024x1024.png)During the 150 day EXORDIUM, the CITADEL tech tree will be discovered by each faction. The CITADEL tech tree will provide asynchronous advantages to each faction and CITADEL throughout the game. The EXORDIUM will allow CITADEL, RELIK, and factions to unlock the 8 branches of the tech tree, discovering technology that will greatly contribute to their faction's power and prosperity. 
+At the start of the EXORDIUM, a CITADEL will choose to stake to a faction and tech tree branch. Each CITADEL will earn the same amount of research points as they earn DRAKMA. That is to say, the SEKT multiplier applies both to prelude DRAKMA and research points.
+Each CITADEL will be randomly assigned a tech prop during our next reveal. A minimum of 4 RELIK per tech property will be accommodated in the random distribution. A CITADEL researching the tech it is assigned will receive a 2X research multiple. A tech branch can only be unlocked for a faction when a RELIK of the same tech property is staked to that tech.  
+Below are the 8 CITADEL tech branches launching with our next reveal. Beneath each tech branch are the technologies available to unlock. Discovery of each tech is linear, meaning, tech cannot be skipped. 
+
+#### PRESERVATIVE ALGORITHMS
+
+Preservative algorithms unlock shield amplifiers and one of the four CITADEL fleet types, the MHRUDVOG THROT. 512 CITADEL have been assigned the preservative algorithms tech branch.
+- Teslaphoresis => unlocks TELUM RATIO shield.
+
+- Deflector shields => unlocks DSGRILL RATIO shield.
+
+- Preservational field algorithms => unlocks DAG SGIATH shield
+
+- Gravitational field => unlocks UNGARDROTHH shield
+
+- Grid disturbance engineering => unlocks XZCID MAGH shield
+
+- Obscurance calculus => unlocks MYSTERIUM shield
+
+- Bioadaptive resonance => unlocks MHRUDVOG THROT fleet type
+
+#### MILITANT ALGORITHMS
+
+Militant algorithms unlock weapon systems and the DREBENTRAAKHT fleet type. The DREBENTRAAKHT is a siege ship designed to knock down shield and weapon systems. 256 CITADEL have been assigned the militant algorithms tech branch.
+- Applied gravitonics
+
+- Graviton cannon => unlocks DREBENTRAAKHT fleet type
+
+- Gravimetric torpedoes => unlocks MARBHADH GHXST weapon system
+
+- Plasma acceleration
+
+- Plasma cannon => unlocks RRAKATAKHT FUROR weapon system
+
+- Plasma torpedo => unlocks TELUM FUROR weapon system
+
+- Plasma detonator => unlocks HALMAHHER FUROR weapon system
+
+- Molecular disruption
+
+- Dag disruptor => unlocks DAG VERSTACKT weapon system
+
+#### ANTIMATTER ANNIHILATION
+
+Antimatter Annihilation unlocks the special abilities of the 8 CITADEL engine types. 128 CITADEL belong to the antimatter annihilation tech branch.
+- Plasma discharge technology => unlocks HAG GOTOR engine
+
+- Plasma shard engine => unlocks CHOBAKK engine
+
+- Plasma barrier discharge => unlocks GLUASAD engine
+
+- Quantum mechanics
+
+- Zero-point energy => unlocks TELUM MAK engine
+
+- Fermion field energy => unlocks FULTACHT MAK engine
+
+- Bosonic field energy => unlocks DSGILL MAK engine
+
+- Grid outgress => unlocks STROGOTHT
+
+- Dark matter distribution => unlocks DREADNAUGHT
+
+#### PROPULSION
+
+The propulsion tech unlocks two shield types, faction-wide amplifiers to the fleet academy, and the DALAA MAX fleet type. The Dalaa Max is a fast and inexpensive fleet type primarily used for scouting missions. 64 CITADEL have the propulsion tech property.
+- Sublight propulsion
+
+- Atomic engine => unlocks DALAA MAX fleet type
+
+- Ionic engine => +5% swarm speed
+
+- Artificial gravity => +2% siege ship production
+
+- Cryogenic transport => +10% siege ship production
+
+- Quantum field theory => unlocks DASKENWAFT shield
+
+- Collective excitation => unlocks MARBHADH GREINE shield
+
+#### POSTHUMANISM
+
+Post-humanism will be a tech branch continually built upon in the game of CITADEL. For the EXORDIUM, post-humanism unlocks a weapon system, several faction-wide amplifiers, and most importantly, the SIF GATTACA, the main fleet type in the game of CITADEL. The SIF GATTACA are swarm fleet unlocked by neural grafting and are the primary fleet used in raids and siege. 32 CITADEL have the post-humanism tech property.
+- Biogenetic algorithms
+
+- Neural grafting => unlocks SIF GATTACA fleet type
+
+- Grid-sentient algorithms => +2% drakma production
+
+- Xeno sympathy => +2% fortification bonus
+
+- Biogenetic warfare
+
+- Retroviral plague => unlocks VEERDACHT MAGH weapon system
+
+- Hermetic systems => +1% shield defense
+
+#### ECOLOGICAL EXTRACTION
+
+Ecological extraction attends to the extraction of DRAKMA from the surface and atmosphere of astronomical objects. 16 CITADEL posses the ecological extraction tech property.
+- Terraforming
+
+- Synthetic chemistry => +2% drakma production
+
+- Atmospheric engineering => +5% drakma production
+
+#### TECHNOCRACY
+
+The post-human political system of CITADEL is WARLORD TECHNOCRACY. This tech tree branch will be critical towards the development of this system. 8 CITADEL own the technocracy tech property.
+- Polymorphic algorithms
+
+- Cloning vats => +10% swarm production
+
+- Biohacking
+
+- Seed AI (FLEET ACADEMY)
+
+- Warlord technocracy => unlocks this post-human political system
+
+- Econometric probe => +1% drakma production
+
+#### PROGINATOR PSI
+
+The Proginator PSI tech branch is key to unlocking the MENTAT, the intelligence network in the game of CITADEL. The MENTAT will be the third NFT in our games progression and will be freely claimable by RELIK owners. 128 GEN0 MENTAT will be available at the start of the full-game. MENTAT benefit the entire faction. 8 CITADEL possess the proginator psi tech property.
+- Surveillance state
+
+- Threatcasting => unlocks the MENTAT
+
+- Cybernated sentience
+
+- Psionic resonator => unlocks AG HALMAHHER weapon system
+
+- Dissociative wave algorithms => unlocks DEI IUDICIUM weapon system
+
+## Shield, Weapon System, Engine
+
+This section will outline the base and unique abilities of each CITADEL shield, weapon system, and engine. Base abilities are unlocked from the start. Unique abilities are unlocked by the tech tree of each faction. The hierarchy of these values will not change, but individual values may change as we play test the game.
+
+#### Shield
+
+DAG SGIATH 10% fleet defense bonus, 5% siege defense bonus (unique)
+
+XZCID MAGH 11% fleet defense bonus, 10% siege defense bonus (unique)
+
+TELUM RATIO 12% fleet defense bonus, 2% fleet defense bonus (unique)
+
+UNGARDROTHH 15% fleet defense bonus, 15% defense against siege (unique)
+
+DSGRILL RATIO 17% fleet defense bonus, 5% fleet defense bonus (unique)
+
+DASKENWAFT 20% fleet defense bonus, 15% swarm defense bonus (unique)
+
+MYSTERIUM 25% fleet defense bonus, 5% drakma production (unique)
+
+MARBHADH GREINE 35% fleet defense bonus, 25% swarm defense bonus (unique)
+
+#### Engine
+
+HAG GOTOR 10% shield recharge, 2.0% weapons repair, 1% fortification bonus (unique)
+
+CHOBAKK 11% shield recharge, 2.25% weapons repair, 2% fortification bonus (unique) 
+
+TELUM MAK 12% shield recharge, 2.5% weapons repair, 1% weapons repair (unique)
+
+STROGOTHT 15% shield recharge, 3.0% weapons repair, 1% drakma production (unique)
+
+FULTACHT MAK 17% shield recharge, 3.75% weapons repair, 2.5% weapons repair (unique)
+
+GLUASAD 20% shield recharge, 4.75% weapons repiar, 5% fortification bonus (unique) 
+
+DSGILL MAK 25% shield recharge, 6.0% weapons repair, 5% weapons repair (unique)
+
+DREADNAUGHT 35% shield recharge, 7.5% weapons repair, 5% drakma production (unique)
+
+#### Weapon System
+
+RRAKATAKHT FUROR 10% fleet damage, 5% swarm fleet damage
+
+AG HALMAHHER 11% fleet damage, 5% siege fleet damage
+
+TELUM FUROR 12% fleet damage, 6% swarm fleet damage 
+
+HALMAHHER FUROR 15% fleet damage, 7% swarm fleet damage
+
+DAG VERSTACKT 17% fleet damage, 7% siege fleet damage
+
+VEERDACHT MAGH 20% fleet damage, 5% attacking fleet destroyed / 2% defending fleet destroyed (unique)
+
+MARBHADH GHXST 25% fleet damage, 10% siege fleet damage
+
+DEI IUDICIUM 35% fleet damage, 5% of fleet desert and join defender each wave (unique)
+
+## Fleet Type
+
+CITADEL will launch with four fleet type. Additional fleet type will be added as the game progresses. Additional abilities will be added to existing fleet type. 
+DALAA MAX => Scout fleet. 
+Low offense, low defense, fast, low carry, inexpensive.
+
+SIF GATTACA => Swarm infantry. 
+Average against all, fast, average carry, inexpensive.
+
+MHRUDVOG THROT => Fortification bonus.
+Low offense, high defense, slow, average carry, inexpensive.
+
+DREBENTRAAKHT => Siege ship with heavy graviton cannon. Breaks down shields, weapon systems, engine. 
+High offense, average defense, slow, expensive.
+
+## Fleet Academy
+
+The Fleet Academy is the first structure you will construct in your CITADEL. Constructing a Fleet Academy will cost DRAKMA and enable each CITADEL to raise Fleet. A Fleet Academy can be upleveled and acts as the research hub of the CITADEL. The tech tree unlocks the following Fleet Academy bonuses.
+Cloning Vats => +10% swarm production speed
+
+Artificial Gravity => +2% siege ship production
+
+Cryogenic Transport => +10% siege ship production
+
+Seed AI => +5% swarm defense
+
+Econometric Probe => +1% drakma production
+
+Hermetic Systems => +1% shield defense
+
+Grid-Sentient Algorithms => +2% drakma production
+
+Xeno Sympathy => +2% fortification
+
+Ionic Engine => +5% swarm speed
+
+Synthetic Chemistry => +2% drakma production
+
+Atmospheric Engineering => +5% drakma production
+
+## Terms of Service
+
+Holders of CITADEL hold pieces of blockchain art with commercial usage rights given. No future utility is conveyed. DRAKMA is an in-game currency and has no utility outside of the world of CITADEL.
+All forward looking statements and plans represent the current ideas of THE NETWORK STATE surrounding the world of CITADEL. THE NETWORK STATE fully reserves the right to halt or alter our plans as we build out this strange and mysterious world.
