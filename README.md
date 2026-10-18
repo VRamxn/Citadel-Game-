@@ -68,7 +68,7 @@ On the local chain the client signs with anvil's dev accounts: pick one at the t
    python3 script/pack_traits.py   # -> data/citadel-traits.bin (commit it)
    ```
    If `data/citadel-traits.bin` is already in the repo, skip this step.
-2. **Fund a deployer** with Sepolia ETH (the full deploy is ~60M gas), then import its key into Foundry's encrypted
+2. **Fund a deployer** with Sepolia ETH (the full deploy is ~76M gas across its transactions; a dry run without `--broadcast` simulates it on a Sepolia fork), then import its key into Foundry's encrypted
    keystore:
    ```sh
    cast wallet import deployer --interactive
