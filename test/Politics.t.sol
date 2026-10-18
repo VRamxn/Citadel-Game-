@@ -1,0 +1,188 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+import {Base} from "./Base.t.sol";
+import {GameStorage} from "../src/game/GameStorage.sol";
+import {Technocracy} from "../src/Technocracy.sol";
+import {TechTree} from "../src/TechTree.sol";
+import {Traits, Tech} from "../src/lib/Traits.sol";
+
+contract TechTreeTest is Base {
+    function test_researchNeedsAKeyRelik() public {
+        _lite(bob, 1, 8, 0, 1); // ELEKT researching PRESERVATIVE for AUTONOMOUS ZONE, no key
+        skip(10 days);
+        (uint256 points,, uint256 keys, uint256 done) = d.techTree.pool(1, 0);
+        assertEq(keys, 0);
+        assertEq(points, 0);
+        assertEq(done, 0);
+
+        _give(alice, 4); // RELIK, PRESERVATIVE
+        _lite(alice, 4, -8, 0, 1);
+        skip(1 days);
+        (points,, keys,) = d.techTree.pool(1, 0);
+        assertEq(keys, 1);
+        // bob 4000 x 2 x 2 (own tech) + relik 4000 x 16 x 2
+        assertEq(points, 16_000 + 128_000);
+        assertTrue(Tech.has(d.techTree.bits(1), Tech.TESLAPHORESIS));
+    }
+
+    function test_techUnlocksUniqueAbility() public {
+        _give(alice, 4);
+        _lite(alice, 4, -8, 0, 1);
+        uint256 before = view_.statsOf(4).siegeDefBps;
+        skip(5 days); // 640k points: 3 techs (cumulative 600k) => PRESERVATIONAL FIELD => DAG SGIATH unique
+        assertTrue(Tech.has(d.techTree.bits(1), Tech.PRESERVATIONAL_FIELD));
+        assertEq(view_.statsOf(4).siegeDefBps, before + 500);
+    }
+
+    function test_atomicEngineUnlocksDalaa() public {
+        _lite(alice, 0, 8, 0, 0); // RELIK, PROPULSION
+        _buildTo(alice, 0, B_ACADEMY, 1);
+        skip(3 days); // 384k: SUBLIGHT + ATOMIC ENGINE
+        vm.prank(alice);
+        eco.train(0, DALAA, 5);
+        skip(10 minutes);
+        assertEq(view_.garrisonOf(0)[DALAA], 5);
+    }
+
+    function test_factionsResearchSeparately() public {
+        _lite(alice, 0, 8, 0, 0);
+        skip(3 days);
+        assertGt(d.techTree.bits(0), 0);
+        assertEq(d.techTree.bits(1), 0);
+    }
+
+    function test_branchMentat() public {
+        _give(alice, 4);
+        _lite(alice, 4, -8, 0, 1);
+        vm.prank(alice);
+        vm.expectRevert(TechTree.BranchIncomplete.selector);
+        d.techTree.claimBranchMentat(0, 4);
+        skip(25 days); // 7 techs: 2.8M points at 128k/day
+        vm.prank(alice);
+        uint256 m = d.techTree.claimBranchMentat(0, 4);
+        assertEq(d.mentat.ownerOf(m), alice);
+    }
+}
+
+contract TechnocracyTest is Base {
+    Technocracy t;
+
+    function setUp() public override {
+        super.setUp();
+        t = d.technocracy;
+    }
+
+    function test_relikPilotIsBornSovereign() public {
+        vm.prank(alice);
+        uint256 p = t.claimPilot(0);
+        assertTrue(d.pilot.traitsOf(p).sovereign);
+        assertEq(t.sovereignCount(), 1);
+        vm.prank(alice);
+        vm.expectRevert(Technocracy.AlreadyClaimed.selector);
+        t.claimPilot(0);
+
+        vm.prank(bob);
+        uint256 q = t.claimPilot(1);
+        assertFalse(d.pilot.traitsOf(q).sovereign);
+    }
+
+    function test_claimWorksWhileLit() public {
+        _lite(bob, 1, 8, 0, 0);
+        vm.prank(bob);
+        t.claimPilot(1);
+    }
+
+    function test_buySeatBribeAndOverthrow() public {
+        vm.prank(bob);
+        uint256 p = t.claimPilot(1);
+        vm.prank(bob);
+        t.becomeSovereign(p);
+        assertTrue(d.pilot.traitsOf(p).sovereign);
+        // 25% of 4M, plus the 70% collective share since no other seat exists yet to receive it
+        assertEq(d.drakma.balanceOf(treasury), 3_800_000 ether);
+
+        vm.startPrank(bob);
+        t.bribe(3, p);
+        t.bribe(4, p);
+        vm.stopPrank();
+        uint256 copies = d.pilot.traitsOf(p).subjugation == Traits.SUBJ_POTENTATE_COERCION
+            || d.pilot.traitsOf(p).subjugation == Traits.SUBJ_TECHNOCRAT_ARMAMENT
+            ? 2
+            : 1;
+        assertEq(t.activeBribes(p), 2 * copies);
+        assertEq(t.overthrowCost(p), 4_000_000 ether + 2 * copies * 1_000_000 ether);
+
+        vm.prank(carol);
+        uint256 c = t.claimPilot(2);
+        vm.prank(carol);
+        t.overthrow(p, c);
+        assertFalse(d.pilot.traitsOf(p).sovereign);
+        assertTrue(d.pilot.traitsOf(c).sovereign);
+        assertEq(t.sovereignCount(), 1);
+
+        skip(91 days);
+        assertEq(t.activeBribes(c), 0);
+    }
+
+    function test_collectiveShares() public {
+        vm.prank(alice);
+        uint256 a = t.claimPilot(0); // born sovereign
+        vm.prank(bob);
+        uint256 b = t.claimPilot(1);
+        vm.prank(bob);
+        t.becomeSovereign(b); // 70% of 4M goes to alice's seat
+        assertEq(t.pendingCollective(a), 2_800_000 ether);
+        vm.prank(alice);
+        vm.expectRevert();
+        t.claimCollective(a);
+        skip(30 days);
+        uint256 before = d.drakma.balanceOf(alice);
+        vm.prank(alice);
+        t.claimCollective(a);
+        assertEq(d.drakma.balanceOf(alice) - before, 2_800_000 ether);
+    }
+
+    function test_kultShares() public {
+        vm.prank(alice);
+        uint256 a = t.claimPilot(0);
+        vm.prank(bob);
+        uint256 b = t.claimPilot(1);
+        t.registerKult(b);
+        uint8 k = d.pilot.traitsOf(b).kult;
+        vm.prank(alice);
+        t.bribe(k, a);
+        assertEq(t.pendingKult(b), 60_000 ether);
+        uint256 before = d.drakma.balanceOf(bob);
+        vm.prank(bob);
+        t.claimKult(b);
+        assertEq(d.drakma.balanceOf(bob) - before, 60_000 ether);
+    }
+
+    function test_councilGovernsTheGame() public {
+        vm.prank(alice);
+        uint256 a = t.claimPilot(0);
+        vm.prank(admin);
+        d.game.transferOwnership(address(d.council));
+        vm.prank(alice);
+        uint256 id =
+            d.council.propose(a, address(d.game), abi.encodeWithSignature("acceptOwnership()"), "take the levers");
+        d.council.execute(id); // 1 of 1 seat voted yes
+        assertEq(d.game.owner(), address(d.council));
+
+        GameStorage.Config memory c = _cfg();
+        c.distortion = true;
+        vm.prank(alice);
+        id = d.council.propose(a, address(d.game), abi.encodeCall(view_.setConfig, (c)), "total war");
+        d.council.execute(id);
+        assertTrue(_cfg().distortion);
+    }
+
+    function test_nonSovereignCannotPropose() public {
+        vm.prank(bob);
+        uint256 b = t.claimPilot(1);
+        vm.prank(bob);
+        vm.expectRevert();
+        d.council.propose(b, address(d.game), "", "");
+    }
+}

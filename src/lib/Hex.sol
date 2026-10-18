@@ -20,6 +20,11 @@ library Hex {
         return (uint32(uint16(q)) << 16) | uint32(uint16(r));
     }
 
+    /// @notice Storage key of a tile on astronomical object `ao`.
+    function key(uint8 ao, int16 q, int16 r) internal pure returns (uint64) {
+        return (uint64(ao) << 32) | uint64(key(q, r));
+    }
+
     function _abs(int256 x) private pure returns (uint256) {
         return uint256(x >= 0 ? x : -x);
     }

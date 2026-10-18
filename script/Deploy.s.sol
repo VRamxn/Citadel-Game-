@@ -2,64 +2,43 @@
 pragma solidity ^0.8.24;
 
 import {Script, console} from "forge-std/Script.sol";
-import {CitadelGame} from "../src/CitadelGame.sol";
-import {CitadelNFT} from "../src/CitadelNFT.sol";
-import {PilotNFT} from "../src/PilotNFT.sol";
-import {Drakma} from "../src/Drakma.sol";
-import {TestnetFaucet} from "../src/TestnetFaucet.sol";
-import {IDrakma} from "../src/interfaces/IGameAssets.sol";
+import {Stack} from "./Stack.sol";
 
-/// @notice Deploys the full testnet stack and loads the mainnet CITADEL traits.
+/// @notice Deploys the full system, loads the mainnet CITADEL traits and writes deployments/<chainid>.json.
 ///   forge script script/Deploy.s.sol --rpc-url sepolia --account deployer --broadcast --verify
-contract Deploy is Script {
-    uint16 constant GRID_RADIUS = 12; // 469 tiles
-    uint256 constant TRAIT_CHUNK = 128;
-    string constant CITADEL_URI = "https://gateway.pinata.cloud/ipfs/QmXXC2PHUeiFtUFVdLNnYodWUNdZnK2jbT8prE6R51mGT6/";
-
-    function run() external {
+/// Env: GRID_RADIUS (default 12), TREASURY (default: deployer).
+contract Deploy is Script, Stack {
+    function run() external virtual returns (Deployment memory d) {
         bytes memory traits = vm.readFileBinary("data/citadel-traits.bin");
         require(traits.length == 1024 * 6, "run script/pack_traits.py first");
+        uint16 radius = uint16(vm.envOr("GRID_RADIUS", uint256(12)));
 
         vm.startBroadcast();
         address admin = msg.sender;
-
-        Drakma dk = new Drakma(admin);
-        CitadelNFT cit = new CitadelNFT(admin, CITADEL_URI);
-        PilotNFT pil = new PilotNFT(admin, IDrakma(address(dk)));
-        CitadelGame game = new CitadelGame(admin, address(cit), address(pil), IDrakma(address(dk)), GRID_RADIUS);
-        TestnetFaucet faucet = new TestnetFaucet(admin, cit, pil, dk);
-
-        dk.grantRole(dk.MINTER_ROLE(), address(game));
-        dk.grantRole(dk.BURNER_ROLE(), address(game));
-        dk.grantRole(dk.BURNER_ROLE(), address(pil));
-        dk.grantRole(dk.MINTER_ROLE(), address(faucet));
-        cit.grantRole(cit.MINTER_ROLE(), address(faucet));
-        pil.grantRole(pil.MINTER_ROLE(), address(faucet));
-
-        for (uint256 start; start < 1024; start += TRAIT_CHUNK) {
-            cit.setTraits(start, _slice(traits, start * 6, TRAIT_CHUNK * 6));
-        }
+        address treasury = vm.envOr("TREASURY", admin);
+        d = _deploy(admin, treasury, radius);
+        _loadTraits(d.citadel, traits);
         vm.stopBroadcast();
 
-        console.log("DRAKMA      ", address(dk));
-        console.log("CITADEL     ", address(cit));
-        console.log("PILOT       ", address(pil));
-        console.log("CitadelGame ", address(game));
-        console.log("Faucet      ", address(faucet));
-
-        string memory json = "deploy";
-        vm.serializeAddress(json, "drakma", address(dk));
-        vm.serializeAddress(json, "citadel", address(cit));
-        vm.serializeAddress(json, "pilot", address(pil));
-        vm.serializeAddress(json, "game", address(game));
-        string memory out = vm.serializeAddress(json, "faucet", address(faucet));
-        vm.writeJson(out, string.concat("deployments/", vm.toString(block.chainid), ".json"));
+        _write(d);
     }
 
-    function _slice(bytes memory b, uint256 from, uint256 len) private pure returns (bytes memory out) {
-        out = new bytes(len);
-        for (uint256 i; i < len; ++i) {
-            out[i] = b[from + i];
-        }
+    function _write(Deployment memory d) internal {
+        string memory j = "deploy";
+        vm.serializeUint(j, "chainId", block.chainid);
+        vm.serializeUint(j, "block", block.number);
+        vm.serializeAddress(j, "drakma", address(d.drakma));
+        vm.serializeAddress(j, "citadel", address(d.citadel));
+        vm.serializeAddress(j, "pilot", address(d.pilot));
+        vm.serializeAddress(j, "mentat", address(d.mentat));
+        vm.serializeAddress(j, "techTree", address(d.techTree));
+        vm.serializeAddress(j, "technocracy", address(d.technocracy));
+        vm.serializeAddress(j, "council", address(d.council));
+        vm.serializeAddress(j, "faucet", address(d.faucet));
+        string memory out = vm.serializeAddress(j, "game", address(d.game));
+        string memory path = string.concat("deployments/", vm.toString(block.chainid), ".json");
+        vm.writeJson(out, path);
+        console.log("game", address(d.game));
+        console.log("written", path);
     }
 }
