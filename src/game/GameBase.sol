@@ -267,7 +267,7 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
             _accrue(c, _statsAt(id, c.levels), k.end);
             _completeConstruction(id);
         }
-        _accrue(c, _stats(id), block.timestamp);
+        if (block.timestamp > c.lastSync) _accrue(c, _stats(id), block.timestamp);
         for (uint8 t; t < FLEET_TYPES; ++t) {
             Batch storage b = _training[id][t];
             uint64 fin = _finished(b);

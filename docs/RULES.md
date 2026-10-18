@@ -244,3 +244,7 @@ target's garrison**. There's no recall **[designed]**. A CITADEL under siege can
 - **Keeper:** siege waves processed late all use the garrison as it is when processed, so run the keeper
   (`keeper/keeper.ts`) to keep sieges hourly.
 - **Not audited.** Admin levers sit with one key until handed to the council.
+- **Gas** (`forge test --match-contract GasReport -vv`): lite ~300k · build ~210k · train ~165k · claim ~150k ·
+  instant raid ~360k · send raid ~330k · resolve raid ~560k · resolve return ~70k · start siege ~340k · one siege wave
+  ~300k (24 waves ~1M). That's fine on a testnet or an L2. The whitepaper's goal of "under 10 cents a day" for an
+  active player needs an L2 ("Fully On-Chain / L2"), not Ethereum mainnet.
