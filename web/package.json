@@ -1,0 +1,25 @@
+{
+  "name": "citadel-os",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "abis": "node scripts/abis.mjs",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "viem": "^2.57.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

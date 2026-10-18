@@ -31,6 +31,14 @@ contract DevDeploy is Deploy {
         ViewModule(address(d.game)).setConfig(c);
         vm.stopBroadcast();
 
+        // hand the faucet's queue a mix of SEKT so the seeded world looks like the real one
+        vm.startBroadcast(adminKey);
+        uint256[8] memory picks = [uint256(3), 70, 200, 500, 600, 700, 800, 900];
+        for (uint256 i; i < 8; ++i) {
+            d.faucet.grantCitadel(vm.addr(vm.deriveKey(MNEMONIC, uint32(i + 1))), picks[i]);
+        }
+        vm.stopBroadcast();
+
         int16[2][8] memory spots = [
             [int16(3), int16(-1)],
             [int16(-3), int16(1)],
@@ -48,7 +56,7 @@ contract DevDeploy is Deploy {
             d.citadel.setApprovalForAll(address(d.game), true);
             d.pilot.setApprovalForAll(address(d.game), true);
             d.mentat.setApprovalForAll(address(d.game), true);
-            uint256 citadelId = 2 * i; // the faucet hands out ids in order
+            uint256 citadelId = picks[i];
             uint256[] memory pilots = new uint256[](1);
             pilots[0] = 2 * i;
             EconomyModule eco = EconomyModule(address(d.game));

@@ -5,3 +5,5 @@ data/raw/
 .env
 deployments/31337.json
 broadcast/
+web/node_modules/
+web/dist/
