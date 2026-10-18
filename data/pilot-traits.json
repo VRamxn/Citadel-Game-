@@ -1,0 +1,10262 @@
+{
+ "0": {
+  "name": "THE PIN",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "1": {
+  "name": "THE FANATIC",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 1,
+  "sovereign": true,
+  "death": false
+ },
+ "2": {
+  "name": "THE STATIST",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "3": {
+  "name": "THE FACTIONIST",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "4": {
+  "name": "THE PLAGUE",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "5": {
+  "name": "JOBU",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "6": {
+  "name": "stríðsmaður f0rn",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "7": {
+  "name": "PILOT 7",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "8": {
+  "name": "PILOT 8",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "9": {
+  "name": "PILOT 9",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "10": {
+  "name": "PILOT 10",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "11": {
+  "name": "PILOT 11",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "12": {
+  "name": "PILOT 12",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "13": {
+  "name": "PILOT 13",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "14": {
+  "name": "PILOT 14",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "15": {
+  "name": "PILOT 15",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "16": {
+  "name": "PILOT 16",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "17": {
+  "name": "PILOT 17",
+  "subjugation": "CRHONA THROT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "18": {
+  "name": "PILOT 18",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "19": {
+  "name": "PILOT 19",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "20": {
+  "name": "PILOT 20",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "21": {
+  "name": "PILOT 21",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "22": {
+  "name": "PILOT 22",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "23": {
+  "name": "PILOT 23",
+  "subjugation": "CRHONA THROT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "24": {
+  "name": "PILOT 24",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "25": {
+  "name": "PILOT 25",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "26": {
+  "name": "PILOT 26",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "27": {
+  "name": "PILOT 27",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "28": {
+  "name": "PILOT 28",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "29": {
+  "name": "PILOT 29",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "30": {
+  "name": "PILOT 30",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "31": {
+  "name": "PILOT 31",
+  "subjugation": "CRHONA THROT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "32": {
+  "name": "PILOT 32",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "33": {
+  "name": "PILOT 33",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "34": {
+  "name": "PILOT 34",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "35": {
+  "name": "PILOT 35",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "36": {
+  "name": "PILOT 36",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "37": {
+  "name": "PILOT 37",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 9,
+  "sovereign": true,
+  "death": false
+ },
+ "38": {
+  "name": "PILOT 38",
+  "subjugation": "CRHONA THROT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "39": {
+  "name": "PILOT 39",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "40": {
+  "name": "PILOT 40",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "41": {
+  "name": "PILOT 41",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 1,
+  "sovereign": true,
+  "death": false
+ },
+ "42": {
+  "name": "PILOT 42",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 1,
+  "sovereign": true,
+  "death": false
+ },
+ "43": {
+  "name": "PILOT 43",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "44": {
+  "name": "PILOT 44",
+  "subjugation": "CRHONA THROT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "45": {
+  "name": "PILOT 45",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "46": {
+  "name": "PILOT 46",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "47": {
+  "name": "PILOT 47",
+  "subjugation": "SIF COMMANDER",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "48": {
+  "name": "PILOT 48",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "49": {
+  "name": "PILOT 49",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "50": {
+  "name": "PILOT 50",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "51": {
+  "name": "PILOT 51",
+  "subjugation": "CRHONA THROT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "52": {
+  "name": "PILOT 52",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "53": {
+  "name": "PILOT 53",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "54": {
+  "name": "PILOT 54",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "55": {
+  "name": "PILOT 55",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "56": {
+  "name": "PILOT 56",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "57": {
+  "name": "PILOT 57",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "58": {
+  "name": "PILOT 58",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "59": {
+  "name": "PILOT 59",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "60": {
+  "name": "PILOT 60",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "61": {
+  "name": "PILOT 61",
+  "subjugation": "CRHONA THROT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "62": {
+  "name": "PILOT 62",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "63": {
+  "name": "PILOT 63",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "64": {
+  "name": "PILOT 64",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "65": {
+  "name": "PILOT 65",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "66": {
+  "name": "PILOT 66",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "67": {
+  "name": "PILOT 67",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "68": {
+  "name": "PILOT 68",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "69": {
+  "name": "PILOT 69",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "70": {
+  "name": "PILOT 70",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "71": {
+  "name": "PILOT 71",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "72": {
+  "name": "PILOT 72",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "73": {
+  "name": "PILOT 73",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "74": {
+  "name": "PILOT 74",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "75": {
+  "name": "PILOT 75",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "76": {
+  "name": "PILOT 76",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "77": {
+  "name": "PILOT 77",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "78": {
+  "name": "PILOT 78",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "79": {
+  "name": "PILOT 79",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "80": {
+  "name": "PILOT 80",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "81": {
+  "name": "PILOT 81",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "82": {
+  "name": "PILOT 82",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "83": {
+  "name": "PILOT 83",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "84": {
+  "name": "PILOT 84",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "85": {
+  "name": "PILOT 85",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "86": {
+  "name": "PILOT 86",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "87": {
+  "name": "PILOT 87",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "88": {
+  "name": "PILOT 88",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "89": {
+  "name": "PILOT 89",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "90": {
+  "name": "PILOT 90",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "91": {
+  "name": "PILOT 91",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "92": {
+  "name": "PILOT 92",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "93": {
+  "name": "PILOT 93",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "94": {
+  "name": "PILOT 94",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "95": {
+  "name": "PILOT 95",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "96": {
+  "name": "PILOT 96",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "97": {
+  "name": "PILOT 97",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "98": {
+  "name": "PILOT 98",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "99": {
+  "name": "PILOT 99",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "100": {
+  "name": "PILOT 100",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "101": {
+  "name": "PILOT 101",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "102": {
+  "name": "PILOT 102",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "103": {
+  "name": "PILOT 103",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "104": {
+  "name": "PILOT 104",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "105": {
+  "name": "PILOT 105",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "106": {
+  "name": "PILOT 106",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "107": {
+  "name": "PILOT 107",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "108": {
+  "name": "PILOT 108",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "109": {
+  "name": "PILOT 109",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "110": {
+  "name": "PILOT 110",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "111": {
+  "name": "PILOT 111",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "112": {
+  "name": "PILOT 112",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "113": {
+  "name": "PILOT 113",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "114": {
+  "name": "PILOT 114",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "115": {
+  "name": "PILOT 115",
+  "subjugation": "CRHONA THROT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "116": {
+  "name": "PILOT 116",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "117": {
+  "name": "PILOT 117",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "118": {
+  "name": "PILOT 118",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "119": {
+  "name": "PILOT 119",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "120": {
+  "name": "PILOT 120",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "121": {
+  "name": "PILOT 121",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "122": {
+  "name": "PILOT 122",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "123": {
+  "name": "PILOT 123",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "124": {
+  "name": "PILOT 124",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "125": {
+  "name": "PILOT 125",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "126": {
+  "name": "PILOT 126",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "127": {
+  "name": "PILOT 127",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "128": {
+  "name": "PILOT 128",
+  "subjugation": "CRHONA THROT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "129": {
+  "name": "PILOT 129",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "130": {
+  "name": "PILOT 130",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "131": {
+  "name": "PILOT 131",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "132": {
+  "name": "PILOT 132",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "133": {
+  "name": "PILOT 133",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "134": {
+  "name": "PILOT 134",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "135": {
+  "name": "PILOT 135",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "136": {
+  "name": "PILOT 136",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "137": {
+  "name": "PILOT 137",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "138": {
+  "name": "PILOT 138",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "139": {
+  "name": "PILOT 139",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "140": {
+  "name": "PILOT 140",
+  "subjugation": "CRHONA THROT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "141": {
+  "name": "PILOT 141",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "142": {
+  "name": "PILOT 142",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "143": {
+  "name": "PILOT 143",
+  "subjugation": "CRHONA THROT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "144": {
+  "name": "PILOT 144",
+  "subjugation": "SIF COMMANDER",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "145": {
+  "name": "PILOT 145",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "146": {
+  "name": "PILOT 146",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "147": {
+  "name": "PILOT 147",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "148": {
+  "name": "PILOT 148",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "149": {
+  "name": "PILOT 149",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "150": {
+  "name": "PILOT 150",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "151": {
+  "name": "PILOT 151",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "152": {
+  "name": "PILOT 152",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "153": {
+  "name": "PILOT 153",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "154": {
+  "name": "PILOT 154",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "155": {
+  "name": "PILOT 155",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "156": {
+  "name": "PILOT 156",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "157": {
+  "name": "PILOT 157",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "158": {
+  "name": "PILOT 158",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "159": {
+  "name": "PILOT 159",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "160": {
+  "name": "PILOT 160",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "161": {
+  "name": "PILOT 161",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "162": {
+  "name": "PILOT 162",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "163": {
+  "name": "PILOT 163",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "164": {
+  "name": "PILOT 164",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "165": {
+  "name": "PILOT 165",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "166": {
+  "name": "PILOT 166",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "167": {
+  "name": "PILOT 167",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "168": {
+  "name": "PILOT 168",
+  "subjugation": "CRHONA THROT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "169": {
+  "name": "PILOT 169",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "170": {
+  "name": "PILOT 170",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "171": {
+  "name": "PILOT 171",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "172": {
+  "name": "PILOT 172",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "173": {
+  "name": "PILOT 173",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "174": {
+  "name": "PILOT 174",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "175": {
+  "name": "PILOT 175",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "176": {
+  "name": "PILOT 176",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "177": {
+  "name": "PILOT 177",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "178": {
+  "name": "PILOT 178",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "179": {
+  "name": "PILOT 179",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "180": {
+  "name": "PILOT 180",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "181": {
+  "name": "PILOT 181",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "182": {
+  "name": "PILOT 182",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "183": {
+  "name": "PILOT 183",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "184": {
+  "name": "PILOT 184",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "185": {
+  "name": "PILOT 185",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "186": {
+  "name": "PILOT 186",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "187": {
+  "name": "PILOT 187",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "188": {
+  "name": "PILOT 188",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "189": {
+  "name": "PILOT 189",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "190": {
+  "name": "PILOT 190",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "191": {
+  "name": "PILOT 191",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "192": {
+  "name": "PILOT 192",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "193": {
+  "name": "PILOT 193",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "194": {
+  "name": "PILOT 194",
+  "subjugation": "SIF COMMANDER",
+  "kult": 0,
+  "kultRolled": false,
+  "level": 1,
+  "sovereign": true,
+  "death": true
+ },
+ "195": {
+  "name": "PILOT 195",
+  "subjugation": "CRHONA THROT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "196": {
+  "name": "PILOT 196",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "197": {
+  "name": "PILOT 197",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "198": {
+  "name": "PILOT 198",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "199": {
+  "name": "PILOT 199",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "200": {
+  "name": "PILOT 200",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "201": {
+  "name": "PILOT 201",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "202": {
+  "name": "PILOT 202",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "203": {
+  "name": "PILOT 203",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "204": {
+  "name": "PILOT 204",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "205": {
+  "name": "PILOT 205",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "206": {
+  "name": "PILOT 206",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "207": {
+  "name": "PILOT 207",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "208": {
+  "name": "PILOT 208",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "209": {
+  "name": "PILOT 209",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "210": {
+  "name": "PILOT 210",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "211": {
+  "name": "PILOT 211",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "212": {
+  "name": "PILOT 212",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "213": {
+  "name": "PILOT 213",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "214": {
+  "name": "PILOT 214",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "215": {
+  "name": "PILOT 215",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "216": {
+  "name": "PILOT 216",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "217": {
+  "name": "PILOT 217",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "218": {
+  "name": "PILOT 218",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "219": {
+  "name": "PILOT 219",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "220": {
+  "name": "PILOT 220",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "221": {
+  "name": "PILOT 221",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "222": {
+  "name": "PILOT 222",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "223": {
+  "name": "PILOT 223",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "224": {
+  "name": "PILOT 224",
+  "subjugation": "CRHONA THROT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "225": {
+  "name": "PILOT 225",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "226": {
+  "name": "PILOT 226",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "227": {
+  "name": "PILOT 227",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "228": {
+  "name": "PILOT 228",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "229": {
+  "name": "PILOT 229",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "230": {
+  "name": "PILOT 230",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "231": {
+  "name": "PILOT 231",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "232": {
+  "name": "PILOT 232",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "233": {
+  "name": "PILOT 233",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "234": {
+  "name": "PILOT 234",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "235": {
+  "name": "PILOT 235",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "236": {
+  "name": "PILOT 236",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "237": {
+  "name": "PILOT 237",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "238": {
+  "name": "PILOT 238",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "239": {
+  "name": "PILOT 239",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "240": {
+  "name": "PILOT 240",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "241": {
+  "name": "PILOT 241",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 9,
+  "sovereign": true,
+  "death": false
+ },
+ "242": {
+  "name": "PILOT 242",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "243": {
+  "name": "PILOT 243",
+  "subjugation": "CRHONA THROT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "244": {
+  "name": "PILOT 244",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "245": {
+  "name": "PILOT 245",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "246": {
+  "name": "PILOT 246",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "247": {
+  "name": "PILOT 247",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "248": {
+  "name": "PILOT 248",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "249": {
+  "name": "PILOT 249",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "250": {
+  "name": "PILOT 250",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "251": {
+  "name": "PILOT 251",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "252": {
+  "name": "PILOT 252",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "253": {
+  "name": "PILOT 253",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "254": {
+  "name": "PILOT 254",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "255": {
+  "name": "PILOT 255",
+  "subjugation": "CRHONA THROT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "256": {
+  "name": "PILOT 256",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "257": {
+  "name": "PILOT 257",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "258": {
+  "name": "PILOT 258",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "259": {
+  "name": "PILOT 259",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "260": {
+  "name": "PILOT 260",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": false,
+  "level": 9,
+  "sovereign": true,
+  "death": false
+ },
+ "261": {
+  "name": "PILOT 261",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "262": {
+  "name": "PILOT 262",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "263": {
+  "name": "PILOT 263",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 1,
+  "sovereign": true,
+  "death": false
+ },
+ "264": {
+  "name": "PILOT 264",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "265": {
+  "name": "PILOT 265",
+  "subjugation": "SIF COMMANDER",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "266": {
+  "name": "PILOT 266",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "267": {
+  "name": "PILOT 267",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "268": {
+  "name": "PILOT 268",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "269": {
+  "name": "PILOT 269",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "270": {
+  "name": "PILOT 270",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "271": {
+  "name": "PILOT 271",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "272": {
+  "name": "PILOT 272",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "273": {
+  "name": "PILOT 273",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "274": {
+  "name": "PILOT 274",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "275": {
+  "name": "PILOT 275",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "276": {
+  "name": "PILOT 276",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "277": {
+  "name": "PILOT 277",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "278": {
+  "name": "PILOT 278",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "279": {
+  "name": "PILOT 279",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 7,
+  "sovereign": true,
+  "death": false
+ },
+ "280": {
+  "name": "PILOT 280",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "281": {
+  "name": "PILOT 281",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "282": {
+  "name": "PILOT 282",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "283": {
+  "name": "PILOT 283",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "284": {
+  "name": "PILOT 284",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "285": {
+  "name": "PILOT 285",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "286": {
+  "name": "PILOT 286",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "287": {
+  "name": "PILOT 287",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 5,
+  "sovereign": true,
+  "death": false
+ },
+ "288": {
+  "name": "PILOT 288",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 1,
+  "sovereign": true,
+  "death": false
+ },
+ "289": {
+  "name": "PILOT 289",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "290": {
+  "name": "PILOT 290",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "291": {
+  "name": "PILOT 291",
+  "subjugation": "CRHONA THROT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "292": {
+  "name": "PILOT 292",
+  "subjugation": "SIF COMMANDER",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "293": {
+  "name": "PILOT 293",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "294": {
+  "name": "PILOT 294",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "295": {
+  "name": "PILOT 295",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "296": {
+  "name": "PILOT 296",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "297": {
+  "name": "PILOT 297",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "298": {
+  "name": "PILOT 298",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "299": {
+  "name": "PILOT 299",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "300": {
+  "name": "PILOT 300",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "301": {
+  "name": "PILOT 301",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "302": {
+  "name": "PILOT 302",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "303": {
+  "name": "PILOT 303",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "304": {
+  "name": "PILOT 304",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 9,
+  "sovereign": true,
+  "death": false
+ },
+ "305": {
+  "name": "PILOT 305",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "306": {
+  "name": "PILOT 306",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "307": {
+  "name": "PILOT 307",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "308": {
+  "name": "PILOT 308",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "309": {
+  "name": "PILOT 309",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "310": {
+  "name": "PILOT 310",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "311": {
+  "name": "PILOT 311",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "312": {
+  "name": "PILOT 312",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "313": {
+  "name": "PILOT 313",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "314": {
+  "name": "PILOT 314",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "315": {
+  "name": "PILOT 315",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "316": {
+  "name": "PILOT 316",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "317": {
+  "name": "PILOT 317",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "318": {
+  "name": "PILOT 318",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 3,
+  "sovereign": false,
+  "death": false
+ },
+ "319": {
+  "name": "PILOT 319",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "320": {
+  "name": "PILOT 320",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "321": {
+  "name": "PILOT 321",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "322": {
+  "name": "PILOT 322",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "323": {
+  "name": "PILOT 323",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "324": {
+  "name": "PILOT 324",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "325": {
+  "name": "PILOT 325",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "326": {
+  "name": "PILOT 326",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "327": {
+  "name": "PILOT 327",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "328": {
+  "name": "PILOT 328",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "329": {
+  "name": "PILOT 329",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "330": {
+  "name": "PILOT 330",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "331": {
+  "name": "PILOT 331",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "332": {
+  "name": "PILOT 332",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "333": {
+  "name": "PILOT 333",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "334": {
+  "name": "PILOT 334",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "335": {
+  "name": "PILOT 335",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "336": {
+  "name": "PILOT 336",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "337": {
+  "name": "PILOT 337",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "338": {
+  "name": "PILOT 338",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "339": {
+  "name": "PILOT 339",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "340": {
+  "name": "PILOT 340",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "341": {
+  "name": "PILOT 341",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "342": {
+  "name": "PILOT 342",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "343": {
+  "name": "PILOT 343",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "344": {
+  "name": "PILOT 344",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "345": {
+  "name": "PILOT 345",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "346": {
+  "name": "PILOT 346",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "347": {
+  "name": "PILOT 347",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "348": {
+  "name": "PILOT 348",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "349": {
+  "name": "PILOT 349",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "350": {
+  "name": "PILOT 350",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "351": {
+  "name": "PILOT 351",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "352": {
+  "name": "PILOT 352",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "353": {
+  "name": "PILOT 353",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "354": {
+  "name": "PILOT 354",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "355": {
+  "name": "PILOT 355",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "356": {
+  "name": "PILOT 356",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "357": {
+  "name": "PILOT 357",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 4,
+  "sovereign": false,
+  "death": false
+ },
+ "358": {
+  "name": "PILOT 358",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "359": {
+  "name": "PILOT 359",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "360": {
+  "name": "PILOT 360",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "361": {
+  "name": "PILOT 361",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "362": {
+  "name": "PILOT 362",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "363": {
+  "name": "PILOT 363",
+  "subjugation": "CRHONA THROT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "364": {
+  "name": "PILOT 364",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "365": {
+  "name": "PILOT 365",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "366": {
+  "name": "PILOT 366",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 4,
+  "sovereign": false,
+  "death": false
+ },
+ "367": {
+  "name": "PILOT 367",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": true
+ },
+ "368": {
+  "name": "PILOT 368",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 5,
+  "sovereign": false,
+  "death": false
+ },
+ "369": {
+  "name": "PILOT 369",
+  "subjugation": "CRHONA THROT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "370": {
+  "name": "PILOT 370",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "371": {
+  "name": "PILOT 371",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "372": {
+  "name": "PILOT 372",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "373": {
+  "name": "PILOT 373",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "374": {
+  "name": "PILOT 374",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "375": {
+  "name": "PILOT 375",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "376": {
+  "name": "PILOT 376",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "377": {
+  "name": "PILOT 377",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "378": {
+  "name": "PILOT 378",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "379": {
+  "name": "PILOT 379",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "380": {
+  "name": "PILOT 380",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "381": {
+  "name": "PILOT 381",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "382": {
+  "name": "PILOT 382",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 5,
+  "sovereign": false,
+  "death": false
+ },
+ "383": {
+  "name": "PILOT 383",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "384": {
+  "name": "PILOT 384",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "385": {
+  "name": "PILOT 385",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "386": {
+  "name": "PILOT 386",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "387": {
+  "name": "PILOT 387",
+  "subjugation": "CRHONA THROT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "388": {
+  "name": "PILOT 388",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "389": {
+  "name": "PILOT 389",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "390": {
+  "name": "PILOT 390",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "391": {
+  "name": "PILOT 391",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "392": {
+  "name": "PILOT 392",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 3,
+  "sovereign": false,
+  "death": false
+ },
+ "393": {
+  "name": "PILOT 393",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "394": {
+  "name": "PILOT 394",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "395": {
+  "name": "PILOT 395",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "396": {
+  "name": "PILOT 396",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "397": {
+  "name": "PILOT 397",
+  "subjugation": "SIF COMMANDER",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "398": {
+  "name": "PILOT 398",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "399": {
+  "name": "PILOT 399",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "400": {
+  "name": "PILOT 400",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "401": {
+  "name": "PILOT 401",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "402": {
+  "name": "PILOT 402",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "403": {
+  "name": "PILOT 403",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 3,
+  "sovereign": false,
+  "death": false
+ },
+ "404": {
+  "name": "PILOT 404",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "405": {
+  "name": "PILOT 405",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "406": {
+  "name": "PILOT 406",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "407": {
+  "name": "PILOT 407",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "408": {
+  "name": "PILOT 408",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "409": {
+  "name": "PILOT 409",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "410": {
+  "name": "PILOT 410",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "411": {
+  "name": "PILOT 411",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "412": {
+  "name": "PILOT 412",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "413": {
+  "name": "PILOT 413",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "414": {
+  "name": "PILOT 414",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "415": {
+  "name": "PILOT 415",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "416": {
+  "name": "PILOT 416",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "417": {
+  "name": "PILOT 417",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "418": {
+  "name": "PILOT 418",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "419": {
+  "name": "PILOT 419",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "420": {
+  "name": "PILOT 420",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 2,
+  "sovereign": true,
+  "death": false
+ },
+ "421": {
+  "name": "PILOT 421",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "422": {
+  "name": "PILOT 422",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "423": {
+  "name": "PILOT 423",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "424": {
+  "name": "PILOT 424",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "425": {
+  "name": "PILOT 425",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "426": {
+  "name": "PILOT 426",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "427": {
+  "name": "PILOT 427",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "428": {
+  "name": "PILOT 428",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "429": {
+  "name": "PILOT 429",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 5,
+  "sovereign": false,
+  "death": false
+ },
+ "430": {
+  "name": "PILOT 430",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 9,
+  "sovereign": false,
+  "death": false
+ },
+ "431": {
+  "name": "PILOT 431",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 9,
+  "sovereign": false,
+  "death": false
+ },
+ "432": {
+  "name": "PILOT 432",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "433": {
+  "name": "PILOT 433",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "434": {
+  "name": "PILOT 434",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "435": {
+  "name": "PILOT 435",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "436": {
+  "name": "PILOT 436",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "437": {
+  "name": "PILOT 437",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "438": {
+  "name": "PILOT 438",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "439": {
+  "name": "PILOT 439",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "440": {
+  "name": "PILOT 440",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": false,
+  "level": 1,
+  "sovereign": true,
+  "death": false
+ },
+ "441": {
+  "name": "PILOT 441",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "442": {
+  "name": "PILOT 442",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "443": {
+  "name": "PILOT 443",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "444": {
+  "name": "PILOT 444",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "445": {
+  "name": "PILOT 445",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "446": {
+  "name": "PILOT 446",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "447": {
+  "name": "PILOT 447",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "448": {
+  "name": "PILOT 448",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "449": {
+  "name": "PILOT 449",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "450": {
+  "name": "PILOT 450",
+  "subjugation": "SIF COMMANDER",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "451": {
+  "name": "PILOT 451",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "452": {
+  "name": "PILOT 452",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "453": {
+  "name": "PILOT 453",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "454": {
+  "name": "PILOT 454",
+  "subjugation": "SIF COMMANDER",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "455": {
+  "name": "PILOT 455",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "456": {
+  "name": "PILOT 456",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "457": {
+  "name": "PILOT 457",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "458": {
+  "name": "PILOT 458",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "459": {
+  "name": "PILOT 459",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "460": {
+  "name": "PILOT 460",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "461": {
+  "name": "PILOT 461",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "462": {
+  "name": "PILOT 462",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "463": {
+  "name": "PILOT 463",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "464": {
+  "name": "PILOT 464",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "465": {
+  "name": "PILOT 465",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "466": {
+  "name": "PILOT 466",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "467": {
+  "name": "PILOT 467",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "468": {
+  "name": "PILOT 468",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "469": {
+  "name": "PILOT 469",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "470": {
+  "name": "PILOT 470",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "471": {
+  "name": "PILOT 471",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "472": {
+  "name": "PILOT 472",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "473": {
+  "name": "PILOT 473",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "474": {
+  "name": "PILOT 474",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "475": {
+  "name": "PILOT 475",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "476": {
+  "name": "PILOT 476",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "477": {
+  "name": "PILOT 477",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "478": {
+  "name": "PILOT 478",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "479": {
+  "name": "PILOT 479",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "480": {
+  "name": "PILOT 480",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "481": {
+  "name": "PILOT 481",
+  "subjugation": "CRHONA THROT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "482": {
+  "name": "PILOT 482",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "483": {
+  "name": "PILOT 483",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "484": {
+  "name": "PILOT 484",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "485": {
+  "name": "PILOT 485",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "486": {
+  "name": "PILOT 486",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "487": {
+  "name": "PILOT 487",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "488": {
+  "name": "PILOT 488",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "489": {
+  "name": "PILOT 489",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "490": {
+  "name": "PILOT 490",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "491": {
+  "name": "PILOT 491",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "492": {
+  "name": "PILOT 492",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "493": {
+  "name": "PILOT 493",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "494": {
+  "name": "PILOT 494",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "495": {
+  "name": "PILOT 495",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "496": {
+  "name": "PILOT 496",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "497": {
+  "name": "PILOT 497",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "498": {
+  "name": "PILOT 498",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "499": {
+  "name": "PILOT 499",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "500": {
+  "name": "PILOT 500",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "501": {
+  "name": "PILOT 501",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 6,
+  "sovereign": false,
+  "death": false
+ },
+ "502": {
+  "name": "PILOT 502",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "503": {
+  "name": "PILOT 503",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "504": {
+  "name": "PILOT 504",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "505": {
+  "name": "PILOT 505",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "506": {
+  "name": "PILOT 506",
+  "subjugation": "SIF COMMANDER",
+  "kult": 4,
+  "kultRolled": false,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "507": {
+  "name": "PILOT 507",
+  "subjugation": "SIF COMMANDER",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "508": {
+  "name": "PILOT 508",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "509": {
+  "name": "PILOT 509",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "510": {
+  "name": "PILOT 510",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "511": {
+  "name": "PILOT 511",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "512": {
+  "name": "PILOT 512",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "513": {
+  "name": "PILOT 513",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "514": {
+  "name": "PILOT 514",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "515": {
+  "name": "PILOT 515",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "516": {
+  "name": "PILOT 516",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "517": {
+  "name": "PILOT 517",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "518": {
+  "name": "PILOT 518",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "519": {
+  "name": "PILOT 519",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "520": {
+  "name": "PILOT 520",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "521": {
+  "name": "PILOT 521",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "522": {
+  "name": "PILOT 522",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "523": {
+  "name": "PILOT 523",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "524": {
+  "name": "PILOT 524",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 4,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "525": {
+  "name": "PILOT 525",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "526": {
+  "name": "PILOT 526",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "527": {
+  "name": "PILOT 527",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "528": {
+  "name": "PILOT 528",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "529": {
+  "name": "PILOT 529",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "530": {
+  "name": "PILOT 530",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "531": {
+  "name": "PILOT 531",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "532": {
+  "name": "PILOT 532",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "533": {
+  "name": "PILOT 533",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "534": {
+  "name": "PILOT 534",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "535": {
+  "name": "PILOT 535",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "536": {
+  "name": "PILOT 536",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "537": {
+  "name": "PILOT 537",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "538": {
+  "name": "PILOT 538",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "539": {
+  "name": "PILOT 539",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "540": {
+  "name": "PILOT 540",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "541": {
+  "name": "PILOT 541",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "542": {
+  "name": "PILOT 542",
+  "subjugation": "CRHONA THROT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "543": {
+  "name": "PILOT 543",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "544": {
+  "name": "PILOT 544",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "545": {
+  "name": "PILOT 545",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "546": {
+  "name": "PILOT 546",
+  "subjugation": "CRHONA THROT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "547": {
+  "name": "PILOT 547",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 0,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "548": {
+  "name": "PILOT 548",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "549": {
+  "name": "PILOT 549",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "550": {
+  "name": "PILOT 550",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "551": {
+  "name": "PILOT 551",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "552": {
+  "name": "PILOT 552",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "553": {
+  "name": "PILOT 553",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "554": {
+  "name": "PILOT 554",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "555": {
+  "name": "PILOT 555",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "556": {
+  "name": "PILOT 556",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "557": {
+  "name": "PILOT 557",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "558": {
+  "name": "PILOT 558",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "559": {
+  "name": "PILOT 559",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 5,
+  "sovereign": false,
+  "death": false
+ },
+ "560": {
+  "name": "PILOT 560",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "561": {
+  "name": "PILOT 561",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "562": {
+  "name": "PILOT 562",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "563": {
+  "name": "PILOT 563",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "564": {
+  "name": "PILOT 564",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "565": {
+  "name": "PILOT 565",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "566": {
+  "name": "PILOT 566",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 4,
+  "sovereign": false,
+  "death": false
+ },
+ "567": {
+  "name": "PILOT 567",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "568": {
+  "name": "PILOT 568",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "569": {
+  "name": "PILOT 569",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "570": {
+  "name": "PILOT 570",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "571": {
+  "name": "PILOT 571",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "572": {
+  "name": "PILOT 572",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "573": {
+  "name": "PILOT 573",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "574": {
+  "name": "PILOT 574",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "575": {
+  "name": "PILOT 575",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "576": {
+  "name": "PILOT 576",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "577": {
+  "name": "PILOT 577",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "578": {
+  "name": "PILOT 578",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "579": {
+  "name": "PILOT 579",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "580": {
+  "name": "PILOT 580",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "581": {
+  "name": "PILOT 581",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "582": {
+  "name": "PILOT 582",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "583": {
+  "name": "PILOT 583",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "584": {
+  "name": "PILOT 584",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "585": {
+  "name": "PILOT 585",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "586": {
+  "name": "PILOT 586",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "587": {
+  "name": "PILOT 587",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "588": {
+  "name": "PILOT 588",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "589": {
+  "name": "PILOT 589",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "590": {
+  "name": "PILOT 590",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "591": {
+  "name": "PILOT 591",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "592": {
+  "name": "PILOT 592",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "593": {
+  "name": "PILOT 593",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "594": {
+  "name": "PILOT 594",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "595": {
+  "name": "PILOT 595",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "596": {
+  "name": "PILOT 596",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "597": {
+  "name": "PILOT 597",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "598": {
+  "name": "PILOT 598",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "599": {
+  "name": "PILOT 599",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "600": {
+  "name": "PILOT 600",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "601": {
+  "name": "PILOT 601",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "602": {
+  "name": "PILOT 602",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "603": {
+  "name": "PILOT 603",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "604": {
+  "name": "PILOT 604",
+  "subjugation": "CRHONA THROT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "605": {
+  "name": "PILOT 605",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "606": {
+  "name": "PILOT 606",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "607": {
+  "name": "PILOT 607",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "608": {
+  "name": "PILOT 608",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "609": {
+  "name": "PILOT 609",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "610": {
+  "name": "PILOT 610",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "611": {
+  "name": "PILOT 611",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "612": {
+  "name": "PILOT 612",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "613": {
+  "name": "PILOT 613",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 3,
+  "sovereign": false,
+  "death": false
+ },
+ "614": {
+  "name": "PILOT 614",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "615": {
+  "name": "PILOT 615",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "616": {
+  "name": "PILOT 616",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "617": {
+  "name": "PILOT 617",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "618": {
+  "name": "PILOT 618",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "619": {
+  "name": "PILOT 619",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "620": {
+  "name": "PILOT 620",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "621": {
+  "name": "PILOT 621",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "622": {
+  "name": "PILOT 622",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "623": {
+  "name": "PILOT 623",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "624": {
+  "name": "PILOT 624",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "625": {
+  "name": "PILOT 625",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "626": {
+  "name": "PILOT 626",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "627": {
+  "name": "PILOT 627",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "628": {
+  "name": "PILOT 628",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "629": {
+  "name": "PILOT 629",
+  "subjugation": "CRHONA THROT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "630": {
+  "name": "PILOT 630",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "631": {
+  "name": "PILOT 631",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "632": {
+  "name": "PILOT 632",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "633": {
+  "name": "PILOT 633",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "634": {
+  "name": "PILOT 634",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "635": {
+  "name": "PILOT 635",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "636": {
+  "name": "PILOT 636",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "637": {
+  "name": "PILOT 637",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "638": {
+  "name": "PILOT 638",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "639": {
+  "name": "PILOT 639",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "640": {
+  "name": "PILOT 640",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "641": {
+  "name": "PILOT 641",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "642": {
+  "name": "PILOT 642",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "643": {
+  "name": "PILOT 643",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "644": {
+  "name": "PILOT 644",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "645": {
+  "name": "PILOT 645",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "646": {
+  "name": "PILOT 646",
+  "subjugation": "CRHONA THROT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "647": {
+  "name": "PILOT 647",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "648": {
+  "name": "PILOT 648",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "649": {
+  "name": "PILOT 649",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "650": {
+  "name": "PILOT 650",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "651": {
+  "name": "PILOT 651",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "652": {
+  "name": "PILOT 652",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "653": {
+  "name": "PILOT 653",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "654": {
+  "name": "PILOT 654",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "655": {
+  "name": "PILOT 655",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "656": {
+  "name": "PILOT 656",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "657": {
+  "name": "PILOT 657",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "658": {
+  "name": "PILOT 658",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "659": {
+  "name": "PILOT 659",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "660": {
+  "name": "PILOT 660",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "661": {
+  "name": "PILOT 661",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "662": {
+  "name": "PILOT 662",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "663": {
+  "name": "PILOT 663",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "664": {
+  "name": "PILOT 664",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 5,
+  "sovereign": false,
+  "death": false
+ },
+ "665": {
+  "name": "PILOT 665",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "666": {
+  "name": "PILOT 666",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "667": {
+  "name": "PILOT 667",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "668": {
+  "name": "PILOT 668",
+  "subjugation": "SIF COMMANDER",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "669": {
+  "name": "PILOT 669",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "670": {
+  "name": "PILOT 670",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "671": {
+  "name": "PILOT 671",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "672": {
+  "name": "PILOT 672",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "673": {
+  "name": "PILOT 673",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "674": {
+  "name": "PILOT 674",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "675": {
+  "name": "PILOT 675",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "676": {
+  "name": "PILOT 676",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 3,
+  "sovereign": false,
+  "death": false
+ },
+ "677": {
+  "name": "PILOT 677",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 8,
+  "sovereign": false,
+  "death": false
+ },
+ "678": {
+  "name": "PILOT 678",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "679": {
+  "name": "PILOT 679",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "680": {
+  "name": "PILOT 680",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "681": {
+  "name": "PILOT 681",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "682": {
+  "name": "PILOT 682",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "683": {
+  "name": "PILOT 683",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "684": {
+  "name": "PILOT 684",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "685": {
+  "name": "PILOT 685",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "686": {
+  "name": "PILOT 686",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "687": {
+  "name": "PILOT 687",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "688": {
+  "name": "PILOT 688",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "689": {
+  "name": "PILOT 689",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "690": {
+  "name": "PILOT 690",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "691": {
+  "name": "PILOT 691",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "692": {
+  "name": "PILOT 692",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "693": {
+  "name": "PILOT 693",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "694": {
+  "name": "PILOT 694",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "695": {
+  "name": "PILOT 695",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "696": {
+  "name": "PILOT 696",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "697": {
+  "name": "PILOT 697",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "698": {
+  "name": "PILOT 698",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 3,
+  "sovereign": false,
+  "death": false
+ },
+ "699": {
+  "name": "PILOT 699",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "700": {
+  "name": "PILOT 700",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "701": {
+  "name": "PILOT 701",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 2,
+  "sovereign": false,
+  "death": false
+ },
+ "702": {
+  "name": "PILOT 702",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "703": {
+  "name": "PILOT 703",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "704": {
+  "name": "PILOT 704",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "705": {
+  "name": "PILOT 705",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "706": {
+  "name": "PILOT 706",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "707": {
+  "name": "PILOT 707",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "708": {
+  "name": "PILOT 708",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "709": {
+  "name": "PILOT 709",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "710": {
+  "name": "PILOT 710",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "711": {
+  "name": "PILOT 711",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "712": {
+  "name": "PILOT 712",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 3,
+  "sovereign": true,
+  "death": false
+ },
+ "713": {
+  "name": "PILOT 713",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "714": {
+  "name": "PILOT 714",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "715": {
+  "name": "PILOT 715",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "716": {
+  "name": "PILOT 716",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "717": {
+  "name": "PILOT 717",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "718": {
+  "name": "PILOT 718",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "719": {
+  "name": "PILOT 719",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "720": {
+  "name": "PILOT 720",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "721": {
+  "name": "PILOT 721",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "722": {
+  "name": "PILOT 722",
+  "subjugation": "CRHONA THROT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "723": {
+  "name": "PILOT 723",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "724": {
+  "name": "PILOT 724",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "725": {
+  "name": "PILOT 725",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "726": {
+  "name": "PILOT 726",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "727": {
+  "name": "PILOT 727",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "728": {
+  "name": "PILOT 728",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "729": {
+  "name": "PILOT 729",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "730": {
+  "name": "PILOT 730",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "731": {
+  "name": "PILOT 731",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "732": {
+  "name": "PILOT 732",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "733": {
+  "name": "PILOT 733",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "734": {
+  "name": "PILOT 734",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "735": {
+  "name": "PILOT 735",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "736": {
+  "name": "PILOT 736",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "737": {
+  "name": "PILOT 737",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "738": {
+  "name": "PILOT 738",
+  "subjugation": "CRHONA THROT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "739": {
+  "name": "PILOT 739",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "740": {
+  "name": "PILOT 740",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "741": {
+  "name": "PILOT 741",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "742": {
+  "name": "PILOT 742",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "743": {
+  "name": "PILOT 743",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "744": {
+  "name": "PILOT 744",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "745": {
+  "name": "PILOT 745",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "746": {
+  "name": "PILOT 746",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "747": {
+  "name": "PILOT 747",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "748": {
+  "name": "PILOT 748",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "749": {
+  "name": "PILOT 749",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "750": {
+  "name": "PILOT 750",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "751": {
+  "name": "PILOT 751",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "752": {
+  "name": "PILOT 752",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 1,
+  "sovereign": true,
+  "death": false
+ },
+ "753": {
+  "name": "PILOT 753",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "754": {
+  "name": "PILOT 754",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "755": {
+  "name": "PILOT 755",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "756": {
+  "name": "PILOT 756",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "757": {
+  "name": "PILOT 757",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "758": {
+  "name": "PILOT 758",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "759": {
+  "name": "PILOT 759",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "760": {
+  "name": "PILOT 760",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "761": {
+  "name": "PILOT 761",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "762": {
+  "name": "PILOT 762",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "763": {
+  "name": "PILOT 763",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "764": {
+  "name": "PILOT 764",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "765": {
+  "name": "PILOT 765",
+  "subjugation": "SIF COMMANDER",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "766": {
+  "name": "PILOT 766",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "767": {
+  "name": "PILOT 767",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "768": {
+  "name": "PILOT 768",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "769": {
+  "name": "PILOT 769",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "770": {
+  "name": "PILOT 770",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "771": {
+  "name": "PILOT 771",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "772": {
+  "name": "PILOT 772",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "773": {
+  "name": "PILOT 773",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "774": {
+  "name": "PILOT 774",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "775": {
+  "name": "PILOT 775",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "776": {
+  "name": "PILOT 776",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "777": {
+  "name": "PILOT 777",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "778": {
+  "name": "PILOT 778",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "779": {
+  "name": "PILOT 779",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "780": {
+  "name": "PILOT 780",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "781": {
+  "name": "PILOT 781",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "782": {
+  "name": "PILOT 782",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "783": {
+  "name": "PILOT 783",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "784": {
+  "name": "PILOT 784",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "785": {
+  "name": "PILOT 785",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "786": {
+  "name": "PILOT 786",
+  "subjugation": "SIF COMMANDER",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "787": {
+  "name": "PILOT 787",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "788": {
+  "name": "PILOT 788",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "789": {
+  "name": "PILOT 789",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "790": {
+  "name": "PILOT 790",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "791": {
+  "name": "PILOT 791",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "792": {
+  "name": "PILOT 792",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "793": {
+  "name": "PILOT 793",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "794": {
+  "name": "PILOT 794",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": true
+ },
+ "795": {
+  "name": "PILOT 795",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "796": {
+  "name": "PILOT 796",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "797": {
+  "name": "PILOT 797",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "798": {
+  "name": "PILOT 798",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "799": {
+  "name": "PILOT 799",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "800": {
+  "name": "PILOT 800",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "801": {
+  "name": "PILOT 801",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "802": {
+  "name": "PILOT 802",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "803": {
+  "name": "PILOT 803",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "804": {
+  "name": "PILOT 804",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "805": {
+  "name": "PILOT 805",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "806": {
+  "name": "PILOT 806",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "807": {
+  "name": "PILOT 807",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "808": {
+  "name": "PILOT 808",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "809": {
+  "name": "PILOT 809",
+  "subjugation": "SIF COMMANDER",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "810": {
+  "name": "PILOT 810",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "811": {
+  "name": "PILOT 811",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "812": {
+  "name": "PILOT 812",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "813": {
+  "name": "PILOT 813",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "814": {
+  "name": "PILOT 814",
+  "subjugation": "SIF COMMANDER",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "815": {
+  "name": "PILOT 815",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "816": {
+  "name": "PILOT 816",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "817": {
+  "name": "PILOT 817",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "818": {
+  "name": "PILOT 818",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "819": {
+  "name": "PILOT 819",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "820": {
+  "name": "PILOT 820",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "821": {
+  "name": "PILOT 821",
+  "subjugation": "SIF COMMANDER",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "822": {
+  "name": "PILOT 822",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "823": {
+  "name": "PILOT 823",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "824": {
+  "name": "PILOT 824",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "825": {
+  "name": "PILOT 825",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "826": {
+  "name": "PILOT 826",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "827": {
+  "name": "PILOT 827",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "828": {
+  "name": "PILOT 828",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "829": {
+  "name": "PILOT 829",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "830": {
+  "name": "PILOT 830",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "831": {
+  "name": "PILOT 831",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "832": {
+  "name": "PILOT 832",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "833": {
+  "name": "PILOT 833",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "834": {
+  "name": "PILOT 834",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "835": {
+  "name": "PILOT 835",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "836": {
+  "name": "PILOT 836",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "837": {
+  "name": "PILOT 837",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "838": {
+  "name": "PILOT 838",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "839": {
+  "name": "PILOT 839",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "840": {
+  "name": "PILOT 840",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "841": {
+  "name": "PILOT 841",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "842": {
+  "name": "PILOT 842",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "843": {
+  "name": "PILOT 843",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "844": {
+  "name": "PILOT 844",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": true
+ },
+ "845": {
+  "name": "PILOT 845",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "846": {
+  "name": "PILOT 846",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "847": {
+  "name": "PILOT 847",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "848": {
+  "name": "PILOT 848",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "849": {
+  "name": "PILOT 849",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "850": {
+  "name": "PILOT 850",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "851": {
+  "name": "PILOT 851",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "852": {
+  "name": "PILOT 852",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "853": {
+  "name": "PILOT 853",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "854": {
+  "name": "PILOT 854",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "855": {
+  "name": "PILOT 855",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "856": {
+  "name": "PILOT 856",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "857": {
+  "name": "PILOT 857",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "858": {
+  "name": "PILOT 858",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "859": {
+  "name": "PILOT 859",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "860": {
+  "name": "PILOT 860",
+  "subjugation": "CRHONA THROT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "861": {
+  "name": "PILOT 861",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "862": {
+  "name": "PILOT 862",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "863": {
+  "name": "PILOT 863",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "864": {
+  "name": "PILOT 864",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "865": {
+  "name": "PILOT 865",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "866": {
+  "name": "PILOT 866",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "867": {
+  "name": "PILOT 867",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "868": {
+  "name": "PILOT 868",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "869": {
+  "name": "PILOT 869",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "870": {
+  "name": "PILOT 870",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "871": {
+  "name": "PILOT 871",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "872": {
+  "name": "PILOT 872",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "873": {
+  "name": "PILOT 873",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "874": {
+  "name": "PILOT 874",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "875": {
+  "name": "PILOT 875",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "876": {
+  "name": "PILOT 876",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "877": {
+  "name": "PILOT 877",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "878": {
+  "name": "PILOT 878",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "879": {
+  "name": "PILOT 879",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "880": {
+  "name": "PILOT 880",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "881": {
+  "name": "PILOT 881",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "882": {
+  "name": "PILOT 882",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "883": {
+  "name": "PILOT 883",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "884": {
+  "name": "PILOT 884",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "885": {
+  "name": "PILOT 885",
+  "subjugation": "CRHONA THROT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "886": {
+  "name": "PILOT 886",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "887": {
+  "name": "PILOT 887",
+  "subjugation": "CRHONA THROT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "888": {
+  "name": "PILOT 888",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "889": {
+  "name": "PILOT 889",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "890": {
+  "name": "PILOT 890",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "891": {
+  "name": "PILOT 891",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "892": {
+  "name": "PILOT 892",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "893": {
+  "name": "PILOT 893",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "894": {
+  "name": "PILOT 894",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "895": {
+  "name": "PILOT 895",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "896": {
+  "name": "PILOT 896",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "897": {
+  "name": "PILOT 897",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 3,
+  "sovereign": false,
+  "death": false
+ },
+ "898": {
+  "name": "PILOT 898",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "899": {
+  "name": "PILOT 899",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "900": {
+  "name": "PILOT 900",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "901": {
+  "name": "PILOT 901",
+  "subjugation": "CRHONA THROT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "902": {
+  "name": "PILOT 902",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "903": {
+  "name": "PILOT 903",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "904": {
+  "name": "PILOT 904",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "905": {
+  "name": "PILOT 905",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "906": {
+  "name": "PILOT 906",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "907": {
+  "name": "PILOT 907",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "908": {
+  "name": "PILOT 908",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "909": {
+  "name": "PILOT 909",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "910": {
+  "name": "PILOT 910",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "911": {
+  "name": "PILOT 911",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "912": {
+  "name": "PILOT 912",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "913": {
+  "name": "PILOT 913",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "914": {
+  "name": "PILOT 914",
+  "subjugation": "CRHONA THROT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "915": {
+  "name": "PILOT 915",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "916": {
+  "name": "PILOT 916",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "917": {
+  "name": "PILOT 917",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "918": {
+  "name": "PILOT 918",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "919": {
+  "name": "PILOT 919",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "920": {
+  "name": "PILOT 920",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "921": {
+  "name": "PILOT 921",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "922": {
+  "name": "PILOT 922",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "923": {
+  "name": "PILOT 923",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "924": {
+  "name": "PILOT 924",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "925": {
+  "name": "PILOT 925",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "926": {
+  "name": "PILOT 926",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "927": {
+  "name": "PILOT 927",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "928": {
+  "name": "PILOT 928",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "929": {
+  "name": "PILOT 929",
+  "subjugation": "CRHONA THROT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "930": {
+  "name": "PILOT 930",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "931": {
+  "name": "PILOT 931",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "932": {
+  "name": "PILOT 932",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "933": {
+  "name": "PILOT 933",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "934": {
+  "name": "PILOT 934",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "935": {
+  "name": "PILOT 935",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "936": {
+  "name": "PILOT 936",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "937": {
+  "name": "PILOT 937",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "938": {
+  "name": "PILOT 938",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "939": {
+  "name": "PILOT 939",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "940": {
+  "name": "PILOT 940",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "941": {
+  "name": "PILOT 941",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "942": {
+  "name": "PILOT 942",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "943": {
+  "name": "PILOT 943",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "944": {
+  "name": "PILOT 944",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "945": {
+  "name": "PILOT 945",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "946": {
+  "name": "PILOT 946",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "947": {
+  "name": "PILOT 947",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "948": {
+  "name": "PILOT 948",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "949": {
+  "name": "PILOT 949",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "950": {
+  "name": "PILOT 950",
+  "subjugation": "CRHONA THROT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "951": {
+  "name": "PILOT 951",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "952": {
+  "name": "PILOT 952",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "953": {
+  "name": "PILOT 953",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "954": {
+  "name": "PILOT 954",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "955": {
+  "name": "PILOT 955",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "956": {
+  "name": "PILOT 956",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "957": {
+  "name": "PILOT 957",
+  "subjugation": "PSIONIC FUROR",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "958": {
+  "name": "PILOT 958",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "959": {
+  "name": "PILOT 959",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "960": {
+  "name": "PILOT 960",
+  "subjugation": "CRHONA THROT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "961": {
+  "name": "PILOT 961",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "962": {
+  "name": "PILOT 962",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "963": {
+  "name": "PILOT 963",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "964": {
+  "name": "PILOT 964",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "965": {
+  "name": "PILOT 965",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "966": {
+  "name": "PILOT 966",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "967": {
+  "name": "PILOT 967",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "968": {
+  "name": "PILOT 968",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "969": {
+  "name": "PILOT 969",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "970": {
+  "name": "PILOT 970",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "971": {
+  "name": "PILOT 971",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "972": {
+  "name": "PILOT 972",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "973": {
+  "name": "PILOT 973",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "974": {
+  "name": "PILOT 974",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "975": {
+  "name": "PILOT 975",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "976": {
+  "name": "PILOT 976",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "977": {
+  "name": "PILOT 977",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "978": {
+  "name": "PILOT 978",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "979": {
+  "name": "PILOT 979",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "980": {
+  "name": "PILOT 980",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "981": {
+  "name": "PILOT 981",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "982": {
+  "name": "PILOT 982",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "983": {
+  "name": "PILOT 983",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "984": {
+  "name": "PILOT 984",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "985": {
+  "name": "PILOT 985",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "986": {
+  "name": "PILOT 986",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "987": {
+  "name": "PILOT 987",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "988": {
+  "name": "PILOT 988",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "989": {
+  "name": "PILOT 989",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "990": {
+  "name": "PILOT 990",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "991": {
+  "name": "PILOT 991",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "992": {
+  "name": "PILOT 992",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "993": {
+  "name": "PILOT 993",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "994": {
+  "name": "PILOT 994",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "995": {
+  "name": "PILOT 995",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "996": {
+  "name": "PILOT 996",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "997": {
+  "name": "PILOT 997",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "998": {
+  "name": "PILOT 998",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "999": {
+  "name": "PILOT 999",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1000": {
+  "name": "PILOT 1000",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1001": {
+  "name": "PILOT 1001",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 6,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1002": {
+  "name": "PILOT 1002",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1003": {
+  "name": "PILOT 1003",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1004": {
+  "name": "PILOT 1004",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1005": {
+  "name": "PILOT 1005",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1006": {
+  "name": "PILOT 1006",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1007": {
+  "name": "PILOT 1007",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1008": {
+  "name": "PILOT 1008",
+  "subjugation": "CRHONA THROT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1009": {
+  "name": "PILOT 1009",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1010": {
+  "name": "PILOT 1010",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "1011": {
+  "name": "PILOT 1011",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1012": {
+  "name": "PILOT 1012",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "1013": {
+  "name": "PILOT 1013",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1014": {
+  "name": "PILOT 1014",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1015": {
+  "name": "PILOT 1015",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1016": {
+  "name": "PILOT 1016",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1017": {
+  "name": "PILOT 1017",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1018": {
+  "name": "PILOT 1018",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1019": {
+  "name": "PILOT 1019",
+  "subjugation": "SIF COMMANDER",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1020": {
+  "name": "PILOT 1020",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1021": {
+  "name": "PILOT 1021",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "1022": {
+  "name": "PILOT 1022",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1023": {
+  "name": "PILOT 1023",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1024": {
+  "name": "PILOT 1024",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1025": {
+  "name": "PILOT 1025",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1026": {
+  "name": "PILOT 1026",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1027": {
+  "name": "PILOT 1027",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1028": {
+  "name": "PILOT 1028",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1029": {
+  "name": "PILOT 1029",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1030": {
+  "name": "PILOT 1030",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1031": {
+  "name": "PILOT 1031",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1032": {
+  "name": "PILOT 1032",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1033": {
+  "name": "PILOT 1033",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1034": {
+  "name": "PILOT 1034",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1035": {
+  "name": "PILOT 1035",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1036": {
+  "name": "PILOT 1036",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1037": {
+  "name": "PILOT 1037",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1038": {
+  "name": "PILOT 1038",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1039": {
+  "name": "PILOT 1039",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1040": {
+  "name": "PILOT 1040",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1041": {
+  "name": "PILOT 1041",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1042": {
+  "name": "PILOT 1042",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1043": {
+  "name": "PILOT 1043",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1044": {
+  "name": "PILOT 1044",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1045": {
+  "name": "PILOT 1045",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1046": {
+  "name": "PILOT 1046",
+  "subjugation": "TECHNOCRAT ARMAMENT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1047": {
+  "name": "PILOT 1047",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1048": {
+  "name": "PILOT 1048",
+  "subjugation": "SIF COMMANDER",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1049": {
+  "name": "PILOT 1049",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1050": {
+  "name": "PILOT 1050",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1051": {
+  "name": "PILOT 1051",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1052": {
+  "name": "PILOT 1052",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1053": {
+  "name": "PILOT 1053",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1054": {
+  "name": "PILOT 1054",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1055": {
+  "name": "PILOT 1055",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 7,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1056": {
+  "name": "PILOT 1056",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1057": {
+  "name": "PILOT 1057",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1058": {
+  "name": "PILOT 1058",
+  "subjugation": "SIF COMMANDER",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1059": {
+  "name": "PILOT 1059",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1060": {
+  "name": "PILOT 1060",
+  "subjugation": "CRHONA THROT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1061": {
+  "name": "PILOT 1061",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1062": {
+  "name": "PILOT 1062",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1063": {
+  "name": "PILOT 1063",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1064": {
+  "name": "PILOT 1064",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1065": {
+  "name": "PILOT 1065",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1066": {
+  "name": "PILOT 1066",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1067": {
+  "name": "PILOT 1067",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1068": {
+  "name": "PILOT 1068",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1069": {
+  "name": "PILOT 1069",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1070": {
+  "name": "PILOT 1070",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1071": {
+  "name": "PILOT 1071",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1072": {
+  "name": "PILOT 1072",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1073": {
+  "name": "PILOT 1073",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1074": {
+  "name": "PILOT 1074",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "1075": {
+  "name": "PILOT 1075",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1076": {
+  "name": "PILOT 1076",
+  "subjugation": "SIF COMMANDER",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1077": {
+  "name": "PILOT 1077",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1078": {
+  "name": "PILOT 1078",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1079": {
+  "name": "PILOT 1079",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1080": {
+  "name": "PILOT 1080",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1081": {
+  "name": "PILOT 1081",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1082": {
+  "name": "PILOT 1082",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1083": {
+  "name": "PILOT 1083",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1084": {
+  "name": "PILOT 1084",
+  "subjugation": "SIF COMMANDER",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1085": {
+  "name": "PILOT 1085",
+  "subjugation": "CRHONA THROT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1086": {
+  "name": "PILOT 1086",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1087": {
+  "name": "PILOT 1087",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1088": {
+  "name": "PILOT 1088",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1089": {
+  "name": "PILOT 1089",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 7,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1090": {
+  "name": "PILOT 1090",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1091": {
+  "name": "PILOT 1091",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1092": {
+  "name": "PILOT 1092",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1093": {
+  "name": "PILOT 1093",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "1094": {
+  "name": "PILOT 1094",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1095": {
+  "name": "PILOT 1095",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1096": {
+  "name": "PILOT 1096",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1097": {
+  "name": "PILOT 1097",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1098": {
+  "name": "PILOT 1098",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1099": {
+  "name": "PILOT 1099",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1100": {
+  "name": "PILOT 1100",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1101": {
+  "name": "PILOT 1101",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1102": {
+  "name": "PILOT 1102",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1103": {
+  "name": "PILOT 1103",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1104": {
+  "name": "PILOT 1104",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1105": {
+  "name": "PILOT 1105",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 1,
+  "sovereign": false,
+  "death": false
+ },
+ "1106": {
+  "name": "PILOT 1106",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1107": {
+  "name": "PILOT 1107",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1108": {
+  "name": "PILOT 1108",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1109": {
+  "name": "PILOT 1109",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1110": {
+  "name": "PILOT 1110",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1111": {
+  "name": "PILOT 1111",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1112": {
+  "name": "PILOT 1112",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1113": {
+  "name": "PILOT 1113",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": false,
+  "level": 0,
+  "sovereign": true,
+  "death": false
+ },
+ "1114": {
+  "name": "PILOT 1114",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1115": {
+  "name": "PILOT 1115",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": true
+ },
+ "1116": {
+  "name": "PILOT 1116",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1117": {
+  "name": "PILOT 1117",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1118": {
+  "name": "PILOT 1118",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1119": {
+  "name": "PILOT 1119",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1120": {
+  "name": "PILOT 1120",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1121": {
+  "name": "PILOT 1121",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1122": {
+  "name": "PILOT 1122",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1123": {
+  "name": "PILOT 1123",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1124": {
+  "name": "PILOT 1124",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1125": {
+  "name": "PILOT 1125",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1126": {
+  "name": "PILOT 1126",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1127": {
+  "name": "PILOT 1127",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1128": {
+  "name": "PILOT 1128",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1129": {
+  "name": "PILOT 1129",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 1,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1130": {
+  "name": "PILOT 1130",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1131": {
+  "name": "PILOT 1131",
+  "subjugation": "POTENTATE COERCION",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1132": {
+  "name": "PILOT 1132",
+  "subjugation": "ALKAHEST DRIFT",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1133": {
+  "name": "PILOT 1133",
+  "subjugation": "CRHONA THROT",
+  "kult": 2,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1134": {
+  "name": "PILOT 1134",
+  "subjugation": "CRHONA THROT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1135": {
+  "name": "PILOT 1135",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 5,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1136": {
+  "name": "PILOT 1136",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 6,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1137": {
+  "name": "PILOT 1137",
+  "subjugation": "DREDGE NOBILITY",
+  "kult": 0,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1138": {
+  "name": "PILOT 1138",
+  "subjugation": "HERMETIC STRACHT",
+  "kult": 3,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ },
+ "1139": {
+  "name": "PILOT 1139",
+  "subjugation": "CRHONA THROT",
+  "kult": 4,
+  "kultRolled": true,
+  "level": 0,
+  "sovereign": false,
+  "death": false
+ }
+}

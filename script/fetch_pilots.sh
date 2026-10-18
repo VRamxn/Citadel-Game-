@@ -2,7 +2,8 @@
 # Downloads mainnet PILOT metadata (ids 0..1139) into data/pilots/<id>.json, politely, honouring Retry-After.
 set -u
 cd "$(dirname "$0")/../data" && mkdir -p pilots
-BASE="https://gateway.pinata.cloud/ipfs/bafybeihgg5vrez4nq5mmu4tvuqkvwv7sp62dglljup5azrluraeql2ytta"
+# Pinata rate-limits hard; Filebase serves the same CID
+BASE="${PILOT_GATEWAY:-https://ipfs.filebase.io/ipfs/bafybeihgg5vrez4nq5mmu4tvuqkvwv7sp62dglljup5azrluraeql2ytta}"
 N=${PILOT_SUPPLY:-1140}
 for i in $(seq 0 $((N - 1))); do
   f="pilots/$i.json"
@@ -14,7 +15,7 @@ for i in $(seq 0 $((N - 1))); do
     echo "$(date +%T) id $i: HTTP $code, waiting ${wait}s"
     sleep "$wait"
   done
-  sleep 2
+  sleep 0.3
 done
 rm -f /tmp/pilot-hdr.$$
 echo "done: $(grep -l attributes pilots/*.json | wc -l) / $N"

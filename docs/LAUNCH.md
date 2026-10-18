@@ -30,12 +30,15 @@ unbridged: they sit in a vault on Ethereum while their copies play on Base, and 
 
 **PILOT keep what was bought on mainnet** (`data/pilot-traits.json`):
 - **LEVEL** (0–9, paid in old DRAKMA), read from the original contract's `levels(id)`: 111 PILOT were upleveled.
-- **SOVEREIGNTY**: 118 sovereigns, read from `getSovereign(id)`. That's 56 RELIK-born (`data/born-sovereigns.json`)
+- **SOVEREIGNTY**: 118 sovereigns, read from `getSovereign(id)` (which returns `isSovereign, chargeCount, kult`). That's 56 RELIK-born (`data/born-sovereigns.json`)
   and 62 seats bought with old DRAKMA. Sovereigns keep their KULT, and `Technocracy.seedSovereigns` fills their seats
   at launch. The 10 empty seats (8 born, 2 bought) can be bought or won by overthrow.
-- **Revealed SUBJUGATION and DEATH** from the original metadata. PILOT that were never revealed (metadata name
-  "PILOT <id>") get them rolled from `keccak256("CITADEL PILOT", id)` with THE PILOT post's rarities. That's a public,
-  fixed formula nobody can steer, and the same goes for KULT on non-sovereigns.
+- **SUBJUGATION and DEATH** come from each PILOT's original metadata. Every PILOT is revealed there: HERMETIC
+  STRACHT + VOID is just the most common combination, about half the supply, as THE PILOT post's rarities predict.
+  DEATH shows as "ETERNAL" on 33 PILOT.
+- **KULT** was only ever recorded for sovereigns that bribed one, by the original contract, and those carry over. Every other PILOT's
+  KULT is rolled from `keccak256("CITADEL PILOT", id)` with the post's rarities. That's a fixed public formula nobody
+  can steer.
 
 **CITADEL** traits come from the IPFS metadata snapshot (`data/citadel-traits.json`).
 

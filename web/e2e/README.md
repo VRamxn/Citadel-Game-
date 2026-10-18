@@ -6,7 +6,7 @@ Drive the real client in headless Chromium against a fresh local world, as dev a
 anvil &
 forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300   # fresh world
 npm run dev &                                                     # http://localhost:5173
-npm run e2e:basics    # faucet, approvals, lite, build, train, instant + travelling raids, every panel
+npm run e2e:basics    # bridge originals in, faucet, approvals, lite, build, train, raids, every panel
 npm run e2e:war       # PILOT claim, PILOT-led siege to capture, colonize, sovereign seat, bribe
 ```
 

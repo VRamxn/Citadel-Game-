@@ -97,11 +97,21 @@ await page.evaluate(() => localStorage.setItem("citadel.dev", "9"));
 await page.reload();
 await sleep(3000);
 
-let mine;
-await step("starter kit + approvals", async () => {
+await step("get stand-in originals, bridge them over, take testnet DRAKMA", async () => {
+  await tab("BRIDGE");
+  await clickText("testnet: get 2 CITADEL + 2 PILOT");
+  await waitToast(/testnet originals: done/);
+  await clickText("find my originals");
+  for (let i = 0; i < 120 && !(await page.evaluate(() => document.querySelectorAll(".item .chk input").length)); i++) await sleep(250);
+  await page.evaluate(() => document.querySelectorAll(".item .chk input").forEach((c) => c.click()));
+  await clickText("bridge 4 to");
+  await waitToast(/bridge 4 to .*: done/, 60000);
   await tab("ASSETS");
-  await clickText("Claim starter kit");
-  await waitToast(/testnet faucet: done/);
+  await clickText("Testnet: take 5M DRAKMA");
+  await waitToast(/testnet DRAKMA faucet: done/);
+});
+let mine;
+await step("approvals", async () => {
   for (const t of ["CITADEL", "PILOT", "MENTAT"]) {
     await clickText(`approve ${t}`);
     await waitToast(new RegExp(`approve ${t.toLowerCase()}: done`));
@@ -133,10 +143,6 @@ await step("academy, 3000 SIF (hurried)", async () => {
   await waitToast(/train 3000 SIF GATTACA: done/);
   await clickText("hurry 3000");
   await waitToast(/hurry SIF GATTACA: done/);
-});
-await step("claim the CITADEL's PILOT (64k DK) from its panel", async () => {
-  await clickText("claim PILOT");
-  await waitToast(/claim PILOT for CITADEL .*: done/);
 });
 await step("lay siege to CITADEL 70 with 3000 SIF and a PILOT", async () => {
   await clickCitadel(70);
@@ -176,7 +182,7 @@ await step("the captured tile now holds our GEN1 CITADEL", async () => {
   if (!/GEN1/.test(p) || !/yours/.test(p)) throw new Error("tile not ours");
 });
 await shot("captured");
-await step("colonize (-1,1) with the claimed PILOT", async () => {
+await step("colonize (-1,1) with the other bridged PILOT", async () => {
   await tab("ASSETS");
   await selectValue(".item .row.wrap select", 0, "2");
   await clickText("colonize…");

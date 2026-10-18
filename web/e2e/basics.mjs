@@ -71,10 +71,18 @@ await page.evaluate(() => localStorage.setItem("citadel.dev", "9"));
 await page.reload();
 await sleep(3000);
 
-await step("claim starter kit", async () => {
+await step("get stand-in originals, bridge them over, take testnet DRAKMA", async () => {
+  await tab("BRIDGE");
+  await clickText("testnet: get 2 CITADEL + 2 PILOT");
+  await waitToast(/testnet originals: done/);
+  await clickText("find my originals");
+  for (let i = 0; i < 120 && !(await page.evaluate(() => document.querySelectorAll(".item .chk input").length)); i++) await sleep(250);
+  await page.evaluate(() => document.querySelectorAll(".item .chk input").forEach((c) => c.click()));
+  await clickText("bridge 4 to");
+  await waitToast(/bridge 4 to .*: done/, 60000);
   await tab("ASSETS");
-  await clickText("Claim starter kit");
-  await waitToast(/testnet faucet: done/);
+  await clickText("Testnet: take 5M DRAKMA");
+  await waitToast(/testnet DRAKMA faucet: done/);
 });
 await step("approve NFTs", async () => {
   for (const t of ["CITADEL", "PILOT", "MENTAT"]) {
