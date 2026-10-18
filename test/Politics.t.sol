@@ -178,6 +178,64 @@ contract TechnocracyTest is Base {
         assertTrue(_cfg().distortion);
     }
 
+    function test_vacateDestroyedSovereignSeat() public {
+        // a GEN1 sovereign PILOT dies in a failed siege; its seat can be freed and bought again
+        _lite(alice, 0, 5, 0, 0);
+        _lite(bob, 1, 6, 0, 1);
+        uint256 p = _pilot(alice, 0, 1);
+        vm.prank(alice);
+        t.becomeSovereign(p);
+        assertEq(t.sovereignCount(), 1);
+        assertEq(t.boughtSeats(), 1);
+        _army(alice, 0, SIF, 5);
+        _army(bob, 1, THROT, 20);
+        vm.prank(alice);
+        war.siege(0, 1, _units(5, 0, 0, 0), p + 1);
+        skip(1 hours);
+        sie.advanceSiege(1, 1);
+        vm.expectRevert();
+        d.pilot.ownerOf(p);
+
+        vm.expectRevert(Technocracy.NotSovereign.selector);
+        t.vacate(12345); // never a sovereign
+        t.vacate(p);
+        assertEq(t.sovereignCount(), 0);
+        assertEq(t.boughtSeats(), 0);
+        vm.expectRevert(Technocracy.NotSovereign.selector);
+        t.vacate(p); // only once
+    }
+
+    function test_councilNeedsAMajorityAndOneVotePerSeat() public {
+        vm.prank(alice);
+        uint256 a = t.claimPilot(0);
+        vm.prank(bob);
+        uint256 b = t.claimPilot(1);
+        vm.prank(bob);
+        t.becomeSovereign(b);
+        vm.prank(carol);
+        uint256 c = t.claimPilot(2);
+        vm.prank(carol);
+        t.becomeSovereign(c); // 3 seats
+        vm.prank(alice);
+        uint256 id = d.council.propose(a, address(d.game), abi.encodeWithSignature("startSeason()"), "season 2");
+        vm.expectRevert(); // 1 of 3
+        d.council.execute(id);
+        vm.prank(alice);
+        vm.expectRevert(); // already voted (proposer's yes)
+        d.council.vote(id, a, true);
+        vm.prank(bob);
+        d.council.vote(id, b, false);
+        vm.prank(carol);
+        d.council.vote(id, c, true); // 2 of 3
+        // the council doesn't own the game yet: the call itself fails
+        vm.expectRevert();
+        d.council.execute(id);
+        skip(8 days);
+        vm.prank(carol);
+        vm.expectRevert(); // voting closed
+        d.council.vote(id, c, true);
+    }
+
     function test_nonSovereignCannotPropose() public {
         vm.prank(bob);
         uint256 b = t.claimPilot(1);
