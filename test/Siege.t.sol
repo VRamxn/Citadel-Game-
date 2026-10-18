@@ -97,12 +97,9 @@ contract SiegeTest is Base {
     }
 
     function test_sovereignCannotBeSieged() public {
-        vm.prank(admin);
-        uint256 sov = d.faucet
-            .grantPilot(
-                carol,
-                Traits.PilotTraits({generation: 0, subjugation: 0, kult: 0, level: 0, sovereign: true, death: false})
-            );
+        uint256 sov = _pilotT(
+            carol, Traits.PilotTraits({generation: 0, subjugation: 0, kult: 0, level: 0, sovereign: true, death: false})
+        );
         uint256[] memory ps = new uint256[](1);
         ps[0] = sov;
         vm.prank(carol);

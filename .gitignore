@@ -9,3 +9,7 @@ web/node_modules/
 web/dist/
 web/tsconfig.tsbuildinfo
 web/e2e/shots/
+data/pilots/
+web/public/claims.json
+data/drakma-holders.json
+data/drakma-from-deployer.json

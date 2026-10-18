@@ -8,35 +8,12 @@ export default [
     "internalType": "address"
    },
    {
-    "name": "citadel_",
-    "type": "address",
-    "internalType": "contract CitadelNFT"
-   },
-   {
-    "name": "pilot_",
-    "type": "address",
-    "internalType": "contract PilotNFT"
-   },
-   {
     "name": "drakma_",
     "type": "address",
     "internalType": "contract Drakma"
    }
   ],
   "stateMutability": "nonpayable"
- },
- {
-  "type": "function",
-  "name": "CITADEL_PER_DRIP",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "stateMutability": "view"
  },
  {
   "type": "function",
@@ -47,32 +24,6 @@ export default [
     "name": "",
     "type": "uint256",
     "internalType": "uint256"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "PILOT_PER_DRIP",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "citadel",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "address",
-    "internalType": "contract CitadelNFT"
    }
   ],
   "stateMutability": "view"
@@ -118,24 +69,6 @@ export default [
  },
  {
   "type": "function",
-  "name": "grantCitadel",
-  "inputs": [
-   {
-    "name": "to",
-    "type": "address",
-    "internalType": "address"
-   },
-   {
-    "name": "id",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "outputs": [],
-  "stateMutability": "nonpayable"
- },
- {
-  "type": "function",
   "name": "grantDrakma",
   "inputs": [
    {
@@ -154,75 +87,6 @@ export default [
  },
  {
   "type": "function",
-  "name": "grantPilot",
-  "inputs": [
-   {
-    "name": "to",
-    "type": "address",
-    "internalType": "address"
-   },
-   {
-    "name": "t",
-    "type": "tuple",
-    "internalType": "struct Traits.PilotTraits",
-    "components": [
-     {
-      "name": "generation",
-      "type": "uint8",
-      "internalType": "uint8"
-     },
-     {
-      "name": "subjugation",
-      "type": "uint8",
-      "internalType": "uint8"
-     },
-     {
-      "name": "kult",
-      "type": "uint8",
-      "internalType": "uint8"
-     },
-     {
-      "name": "level",
-      "type": "uint8",
-      "internalType": "uint8"
-     },
-     {
-      "name": "sovereign",
-      "type": "bool",
-      "internalType": "bool"
-     },
-     {
-      "name": "death",
-      "type": "bool",
-      "internalType": "bool"
-     }
-    ]
-   }
-  ],
-  "outputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "stateMutability": "nonpayable"
- },
- {
-  "type": "function",
-  "name": "nextCitadel",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
   "name": "owner",
   "inputs": [],
   "outputs": [
@@ -230,19 +94,6 @@ export default [
     "name": "",
     "type": "address",
     "internalType": "address"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "pilot",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "address",
-    "internalType": "contract PilotNFT"
    }
   ],
   "stateMutability": "view"
@@ -269,31 +120,6 @@ export default [
  },
  {
   "type": "event",
-  "name": "Dripped",
-  "inputs": [
-   {
-    "name": "to",
-    "type": "address",
-    "indexed": true,
-    "internalType": "address"
-   },
-   {
-    "name": "citadels",
-    "type": "uint256[]",
-    "indexed": false,
-    "internalType": "uint256[]"
-   },
-   {
-    "name": "pilots",
-    "type": "uint256[]",
-    "indexed": false,
-    "internalType": "uint256[]"
-   }
-  ],
-  "anonymous": false
- },
- {
-  "type": "event",
   "name": "OwnershipTransferred",
   "inputs": [
    {
@@ -314,11 +140,6 @@ export default [
  {
   "type": "error",
   "name": "AlreadyDripped",
-  "inputs": []
- },
- {
-  "type": "error",
-  "name": "OutOfCitadel",
   "inputs": []
  },
  {

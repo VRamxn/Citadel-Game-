@@ -39,7 +39,6 @@ type Detail = {
   fleetPoints: bigint;
   pilotCost: bigint;
   costs: [bigint, bigint][];
-  pilotClaimed: boolean;
   mentatClaimed: boolean;
 };
 
@@ -70,12 +69,10 @@ function useDetail(c?: Citadel) {
           lv >= 10 ? Promise.resolve([0n, 0n] as [bigint, bigint]) : chain.read<[bigint, bigint]>("game", "buildCost", [b, lv + 1]),
         ),
       );
-      const [pilotClaimed, mentatClaimed] = await Promise.all([
-        id < 1024n ? chain.read<boolean>("technocracy", "citadelClaimedPilot", [id]) : true,
-        c.generation === 0 && c.sekt === 0 ? chain.read<boolean>("techTree", "relikMentatClaimed", [id]) : true,
-      ]);
+      const mentatClaimed =
+        c.generation === 0 && c.sekt === 0 ? await chain.read<boolean>("techTree", "relikMentatClaimed", [id]) : true;
       if (live)
-        setD({ vault, rate, research, garrison, training, construction, stats, pilots, fleetPoints, pilotCost, costs, pilotClaimed, mentatClaimed });
+        setD({ vault, rate, research, garrison, training, construction, stats, pilots, fleetPoints, pilotCost, costs, mentatClaimed });
     })().catch(() => {});
     return () => {
       live = false;
@@ -361,11 +358,6 @@ function OwnActions({ c, d }: { c: Citadel; d: Detail }) {
             </button>
           ))}
         {c.mentat > 0n && <span className="tag">MENTAT #{(c.mentat - 1n).toString()}</span>}
-        {!d.pilotClaimed && (
-          <button onClick={() => act(`claim PILOT for CITADEL ${id}`, () => chain.write("technocracy", "claimPilot", [id]))}>
-            claim PILOT (64k DK)
-          </button>
-        )}
         {!d.mentatClaimed && (
           <button onClick={() => act(`claim MENTAT for RELIK ${id}`, () => chain.write("techTree", "claimRelikMentat", [id]))}>
             claim RELIK MENTAT

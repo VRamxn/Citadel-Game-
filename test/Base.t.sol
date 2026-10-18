@@ -11,6 +11,7 @@ import {ViewModule} from "../src/game/ViewModule.sol";
 import {GameStorage} from "../src/game/GameStorage.sol";
 import {GameBase} from "../src/game/GameBase.sol";
 import {Traits} from "../src/lib/Traits.sol";
+import {LocalMessenger} from "../src/bridge/LocalMessenger.sol";
 
 /// @notice Shared fixture: the full system, with hand-picked GEN0 traits for CITADEL #0..15:
 ///  #0  RELIK, tech PROPULSION      #1  ELEKT, tech PRESERVATIVE   #2  ELEKT, tech MILITANT
@@ -39,10 +40,17 @@ abstract contract Base is Test, Stack {
     uint8 constant B_ACADEMY = 5;
 
     uint256[] none;
+    uint256 nextOriginalPilot; // GEN0 PILOT ids handed out by _pilot
+    LocalMessenger messenger;
 
     function setUp() public virtual {
         vm.startPrank(admin);
-        d = _deploy(admin, treasury, 12);
+        messenger = new LocalMessenger();
+        d = _deployL2(admin, treasury, 12, messenger, bytes32(0), true);
+        // tests stand in for the bridge when they need a bridged original
+        d.citadel.grantRole(d.citadel.BRIDGE_ROLE(), admin);
+        d.pilot.grantRole(d.pilot.BRIDGE_ROLE(), admin);
+        d.pilot.grantRole(d.pilot.MINTER_ROLE(), admin);
         bytes memory t = new bytes(16 * 6);
         for (uint256 i; i < 16; ++i) {
             t[i * 6 + 1] = bytes1(uint8(Traits.SEKT_ELEKT));
@@ -67,7 +75,7 @@ abstract contract Base is Test, Stack {
 
     function _give(address who, uint256 citadelId) internal {
         vm.startPrank(admin);
-        d.faucet.grantCitadel(who, citadelId);
+        d.citadel.bridgeMint(who, citadelId);
         d.faucet.grantDrakma(who, 50_000_000 ether);
         vm.stopPrank();
         vm.startPrank(who);
@@ -78,14 +86,26 @@ abstract contract Base is Test, Stack {
     }
 
     function _pilot(address who, uint8 subjugation, uint8 generation) internal returns (uint256 id) {
-        vm.prank(admin);
-        id = d.faucet
-            .grantPilot(
-                who,
-                Traits.PilotTraits({
-                    generation: generation, subjugation: subjugation, kult: 0, level: 0, sovereign: false, death: false
-                })
-            );
+        return _pilotT(
+            who,
+            Traits.PilotTraits({
+                generation: generation, subjugation: subjugation, kult: 0, level: 0, sovereign: false, death: false
+            })
+        );
+    }
+
+    /// @dev GEN0: load traits for the next original id and bridge it in. GEN1+: mint natively like the game does.
+    function _pilotT(address who, Traits.PilotTraits memory t) internal returns (uint256 id) {
+        vm.startPrank(admin);
+        if (t.generation == 0) {
+            id = nextOriginalPilot++;
+            uint8 flags = (t.sovereign ? 1 : 0) | (t.death ? 2 : 0);
+            d.pilot.setTraits(id, abi.encodePacked(t.subjugation, t.kult, t.level, flags, uint8(0)));
+            d.pilot.bridgeMint(who, id);
+        } else {
+            id = d.pilot.mint(who, t);
+        }
+        vm.stopPrank();
     }
 
     function _lite(address who, uint256 id, int16 q, int16 r, uint8 faction) internal {

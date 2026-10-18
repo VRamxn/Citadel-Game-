@@ -17,6 +17,19 @@ export default [
  },
  {
   "type": "function",
+  "name": "BRIDGE_ROLE",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "bytes32",
+    "internalType": "bytes32"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "DEFAULT_ADMIN_ROLE",
   "inputs": [],
   "outputs": [
@@ -50,19 +63,6 @@ export default [
     "name": "",
     "type": "uint256",
     "internalType": "uint256"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "MINTER_ROLE",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "bytes32",
-    "internalType": "bytes32"
    }
   ],
   "stateMutability": "view"
@@ -103,6 +103,37 @@ export default [
    }
   ],
   "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "bridgeBurn",
+  "inputs": [
+   {
+    "name": "id",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "bridgeMint",
+  "inputs": [
+   {
+    "name": "to",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "id",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
  },
  {
   "type": "function",
@@ -239,24 +270,6 @@ export default [
    }
   ],
   "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "mint",
-  "inputs": [
-   {
-    "name": "to",
-    "type": "address",
-    "internalType": "address"
-   },
-   {
-    "name": "id",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "outputs": [],
-  "stateMutability": "nonpayable"
  },
  {
   "type": "function",

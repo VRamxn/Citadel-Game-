@@ -32,6 +32,11 @@ for (const [file, name, as] of [
   ["Technocracy.sol", "Technocracy", "technocracy"],
   ["SovereignCouncil.sol", "SovereignCouncil", "council"],
   ["TestnetFaucet.sol", "TestnetFaucet", "faucet"],
+  ["TestnetFaucet.sol", "MockOriginalsFaucet", "originalsFaucet"],
+  ["CitadelVaultL1.sol", "CitadelVaultL1", "vault"],
+  ["CitadelBridgeL2.sol", "CitadelBridgeL2", "bridge"],
+  ["DrakmaClaim.sol", "DrakmaClaim", "claim"],
+  ["DrakmaClaim.sol", "DrakmaClaimRelayL1", "claimRelay"],
 ])
   write(as, read(file, name));
 console.log(`game ABI: ${seen.size} entries`);

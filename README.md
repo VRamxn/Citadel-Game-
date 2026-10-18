@@ -36,9 +36,10 @@ terminal (`raid 3 7 100`, `status 3`, `help`).
 | Path | What |
 |---|---|
 | `src/game/` | The game: `CitadelGame` (one address, all state) routes calls to `EconomyModule`, `WarModule`, `SiegeModule` and `ViewModule` by delegatecall (split only for the 24KB size limit) |
-| `src/*.sol` | `CitadelNFT`, `PilotNFT`, `MentatNFT`, `Drakma`, `TechTree`, `Technocracy`, `SovereignCouncil`, `TestnetFaucet` |
+| `src/*.sol` | `CitadelNFT`, `PilotNFT` (bridged originals + native GEN1+), `MentatNFT`, `Drakma`, `DrakmaClaim`, `TechTree`, `Technocracy`, `SovereignCouncil`, testnet faucets |
+| `src/bridge/` | `CitadelVaultL1` (Ethereum), `CitadelBridgeL2` (Base), `LocalMessenger` (local/tests) |
 | `src/lib/` | Trait tables and the tech tree (`Traits.sol`), hex math, trait rolls |
-| `script/` | `Deploy.s.sol` (Sepolia), `DevDeploy.s.sol` (local world with 8 seeded players), `Stack.sol` (shared wiring), `pack_traits.py` |
+| `script/` | `DeployL2` / `DeployL1` / `LinkL2` (launch), `DevDeploy` (local world), `Stack.sol` (shared wiring), trait packers and the DRAKMA `snapshot.mjs` |
 | `test/` | Unit tests per system, plus `Playtest.t.sol`, a 30-day 8-player economic simulation |
 | `web/` | CITADEL OS client (Vite + React + viem) |
 | `keeper/` | Bot that resolves arrived marches and fights due siege waves |
@@ -55,37 +56,19 @@ npm --prefix web install && npm --prefix web run dev             # http://localh
 node keeper/keeper.ts &                                          # optional: auto-resolve marches and sieges
 ```
 
-On the local chain the client signs with anvil's dev accounts: pick one at the top right (#9 starts fresh), and use
-**+1h / +1d** to move time. Open **GUIDE** in the client for a walkthrough.
+On the local chain the client signs with anvil's dev accounts: pick one at the top right, and use **+1h / +1d** to move
+time. Both sides of the bridge run on the same local chain: the BRIDGE tab's testnet faucet hands out stand-in originals
+to bridge in. Open **GUIDE** in the client for a walkthrough.
 
-## Deploy to Sepolia
+## Launch: originals on Ethereum, game on Base
 
-1. **Traits:** `data/citadel-traits.bin` (and the readable `data/citadel-traits.json`) already hold the traits of all 1024
-   mainnet CITADEL, so skip this step. To rebuild them from the original IPFS metadata (it takes hours, because Pinata
-   rate-limits):
-   ```sh
-   script/fetch_traits.sh          # -> data/raw/<id>.json, honours Retry-After
-   python3 script/pack_traits.py   # -> data/citadel-traits.bin + .json
-   ```
-2. **Fund a deployer** with Sepolia ETH (the full deploy is ~76M gas across its transactions; a dry run without `--broadcast` simulates it on a Sepolia fork), then import its key into Foundry's encrypted
-   keystore:
-   ```sh
-   cast wallet import deployer --interactive
-   export SEPOLIA_RPC_URL=https://ethereum-sepolia-rpc.publicnode.com ETHERSCAN_API_KEY=...
-   ```
-3. **Deploy:**
-   ```sh
-   forge script script/Deploy.s.sol --rpc-url sepolia --account deployer --broadcast --verify
-   ```
-   This writes `deployments/11155111.json`. Commit it: the client reads it to find the contracts.
-4. **Publish the client:** the `pages` workflow builds `web/` to GitHub Pages on every push to `main` (enable Pages →
-   "GitHub Actions" in the repo settings).
-5. **Run a keeper** so raids and sieges settle on time. It earns the resolver fee:
-   ```sh
-   KEEPER_KEY=0x... RPC_URL=$SEPOLIA_RPC_URL node keeper/keeper.ts deployments/11155111.json
-   ```
+The game runs on **Base**. Holders bridge their **original** CITADEL and PILOT from Ethereum through a vault (the
+canonical OP Stack messenger, no admin keys) and bring them home whenever they like. PILOT keep the levels and
+sovereignty they bought on mainnet. DRAKMA is a new token: old balances held in people's wallets carry over 1:1,
+plus an equal share for every holder wallet, through a Merkle claim. GEN1+ CITADEL and PILOT are native to Base.
 
-Give a mainnet holder their own CITADEL id on testnet with `TestnetFaucet.grantCitadel(address, id)`.
+Deploy order, the snapshot scripts and what carries over: [`docs/LAUNCH.md`](docs/LAUNCH.md). On Sepolia ↔ Base
+Sepolia the same scripts deploy stand-ins for the originals, with faucets, so the whole flow can be tested first.
 
 ## Develop
 

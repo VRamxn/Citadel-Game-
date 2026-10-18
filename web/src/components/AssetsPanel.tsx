@@ -27,11 +27,15 @@ export function AssetsPanel() {
         <b className="dk">{fmtDk(player.dk)} DK</b> · score {player.score.toString()} · WALLET LEVEL {player.level.toString()} ·{" "}
         {(Number(player.eth) / 1e18).toFixed(3)} ETH
       </p>
-      {!player.dripped && (
-        <button className="primary" onClick={() => act("testnet faucet", () => chain.write("faucet", "drip"))}>
-          Claim starter kit: 2 CITADEL, 2 PILOT, 5M DK
+      {!player.dripped && chain.dep.faucet && chain.dep.faucet !== "0x0000000000000000000000000000000000000000" && (
+        <button className="primary" onClick={() => act("testnet DRAKMA faucet", () => chain.write("faucet", "drip"))}>
+          Testnet: take 5M DRAKMA
         </button>
       )}
+      <p className="dim small">
+        Original CITADEL and PILOT come over from {chain.l1Name || "Ethereum"} in the <b>BRIDGE</b> tab; your old DRAKMA is claimed
+        there too.
+      </p>
       {approved && !allApproved && (
         <div className="row wrap">
           <span className="dim">The game needs approval to hold your NFTs while they're on the grid:</span>
@@ -58,7 +62,7 @@ export function AssetsPanel() {
 
       <h3>CITADEL in wallet</h3>
       {player.walletCitadels.length === 0 && <p className="dim">None.</p>}
-      {player.walletCitadels.map(({ id, traits: t, pilotClaimed, levels }) => (
+      {player.walletCitadels.map(({ id, traits: t, levels }) => (
         <div key={String(id)} className="item">
           <div>
             <b>CITADEL {id.toString()}</b> GEN{t.generation} {t.generation === 0 && SEKT[t.sekt]} · {SHIELDS[t.shield]} /{" "}
@@ -67,11 +71,6 @@ export function AssetsPanel() {
           </div>
           <div className="row wrap">
             <button onClick={() => setLite({ id, faction: 0, research: t.tech, pilots: [] })}>lite…</button>
-            {!pilotClaimed && (
-              <button onClick={() => act(`claim PILOT for CITADEL ${id}`, () => chain.write("technocracy", "claimPilot", [id]))}>
-                claim PILOT (64k DK)
-              </button>
-            )}
             {t.generation === 0 && t.sekt === 0 && <RelikMentat id={id} />}
           </div>
           {lite?.id === id && (

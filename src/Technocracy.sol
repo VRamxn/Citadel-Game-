@@ -2,15 +2,14 @@
 pragma solidity ^0.8.24;
 
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
-import {IPilotNFT, ICitadelNFT, IDrakma, IGameView} from "./interfaces/IGameAssets.sol";
+import {IPilotNFT, IDrakma, IGameView} from "./interfaces/IGameAssets.sol";
 import {Traits} from "./lib/Traits.sol";
-import {Rand} from "./lib/Rand.sol";
 
 /// @title The WARLORD TECHNOCRACY — CITADEL's tokenized political system (THE WARLORD TECHNOCRACY post).
 /// @notice 128 sovereign PILOT form the SOVEREIGN COLLECTIVE: 64 born sovereign when claimed by a RELIK, 64 seats bought
 /// for 4M DK. Sovereigns can't be sieged and lead sieges at 2x; they take a cut of the game's DK sinks. Any PILOT can
 /// overthrow a sovereign for 4M + 1M per active bribe; sovereigns protect themselves by bribing the 8 KULT, and bribes
-/// decay after 90 days. Also hosts the PILOT claim: every GEN0 CITADEL may claim one PILOT for 64,000 DK.
+/// decay after 90 days. Sovereigns from the original PILOT contract are seeded into their seats at launch.
 contract Technocracy is Ownable {
     uint256 public constant SEATS = 128;
     uint256 public constant BOUGHT_SEATS = 64;
@@ -19,19 +18,17 @@ contract Technocracy is Ownable {
     uint256 public constant BRIBE_MULTIPLE = 10;
     uint256 public constant BRIBE_DECAY = 90 days;
     uint256 public constant MAX_BRIBES = 16;
-    uint256 public constant PILOT_CLAIM_COST = 64_000 ether;
     uint256 public constant COLLECTIVE_INTERVAL = 30 days;
     uint256 private constant ACC = 1e18;
 
     IPilotNFT public immutable pilot;
-    ICitadelNFT public immutable citadel;
     IDrakma public immutable drakma;
     IGameView public game;
     address public treasury;
 
     uint256 public sovereignCount;
     uint256 public boughtSeats;
-    mapping(uint256 => bool) public citadelClaimedPilot;
+    bool public seeded;
     mapping(uint256 => uint64[16]) private _bribes; // expiry timestamps, ring buffer
     mapping(uint256 => uint8) private _bribeCursor;
 
@@ -44,7 +41,6 @@ contract Technocracy is Ownable {
     mapping(uint256 => bool) public kultRegistered;
     mapping(uint256 => uint256) private _kultDebt;
 
-    event PilotClaimed(uint256 indexed citadelId, uint256 indexed pilotId, bool sovereign);
     event SovereignSeated(uint256 indexed pilotId, address indexed by, uint256 paid);
     event Bribed(uint256 indexed pilotId, uint8 indexed kult, uint256 activeBribes);
     event Overthrown(uint256 indexed sovereignId, uint256 indexed insurgentId, uint256 paid);
@@ -55,7 +51,6 @@ contract Technocracy is Ownable {
 
     error NotController();
     error AlreadyClaimed();
-    error NotGen0();
     error AlreadySovereign();
     error NotSovereign();
     error SeatsFull();
@@ -64,11 +59,8 @@ contract Technocracy is Ownable {
     error NotRegistered();
     error StillExists();
 
-    constructor(address owner_, IPilotNFT pilot_, ICitadelNFT citadel_, IDrakma drakma_, address treasury_)
-        Ownable(owner_)
-    {
+    constructor(address owner_, IPilotNFT pilot_, IDrakma drakma_, address treasury_) Ownable(owner_) {
         pilot = pilot_;
-        citadel = citadel_;
         drakma = drakma_;
         treasury = treasury_;
     }
@@ -81,24 +73,17 @@ contract Technocracy is Ownable {
         treasury = treasury_;
     }
 
-    // ------------------------------------------------------------------ PILOT claim
-
-    /// @notice Claim the PILOT of a GEN0 CITADEL you control (in your wallet or lit by you) for 64,000 DK.
-    /// A RELIK's PILOT is born sovereign while seats remain.
-    function claimPilot(uint256 citadelId) external returns (uint256 pilotId) {
-        if (game.controllerOfCitadel(citadelId) != msg.sender) revert NotController();
-        Traits.CitadelTraits memory t = citadel.traitsOf(citadelId);
-        if (t.generation != 0) revert NotGen0();
-        if (citadelClaimedPilot[citadelId]) revert AlreadyClaimed();
-        citadelClaimedPilot[citadelId] = true;
-        drakma.gameBurn(msg.sender, PILOT_CLAIM_COST);
-
-        Traits.PilotTraits memory p = Rand.pilot(Rand.seed(citadelId), 0);
-        bool born = t.sekt == Traits.SEKT_RELIK && sovereignCount < SEATS;
-        p.sovereign = born;
-        pilotId = pilot.mint(msg.sender, p);
-        if (born) _seat(pilotId);
-        emit PilotClaimed(citadelId, pilotId, born);
+    /// @notice Seat the sovereigns carried over from the original PILOT contract (RELIK-born and bought), once, before
+    /// play starts. Their PilotNFT traits already say sovereign; this fills their seats in the collective.
+    function seedSovereigns(uint256[] calldata pilotIds, uint256 bought) external onlyOwner {
+        if (seeded) revert AlreadyClaimed();
+        seeded = true;
+        for (uint256 i; i < pilotIds.length; ++i) {
+            if (!pilot.traitsOf(pilotIds[i]).sovereign) revert NotSovereign();
+            _seat(pilotIds[i]);
+        }
+        boughtSeats = bought;
+        if (sovereignCount > SEATS || boughtSeats > BOUGHT_SEATS) revert SeatsFull();
     }
 
     // ------------------------------------------------------------------ the collective
@@ -143,7 +128,7 @@ contract Technocracy is Ownable {
         if (pilot.traitsOf(insurgentId).sovereign) revert AlreadySovereign();
         uint256 cost = overthrowCost(sovereignId);
         // the fallen sovereign is paid what it was owed before it falls
-        _payCollective(sovereignId, game.controllerOfPilot(sovereignId));
+        _payCollective(sovereignId, _controllerOrNobody(sovereignId));
         _unseat(sovereignId);
         _pay(cost);
         pilot.setSovereign(insurgentId, true);
@@ -151,8 +136,10 @@ contract Technocracy is Ownable {
         emit Overthrown(sovereignId, insurgentId, cost);
     }
 
-    /// @notice Free the seat of a sovereign PILOT that no longer exists (destroyed in a failed siege).
+    /// @notice Free the seat of a sovereign PILOT that no longer exists (a GEN1+ PILOT destroyed in a failed siege).
+    /// Original PILOT can't be destroyed — and may simply be on L1 — so their seats are never vacated.
     function vacate(uint256 pilotId) external {
+        if (pilotId < 2048) revert StillExists();
         try pilot.ownerOf(pilotId) returns (address) {
             revert StillExists();
         } catch {}
@@ -217,6 +204,14 @@ contract Technocracy is Ownable {
     }
 
     // ------------------------------------------------------------------ internals
+
+    function _controllerOrNobody(uint256 pilotId) private view returns (address) {
+        try game.controllerOfPilot(pilotId) returns (address a) {
+            return a;
+        } catch {
+            return address(0); // an original PILOT still on L1 has no L2 controller: its unclaimed share is forfeited
+        }
+    }
 
     function _requireController(uint256 pilotId) private view {
         if (game.controllerOfPilot(pilotId) != msg.sender) revert NotController();

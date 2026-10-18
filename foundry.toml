@@ -16,10 +16,16 @@ fs_permissions = [{ access = "read", path = "./data" }, { access = "read-write",
 
 [rpc_endpoints]
 sepolia = "${SEPOLIA_RPC_URL}"
+base_sepolia = "${BASE_SEPOLIA_RPC_URL}"
+mainnet = "${MAINNET_RPC_URL}"
+base = "${BASE_RPC_URL}"
 local = "http://127.0.0.1:8545"
 
 [etherscan]
 sepolia = { key = "${ETHERSCAN_API_KEY}" }
+base_sepolia = { key = "${ETHERSCAN_API_KEY}", chain = 84532 }
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+base = { key = "${ETHERSCAN_API_KEY}", chain = 8453 }
 
 [fmt]
 line_length = 120

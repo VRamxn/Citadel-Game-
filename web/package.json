@@ -6,11 +6,12 @@
   "scripts": {
     "abis": "node scripts/abis.mjs",
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run claims && tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
     "e2e:basics": "node e2e/basics.mjs",
-    "e2e:war": "node e2e/war.mjs"
+    "e2e:war": "node e2e/war.mjs",
+    "claims": "node -e \"const fs=require('fs');fs.mkdirSync('public',{recursive:true});if(fs.existsSync('../data/claims.json'))fs.copyFileSync('../data/claims.json','public/claims.json')\""
   },
   "dependencies": {
     "react": "^19.3.1",

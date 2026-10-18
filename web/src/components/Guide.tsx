@@ -14,7 +14,9 @@ export function Guide() {
       <ol>
         {!chain.isDev && <li>Connect a wallet on {chain.chain.name}.</li>}
         <li>
-          <b>ASSETS</b> → claim the starter kit (2 CITADEL, 2 PILOT, 5M DK) and approve the game.
+          <b>BRIDGE</b> → bring your original CITADEL and PILOT over from {chain.l1Name || "Ethereum"}, and claim your DRAKMA
+          (your old balance plus an equal share for every holder).{" "}
+          {chain.dep.faucet && chain.dep.faucet !== "0x0000000000000000000000000000000000000000" && "On a testnet, the BRIDGE and ASSETS tabs have faucets."}
         </li>
         <li>
           <b>ASSETS</b> → <i>lite…</i> a CITADEL: pick a faction, bring PILOT, click a tile. The golden core mines the most;

@@ -17,6 +17,19 @@ export default [
  },
  {
   "type": "function",
+  "name": "BRIDGE_ROLE",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "bytes32",
+    "internalType": "bytes32"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "DEFAULT_ADMIN_ROLE",
   "inputs": [],
   "outputs": [
@@ -56,19 +69,6 @@ export default [
  },
  {
   "type": "function",
-  "name": "MAX_GEN0",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
   "name": "MAX_LEVEL",
   "inputs": [],
   "outputs": [
@@ -89,6 +89,19 @@ export default [
     "name": "",
     "type": "bytes32",
     "internalType": "bytes32"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "ORIGINALS",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
    }
   ],
   "stateMutability": "view"
@@ -145,6 +158,37 @@ export default [
  },
  {
   "type": "function",
+  "name": "bridgeBurn",
+  "inputs": [
+   {
+    "name": "id",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "bridgeMint",
+  "inputs": [
+   {
+    "name": "to",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "id",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
   "name": "burn",
   "inputs": [
    {
@@ -165,19 +209,6 @@ export default [
     "name": "",
     "type": "address",
     "internalType": "contract IDrakma"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "gen0Minted",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
    }
   ],
   "stateMutability": "view"
@@ -357,6 +388,19 @@ export default [
  },
  {
   "type": "function",
+  "name": "nextNative",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "ownerOf",
   "inputs": [
    {
@@ -499,6 +543,24 @@ export default [
  },
  {
   "type": "function",
+  "name": "setTraits",
+  "inputs": [
+   {
+    "name": "startId",
+    "type": "uint256",
+    "internalType": "uint256"
+   },
+   {
+    "name": "data",
+    "type": "bytes",
+    "internalType": "bytes"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
   "name": "supportsInterface",
   "inputs": [
    {
@@ -544,19 +606,6 @@ export default [
     "name": "",
     "type": "string",
     "internalType": "string"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "totalMinted",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
    }
   ],
   "stateMutability": "view"
@@ -859,6 +908,11 @@ export default [
  },
  {
   "type": "error",
+  "name": "BadTraits",
+  "inputs": []
+ },
+ {
+  "type": "error",
   "name": "ERC721IncorrectOwner",
   "inputs": [
    {
@@ -968,11 +1022,6 @@ export default [
  {
   "type": "error",
   "name": "NotOwner",
-  "inputs": []
- },
- {
-  "type": "error",
-  "name": "SoldOut",
   "inputs": []
  },
  {

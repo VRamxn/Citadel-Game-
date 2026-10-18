@@ -17,15 +17,17 @@ Contents: [Assets](#assets) · [Grid](#grid) · [Mining](#mining) · [Buildings]
 
 | | Standard | Supply | Source |
 |---|---|---|---|
-| **CITADEL** | ERC-721 | 1024 GEN0, capped forever. GEN1+ are created in-game | Testnet copy carries the **real mainnet traits** of each id |
-| **PILOT** | ERC-721 | 2048 GEN0. GEN1+ are minted in-game with FLEET POINTS | Traits: SUBJUGATION, KULT, LEVEL, SOVEREIGNTY, DEATH |
+| **CITADEL** | ERC-721 | 1024 GEN0, capped forever: the **original mainnet CITADEL**, bridged to Base. GEN1+ are created in-game on Base | Traits from the original metadata |
+| **PILOT** | ERC-721 | 1140 GEN0 minted on mainnet (2048 max): the **original PILOT**, bridged. GEN1+ minted in-game with FLEET POINTS | SUBJUGATION, KULT, LEVEL, SOVEREIGNTY, DEATH; mainnet levels and sovereignty carry over |
 | **MENTAT** | ERC-721 | 128 GEN0 | Claimed by RELIK, or earned by completing tech branches |
-| **DRAKMA (DK)** | ERC-20 | Capped at 10B | Mined, looted, and burned by most actions |
+| **DRAKMA (DK)** | ERC-20 | Capped at 10B | **New token.** Old balances in people's wallets carry over by claim, plus an equal share per holder wallet. Then mined, looted, and burned by most actions |
+
+See [`LAUNCH.md`](LAUNCH.md) for the bridge and the carry-over.
 
 **SEKT** (CITADEL rarity) sets the DRAKMA and research multiplier: RELIK 16×, DROTH XYL 8×, IONSLAUGHT 4×, ELEKT 2×.
 
-**Testnet faucet:** each address can claim once and gets 2 CITADEL, 2 PILOT and 5M DK (as in the alpha).
-`grantCitadel(address, id)` gives a mainnet holder their own id.
+**Testnets:** stand-ins for the original collections on Sepolia come with a faucet (2 CITADEL + 2 PILOT per
+address), plus a 5M DK faucet on Base Sepolia.
 
 ## Grid
 
@@ -222,7 +224,8 @@ target's garrison**. There's no recall **[designed]**. A CITADEL under siege can
 
 `Technocracy.sol` (THE WARLORD TECHNOCRACY post):
 
-- **PILOT claim:** every GEN0 CITADEL may claim one PILOT for 64,000 DK. A RELIK's PILOT is **born sovereign**.
+- **Carried over:** every original PILOT already claimed (and every seat bought) on mainnet. The 63 PILOT claimed by
+  RELIK are **born sovereign**, and bought seats and levels carry over (`Technocracy.seedSovereigns`).
 - **Sovereignty:** 128 seats = 64 born + 64 bought for **4M DK**.
 - **Sovereign powers:** can't be sieged, leads sieges at 2×, and takes a cut of the DK sinks.
   - Seat purchases and overthrows pay 70% to the collective, 25% to the treasury, and burn 5%.

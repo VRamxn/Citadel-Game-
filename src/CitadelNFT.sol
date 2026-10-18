@@ -6,14 +6,14 @@ import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 import {Traits} from "./lib/Traits.sol";
 
-/// @notice Testnet stand-in for the mainnet CITADEL collection (0xaf08134ea12494dc3aaa7f1efb23a8753b7f84c9).
-/// GEN0 (#0–1023) traits are loaded on-chain from a snapshot of the mainnet metadata, so testnet CITADEL #n has the
-/// same SEKT/SHIELD/ENGINE/WEAPON/TECH as mainnet #n. GEN1+ CITADEL (#1024 and up) are created in-game by PILOT that
-/// colonize or capture grid, and can be destroyed when sieged.
+/// @notice CITADEL on the game's L2. #0–1023 are the original mainnet CITADEL (0xaf08134ea12494dc3aaa7f1efb23a8753b7f84c9)
+/// bridged over: only the bridge mints and burns them, and their traits are loaded on-chain from a snapshot of the
+/// original metadata. GEN1+ CITADEL (#1024 and up) are native to the L2, created in-game by PILOT that colonize or
+/// capture grid, and can be destroyed when sieged.
 contract CitadelNFT is ERC721, AccessControl {
     using Strings for uint256;
 
-    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+    bytes32 public constant BRIDGE_ROLE = keccak256("BRIDGE_ROLE");
     bytes32 public constant GAME_ROLE = keccak256("GAME_ROLE");
     uint256 public constant MAX_CITADEL = 1024; // GEN0 supply, capped forever
     uint256 private constant TRAIT_BYTES = 6;
@@ -52,9 +52,16 @@ contract CitadelNFT is ERC721, AccessControl {
         }
     }
 
-    function mint(address to, uint256 id) external onlyRole(MINTER_ROLE) {
+    /// @notice Mint the L2 copy of an original CITADEL deposited in the L1 vault.
+    function bridgeMint(address to, uint256 id) external onlyRole(BRIDGE_ROLE) {
         if (id >= MAX_CITADEL || !_traits[id].exists) revert UnknownCitadel(id);
         _mint(to, id);
+    }
+
+    /// @notice Burn the L2 copy of an original CITADEL that is being bridged back to L1.
+    function bridgeBurn(uint256 id) external onlyRole(BRIDGE_ROLE) {
+        if (id >= MAX_CITADEL) revert BadTraits();
+        _burn(id);
     }
 
     /// @notice Mint a GEN1+ CITADEL created in-game.

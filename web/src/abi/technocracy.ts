@@ -13,11 +13,6 @@ export default [
     "internalType": "contract IPilotNFT"
    },
    {
-    "name": "citadel_",
-    "type": "address",
-    "internalType": "contract ICitadelNFT"
-   },
-   {
     "name": "drakma_",
     "type": "address",
     "internalType": "contract IDrakma"
@@ -98,19 +93,6 @@ export default [
  {
   "type": "function",
   "name": "MAX_BRIBES",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "PILOT_CLAIM_COST",
   "inputs": [],
   "outputs": [
    {
@@ -212,38 +194,6 @@ export default [
  },
  {
   "type": "function",
-  "name": "citadel",
-  "inputs": [],
-  "outputs": [
-   {
-    "name": "",
-    "type": "address",
-    "internalType": "contract ICitadelNFT"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
-  "name": "citadelClaimedPilot",
-  "inputs": [
-   {
-    "name": "",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "outputs": [
-   {
-    "name": "",
-    "type": "bool",
-    "internalType": "bool"
-   }
-  ],
-  "stateMutability": "view"
- },
- {
-  "type": "function",
   "name": "claimCollective",
   "inputs": [
    {
@@ -266,25 +216,6 @@ export default [
    }
   ],
   "outputs": [],
-  "stateMutability": "nonpayable"
- },
- {
-  "type": "function",
-  "name": "claimPilot",
-  "inputs": [
-   {
-    "name": "citadelId",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
-  "outputs": [
-   {
-    "name": "pilotId",
-    "type": "uint256",
-    "internalType": "uint256"
-   }
-  ],
   "stateMutability": "nonpayable"
  },
  {
@@ -525,6 +456,37 @@ export default [
  },
  {
   "type": "function",
+  "name": "seedSovereigns",
+  "inputs": [
+   {
+    "name": "pilotIds",
+    "type": "uint256[]",
+    "internalType": "uint256[]"
+   },
+   {
+    "name": "bought",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "seeded",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "bool",
+    "internalType": "bool"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "setGame",
   "inputs": [
    {
@@ -741,31 +703,6 @@ export default [
  },
  {
   "type": "event",
-  "name": "PilotClaimed",
-  "inputs": [
-   {
-    "name": "citadelId",
-    "type": "uint256",
-    "indexed": true,
-    "internalType": "uint256"
-   },
-   {
-    "name": "pilotId",
-    "type": "uint256",
-    "indexed": true,
-    "internalType": "uint256"
-   },
-   {
-    "name": "sovereign",
-    "type": "bool",
-    "indexed": false,
-    "internalType": "bool"
-   }
-  ],
-  "anonymous": false
- },
- {
-  "type": "event",
   "name": "SeatVacated",
   "inputs": [
    {
@@ -820,11 +757,6 @@ export default [
  {
   "type": "error",
   "name": "NotController",
-  "inputs": []
- },
- {
-  "type": "error",
-  "name": "NotGen0",
   "inputs": []
  },
  {

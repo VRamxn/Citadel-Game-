@@ -1,0 +1,317 @@
+[
+ {
+  "relik": 0,
+  "pilot": 1113,
+  "sovereign": true
+ },
+ {
+  "relik": 1,
+  "pilot": 0,
+  "sovereign": true
+ },
+ {
+  "relik": 2,
+  "pilot": 1017,
+  "sovereign": true
+ },
+ {
+  "relik": 3,
+  "pilot": 565,
+  "sovereign": true
+ },
+ {
+  "relik": 4,
+  "pilot": 977,
+  "sovereign": true
+ },
+ {
+  "relik": 5,
+  "pilot": 572,
+  "sovereign": true
+ },
+ {
+  "relik": 6,
+  "pilot": 0,
+  "sovereign": true
+ },
+ {
+  "relik": 7,
+  "pilot": 0,
+  "sovereign": true
+ },
+ {
+  "relik": 8,
+  "pilot": 0,
+  "sovereign": true
+ },
+ {
+  "relik": 9,
+  "pilot": 0,
+  "sovereign": true
+ },
+ {
+  "relik": 10,
+  "pilot": 0,
+  "sovereign": true
+ },
+ {
+  "relik": 11,
+  "pilot": 0,
+  "sovereign": true
+ },
+ {
+  "relik": 12,
+  "pilot": 784,
+  "sovereign": true
+ },
+ {
+  "relik": 13,
+  "pilot": 1051,
+  "sovereign": true
+ },
+ {
+  "relik": 14,
+  "pilot": 912,
+  "sovereign": true
+ },
+ {
+  "relik": 15,
+  "pilot": 913,
+  "sovereign": true
+ },
+ {
+  "relik": 16,
+  "pilot": 563,
+  "sovereign": true
+ },
+ {
+  "relik": 17,
+  "pilot": 1015,
+  "sovereign": true
+ },
+ {
+  "relik": 18,
+  "pilot": 1052,
+  "sovereign": true
+ },
+ {
+  "relik": 19,
+  "pilot": 914,
+  "sovereign": true
+ },
+ {
+  "relik": 20,
+  "pilot": 1018,
+  "sovereign": true
+ },
+ {
+  "relik": 21,
+  "pilot": 1019,
+  "sovereign": true
+ },
+ {
+  "relik": 22,
+  "pilot": 550,
+  "sovereign": true
+ },
+ {
+  "relik": 23,
+  "pilot": 256,
+  "sovereign": true
+ },
+ {
+  "relik": 24,
+  "pilot": 0,
+  "sovereign": true
+ },
+ {
+  "relik": 25,
+  "pilot": 1053,
+  "sovereign": true
+ },
+ {
+  "relik": 26,
+  "pilot": 1054,
+  "sovereign": true
+ },
+ {
+  "relik": 27,
+  "pilot": 553,
+  "sovereign": true
+ },
+ {
+  "relik": 28,
+  "pilot": 605,
+  "sovereign": true
+ },
+ {
+  "relik": 29,
+  "pilot": 554,
+  "sovereign": true
+ },
+ {
+  "relik": 30,
+  "pilot": 607,
+  "sovereign": true
+ },
+ {
+  "relik": 31,
+  "pilot": 1001,
+  "sovereign": true
+ },
+ {
+  "relik": 32,
+  "pilot": 991,
+  "sovereign": true
+ },
+ {
+  "relik": 33,
+  "pilot": 610,
+  "sovereign": true
+ },
+ {
+  "relik": 34,
+  "pilot": 774,
+  "sovereign": true
+ },
+ {
+  "relik": 35,
+  "pilot": 1086,
+  "sovereign": true
+ },
+ {
+  "relik": 37,
+  "pilot": 339,
+  "sovereign": true
+ },
+ {
+  "relik": 38,
+  "pilot": 776,
+  "sovereign": true
+ },
+ {
+  "relik": 39,
+  "pilot": 611,
+  "sovereign": true
+ },
+ {
+  "relik": 40,
+  "pilot": 814,
+  "sovereign": true
+ },
+ {
+  "relik": 41,
+  "pilot": 372,
+  "sovereign": true
+ },
+ {
+  "relik": 42,
+  "pilot": 478,
+  "sovereign": true
+ },
+ {
+  "relik": 43,
+  "pilot": 480,
+  "sovereign": true
+ },
+ {
+  "relik": 44,
+  "pilot": 937,
+  "sovereign": true
+ },
+ {
+  "relik": 45,
+  "pilot": 481,
+  "sovereign": true
+ },
+ {
+  "relik": 46,
+  "pilot": 483,
+  "sovereign": true
+ },
+ {
+  "relik": 47,
+  "pilot": 484,
+  "sovereign": true
+ },
+ {
+  "relik": 48,
+  "pilot": 485,
+  "sovereign": true
+ },
+ {
+  "relik": 49,
+  "pilot": 1055,
+  "sovereign": true
+ },
+ {
+  "relik": 50,
+  "pilot": 777,
+  "sovereign": true
+ },
+ {
+  "relik": 51,
+  "pilot": 841,
+  "sovereign": true
+ },
+ {
+  "relik": 52,
+  "pilot": 815,
+  "sovereign": true
+ },
+ {
+  "relik": 53,
+  "pilot": 259,
+  "sovereign": true
+ },
+ {
+  "relik": 54,
+  "pilot": 842,
+  "sovereign": true
+ },
+ {
+  "relik": 55,
+  "pilot": 843,
+  "sovereign": true
+ },
+ {
+  "relik": 56,
+  "pilot": 844,
+  "sovereign": true
+ },
+ {
+  "relik": 57,
+  "pilot": 845,
+  "sovereign": true
+ },
+ {
+  "relik": 58,
+  "pilot": 778,
+  "sovereign": true
+ },
+ {
+  "relik": 59,
+  "pilot": 846,
+  "sovereign": true
+ },
+ {
+  "relik": 60,
+  "pilot": 847,
+  "sovereign": true
+ },
+ {
+  "relik": 61,
+  "pilot": 848,
+  "sovereign": true
+ },
+ {
+  "relik": 62,
+  "pilot": 779,
+  "sovereign": true
+ },
+ {
+  "relik": 63,
+  "pilot": 263,
+  "sovereign": true
+ }
+]

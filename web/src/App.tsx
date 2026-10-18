@@ -14,6 +14,7 @@ import { DispatchPanel } from "./components/DispatchPanel";
 import { Terminal } from "./components/Terminal";
 import { Guide } from "./components/Guide";
 import { LadderPanel } from "./components/LadderPanel";
+import { BridgePanel } from "./components/BridgePanel";
 
 type Toast = { id: number; text: string; kind: "ok" | "err" | "busy" };
 
@@ -44,7 +45,7 @@ export type Placing =
 const AppCtx = createContext<Ctx>(null as any);
 export const useGame = () => useContext(AppCtx);
 
-const TABS = ["TILE", "ASSETS", "WAR", "TECH", "POLITICS", "LADDER", "DISPATCH", "GUIDE"] as const;
+const TABS = ["TILE", "ASSETS", "BRIDGE", "WAR", "TECH", "POLITICS", "LADDER", "DISPATCH", "GUIDE"] as const;
 type Tab = (typeof TABS)[number];
 
 export function App() {
@@ -200,6 +201,7 @@ function Game({ dep }: { dep: NonNullable<ReturnType<typeof pickDeployment>> }) 
               {tab === "TECH" && <TechPanel />}
               {tab === "POLITICS" && <PoliticsPanel />}
               {tab === "LADDER" && <LadderPanel />}
+              {tab === "BRIDGE" && <BridgePanel />}
               {tab === "DISPATCH" && <DispatchPanel />}
               {tab === "GUIDE" && <Guide />}
             </div>
