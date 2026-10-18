@@ -104,7 +104,7 @@ function EmptyTile() {
       <p>
         {inGrid ? (
           <>
-            Mining multiple <b>{(defaultTileBps(t) / 10000).toFixed(2)}×</b> · {hexDistance(t, { q: 0, r: 0 })} from the
+            Mining multiple <b>{(defaultTileBps(t, world.radius) / 10000).toFixed(2)}×</b> · {hexDistance(t, { q: 0, r: 0 })} from the
             core
           </>
         ) : (

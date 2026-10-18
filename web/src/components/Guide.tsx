@@ -44,14 +44,20 @@ export function Guide() {
         <b>SIF GATTACA</b> fast swarm raiders · <b>MHRUDVOG THROT</b> fortification · <b>DREBENTRAAKHT</b> siege ships that hit
         twice as hard in sieges · <b>DALAA MAX</b> scouts (needs ATOMIC ENGINE).
       </p>
+      <h3>The map</h3>
+      <p>
+        Drag (or pinch) to move, wheel to zoom toward the cursor, <code>WASD</code>/arrows to pan, <code>c</code> to cycle
+        your CITADEL, <code>f</code> for the whole grid. The minimap jumps anywhere; ⚠ flies to whatever is attacking you.
+        The golden core and six outer mining fields produce the most DRAKMA.
+      </p>
       <h3>Terminal</h3>
       <p>
         The CITADEL OS terminal below takes commands too: <code>help</code>, <code>raid 3 7 100</code>, <code>status 3</code>…
       </p>
       {chain.isDev && (
         <p className="dim">
-          Local chain: switch between the 10 dev accounts and skip time with the buttons at the top right. Eight of them are
-          already on the grid.
+          Local chain: switch between the 10 dev accounts and skip time with the buttons at the top right. Forty players are
+          already spread across the grid.
         </p>
       )}
     </div>

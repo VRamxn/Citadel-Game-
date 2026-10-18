@@ -33,6 +33,9 @@ export type Ctx = {
   setFog: (f: boolean) => void;
   ao: number;
   setAo: (ao: number) => void;
+  /** Ask the map to fly to a tile (and select it). */
+  focus: (h: Hex & { ao?: number }) => void;
+  focusReq?: { q: number; r: number; n: number };
 };
 export type Placing =
   | { kind: "lite"; citadelId: bigint; pilots: bigint[]; faction: number; research: number }
@@ -71,6 +74,7 @@ function Game({ dep }: { dep: NonNullable<ReturnType<typeof pickDeployment>> }) 
   const [err, setErr] = useState<string>();
   const [fog, setFog] = useState(true);
   const [ao, setAo] = useState(0);
+  const [focusReq, setFocusReq] = useState<{ q: number; r: number; n: number }>();
   const busy = useRef(false);
 
   const log = useCallback((line: string) => setTermLines((l) => [...l.slice(-400), line]), []);
@@ -145,7 +149,14 @@ function Game({ dep }: { dep: NonNullable<ReturnType<typeof pickDeployment>> }) 
   const ctx: Ctx = { chain, world, player, me, selected, select: onSelect, placing, setPlacing, act, refresh, log, fog, setFog, ao, setAo: (a: number) => {
     setAo(a);
     select(undefined);
-  } };
+  },
+    focusReq,
+    focus: (h) => {
+      if (h.ao !== undefined && h.ao !== ao) setAo(h.ao);
+      setFocusReq({ q: h.q, r: h.r, n: Math.random() });
+      onSelect({ q: h.q, r: h.r });
+    },
+  };
 
   return (
     <AppCtx.Provider value={ctx}>

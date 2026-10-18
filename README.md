@@ -11,7 +11,8 @@ mint, and shipped a Goerli alpha before disbanding. This repo builds the game th
 
 ## What's in the game
 
-- **Grid:** light CITADEL and PILOT to a hex grid. The golden core mines the most DRAKMA, and that's where the war is.
+- **Grid:** light CITADEL and PILOT to a 3,997-tile hex grid. The golden core and six outer mining fields produce the
+  most DRAKMA, and that's where the war is.
 - **Economy:** mine DRAKMA; build MINES, SHIELD / ENGINE / WEAPON SYSTEM, FLEET ACADEMY and CITADEL levels; hurry with DK.
 - **Fleet:** train SIF GATTACA raiders, MHRUDVOG THROT fortifications, DREBENTRAAKHT siege ships and DALAA MAX scouts.
 - **War:**
@@ -25,7 +26,8 @@ mint, and shipped a Goerli alpha before disbanding. This repo builds the game th
   **GRID MAELSTROM** council of sovereigns that can take over the game's levers.
 - **Seasons:** new astronomical objects open in isolation, then join the war.
 
-The client is **CITADEL OS**: a hex map with fog of war, panels for every action, the CITADEL DISPATCH news feed, and a
+The client is **CITADEL OS**: a hex map built for a big world (zoom to cursor, drag and pinch, WASD, a minimap,
+level-of-detail rendering, jump to your CITADEL, to threats or to the core) with fog of war, panels for every action, the CITADEL DISPATCH news feed, and a
 terminal (`raid 3 7 100`, `status 3`, `help`).
 
 ## Layout
@@ -47,7 +49,7 @@ Requires [Foundry](https://getfoundry.sh) (`mise install` picks up the pinned ve
 ```sh
 git clone --recursive https://github.com/VRamxn/Citadel-Game-.git && cd Citadel-Game-
 anvil &                                                          # local chain
-forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300  # deploy + seed 8 players
+forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300  # deploy + seed 40 players
 npm --prefix web install && npm --prefix web run dev             # http://localhost:5173
 node keeper/keeper.ts &                                          # optional: auto-resolve marches and sieges
 ```

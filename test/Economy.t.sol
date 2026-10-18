@@ -56,7 +56,7 @@ contract EconomyTest is Base {
         uint256[] memory ps = new uint256[](1);
         ps[0] = p;
         vm.prank(alice);
-        eco.lite(0, 0, 8, 0, 0, 3, ps);
+        eco.lite(0, 0, 4, 4, 0, 3, ps);
         assertEq(d.pilot.ownerOf(p), address(d.game));
         assertEq(view_.controllerOfPilot(p), alice);
         skip(7 days);
@@ -73,8 +73,8 @@ contract EconomyTest is Base {
     // ------------------------------------------------------------ mining
 
     function test_miningMatchesExordiumRates() public {
-        _lite(alice, 0, 8, 0, 0); // RELIK on a 1x tile
-        _lite(bob, 1, -8, 0, 0); // ELEKT on a 1x tile
+        _lite(alice, 0, 4, 4, 0); // RELIK on a 1x tile
+        _lite(bob, 1, -4, 4, 0); // ELEKT on a 1x tile
         skip(1 days);
         assertEq(view_.vaultOf(0), 64_000 ether);
         assertEq(view_.vaultOf(1), 8_000 ether);
@@ -88,7 +88,7 @@ contract EconomyTest is Base {
     }
 
     function test_claimCooldown() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         skip(1 days);
         vm.prank(bob);
         vm.expectRevert();
@@ -103,7 +103,7 @@ contract EconomyTest is Base {
     // ------------------------------------------------------------ buildings
 
     function test_buildTakesTimeAndCosts() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         (uint256 cost, uint256 time) = view_.buildCost(B_ACADEMY, 1);
         assertEq(cost, 2_000 ether);
         assertEq(time, 20 minutes);
@@ -121,7 +121,7 @@ contract EconomyTest is Base {
     }
 
     function test_buildingsCappedByCitadelLevel() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         _buildTo(bob, 1, B_MINE, 1);
         vm.prank(bob);
         vm.expectRevert(abi.encodeWithSelector(EconomyModule.NeedsCitadelLevel.selector, 2));
@@ -132,7 +132,7 @@ contract EconomyTest is Base {
     }
 
     function test_hurryCostsDoubleTheRemainingShare() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         vm.prank(bob);
         eco.build(1, B_CITADEL); // 20k, 2h
         skip(1 hours);
@@ -144,7 +144,7 @@ contract EconomyTest is Base {
     }
 
     function test_levelsTravelWithTheCitadel() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         _buildTo(bob, 1, B_CITADEL, 3);
         _buildTo(bob, 1, B_MINE, 2);
         skip(7 days);
@@ -161,7 +161,7 @@ contract EconomyTest is Base {
     }
 
     function test_walletScoreGrowsNonLinearly() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         assertEq(d.game.walletScore(bob), 50);
         _buildTo(bob, 1, B_CITADEL, 3);
         assertEq(d.game.walletScore(bob), 59);
@@ -171,7 +171,7 @@ contract EconomyTest is Base {
     // ------------------------------------------------------------ training
 
     function test_trainingNeedsAcademy() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         vm.prank(bob);
         vm.expectRevert(abi.encodeWithSelector(EconomyModule.NeedsAcademy.selector, 1));
         eco.train(1, SIF, 1);
@@ -186,7 +186,7 @@ contract EconomyTest is Base {
     }
 
     function test_dalaaNeedsAtomicEngine() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         _buildTo(bob, 1, B_ACADEMY, 1);
         vm.prank(bob);
         vm.expectRevert(EconomyModule.NeedsTech.selector);
@@ -194,7 +194,7 @@ contract EconomyTest is Base {
     }
 
     function test_academyLevelsSpeedTraining() public {
-        _lite(bob, 1, 8, 0, 0);
+        _lite(bob, 1, 4, 4, 0);
         _buildTo(bob, 1, B_CITADEL, 3);
         _buildTo(bob, 1, B_ACADEMY, 3);
         vm.prank(bob);
@@ -281,7 +281,7 @@ contract EconomyTest is Base {
     // ------------------------------------------------------------ MENTAT
 
     function test_relikMentatBoostsProduction() public {
-        _lite(alice, 0, 8, 0, 0);
+        _lite(alice, 0, 4, 4, 0);
         uint256 before = view_.miningRate(0);
         vm.prank(alice);
         uint256 m = d.techTree.claimRelikMentat(0);

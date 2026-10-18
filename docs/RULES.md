@@ -29,10 +29,14 @@ Contents: [Assets](#assets) · [Grid](#grid) · [Mining](#mining) · [Buildings]
 
 ## Grid
 
-- Each astronomical object (AO) is a hexagon of tiles in axial coordinates `(q, r)` within radius 12 of `(0, 0)`
-  (469 tiles).
-- **Mining multiple per tile [designed]:** distance ≤1 from the core → 1.25×, ≤3 → 1.15×, ≤5 → 1.05×, else 1.00×
-  (*lever* per tile; the posts gave 1×–1.25× with the center as the hotspot).
+- Each astronomical object (AO) is a hexagon of tiles in axial coordinates `(q, r)`. The default radius is 36
+  (**3,997 tiles**), set at deploy with `GRID_RADIUS`. That's room for the 1,024 GEN0 CITADEL and the generations that
+  follow, with most of the map still to be conquered. Crossing it takes over a day for SIF GATTACA.
+- **Mining multiple per tile [designed]** scales with the radius, so contested ground is spread across the map
+  (*lever* per tile; the posts gave 1×–1.25× with the center as the hotspot):
+  - **The core:** 1.25× within radius/12 of the center, 1.15× within twice that, and a 1.05× halo out to three times.
+  - **Six outer mining fields** 60% of the way out: 1.2× at their centers and 1.1× within radius/9.
+  - About 12% of tiles are boosted.
 - **`lite(citadel, ao, q, r, faction, research, pilots[])`** places a GEN0 CITADEL on any free tile, with up to 8 PILOT
   (*lever*), and mining starts at once. Factions: 0 NETWORK STATE, 1 AUTONOMOUS ZONE, 2 SANCTION, 3 ANNEXATION.
   `setFaction` / `setResearch` change those later.

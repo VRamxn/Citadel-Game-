@@ -71,13 +71,33 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
 
     // ------------------------------------------------------------------ grid
 
+    /// @dev Default mining multiple, scaled to the grid so a big map has contested ground everywhere: a golden core
+    /// (1.25x, then 1.15x) and six outer mining fields 60% of the way out (1.2x centre, 1.1x around it), on a 1.05x
+    /// halo around the core. About 12% of tiles are boosted at any radius. Hotspots can be moved per tile.
     function _tileBps(uint8 ao, int16 q, int16 r) internal view returns (uint256) {
         uint32 o = _tileBpsOverride[Hex.key(ao, q, r)];
         if (o != 0) return o;
+        uint256 rad = radius;
         uint256 d = Hex.fromCenter(q, r);
-        if (d <= 1) return 12_500;
-        if (d <= 3) return 11_500;
-        if (d <= 5) return 10_500;
+        uint256 core = rad >= 24 ? rad / 12 : 1;
+        if (d <= core) return 12_500;
+        if (d <= core * 2) return 11_500;
+        int16 ring = int16(uint16(rad * 3 / 5));
+        uint256 field = rad >= 18 ? rad / 9 : 1;
+        int16[2][6] memory dirs = [
+            [int16(1), int16(0)],
+            [int16(1), int16(-1)],
+            [int16(0), int16(-1)],
+            [int16(-1), int16(0)],
+            [int16(-1), int16(1)],
+            [int16(0), int16(1)]
+        ];
+        for (uint256 i; i < 6; ++i) {
+            uint256 df = Hex.distance(q, r, dirs[i][0] * ring, dirs[i][1] * ring);
+            if (df <= field / 3) return 12_000;
+            if (df <= field) return 11_000;
+        }
+        if (d <= core * 3) return 10_500;
         return 10_000;
     }
 

@@ -85,12 +85,49 @@ export function hexCorners(cx: number, cy: number, size = HEX_SIZE) {
   return pts.join(" ");
 }
 
-/** Default tile mining multiple in bps (GameBase._tileBps); overrides aren't visible without events. */
-export function defaultTileBps(h: Hex) {
+/** Pixel position (pointy-top layout) back to the hex under it, with cube rounding. */
+export function pixelToHex(x: number, y: number): Hex {
+  const r = y / (HEX_SIZE * 1.5);
+  const q = x / (HEX_SIZE * Math.sqrt(3)) - r / 2;
+  const s = -q - r;
+  let rq = Math.round(q),
+    rr = Math.round(r);
+  const rs = Math.round(s);
+  const dq = Math.abs(rq - q),
+    dr = Math.abs(rr - r),
+    ds = Math.abs(rs - s);
+  if (dq > dr && dq > ds) rq = -rr - rs;
+  else if (dr > ds) rr = -rq - rs;
+  return { q: rq, r: rr };
+}
+
+const DIRS = [
+  [1, 0],
+  [1, -1],
+  [0, -1],
+  [-1, 0],
+  [-1, 1],
+  [0, 1],
+];
+/** Centres of the six outer mining fields of a grid of this radius. */
+export const fieldCentres = (radius: number) => {
+  const ring = Math.floor((radius * 3) / 5);
+  return DIRS.map(([dq, dr]) => ({ q: dq * ring, r: dr * ring }));
+};
+
+/** Default tile mining multiple in bps — mirrors GameBase._tileBps (overrides aren't visible without events). */
+export function defaultTileBps(h: Hex, radius: number) {
   const d = hexDistance(h, { q: 0, r: 0 });
-  if (d <= 1) return 12500;
-  if (d <= 3) return 11500;
-  if (d <= 5) return 10500;
+  const core = radius >= 24 ? Math.floor(radius / 12) : 1;
+  if (d <= core) return 12500;
+  if (d <= core * 2) return 11500;
+  const field = radius >= 18 ? Math.floor(radius / 9) : 1;
+  for (const c of fieldCentres(radius)) {
+    const df = hexDistance(h, c);
+    if (df <= Math.floor(field / 3)) return 12000;
+    if (df <= field) return 11000;
+  }
+  if (d <= core * 3) return 10500;
   return 10000;
 }
 

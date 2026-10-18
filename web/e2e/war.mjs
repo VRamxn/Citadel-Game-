@@ -16,6 +16,8 @@ page.on("console", (m) => {
 });
 page.on("pageerror", (e) => errors.push(`pageerror: ${e.message}`));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const clickTile = (q, r) => page.evaluate((q, r) => window.__citadelMap.click(q, r), q, r);
+const clickCitadel = (id) => page.evaluate((id) => window.__citadelMap.clickCitadel(String(id)), String(id));
 const shot = (n) => page.screenshot({ path: `${shots}/ui2-${n}.png` });
 
 async function clickText(text, sel = "button") {
@@ -49,10 +51,6 @@ async function tab(name) {
   await clickText(name, ".tabs button");
   await sleep(500);
 }
-const clickTile = (q, r) =>
-  page.evaluate((k) => document.querySelector(`[data-tile="${k}"]`).dispatchEvent(new MouseEvent("click", { bubbles: true })), `${q},${r}`);
-const clickCitadel = (id) =>
-  page.evaluate((id) => document.querySelector(`[data-citadel="${id}"]`).dispatchEvent(new MouseEvent("click", { bubbles: true })), String(id));
 async function setInput(selector, index, value) {
   await page.evaluate(
     (selector, index, value) => {

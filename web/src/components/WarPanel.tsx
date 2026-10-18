@@ -8,7 +8,7 @@ const units = (u: readonly bigint[]) =>
     .join(" · ");
 
 export function WarPanel() {
-  const { world, me, chain, act, select } = useGame();
+  const { world, me, chain, act, focus } = useGame();
   const mineIds = new Set([...world.citadels.values()].filter((c) => c.owner === me).map((c) => c.id));
   const marches = [...world.marches.values()].sort((a, b) => Number(a.arriveAt - b.arriveAt));
   const sieges = [...world.sieges.values()];
@@ -33,7 +33,7 @@ export function WarPanel() {
               {s.waves} · army {units(s.units)}
             </div>
             <div className="row">
-              {t && <button onClick={() => select(t)}>view target</button>}
+              {t && <button onClick={() => focus(t)}>show on map</button>}
               <button
                 disabled={due <= 0}
                 onClick={() => act(`advance siege ${s.id}`, () => chain.write("game", "advanceSiege", [s.id, 24n]))}
@@ -61,6 +61,9 @@ export function WarPanel() {
             </div>
             <div className="dim">{units(m.units)}</div>
             <div className="row">
+              {world.citadels.get(m.kind === 2 ? m.origin : m.target) && m.kind !== 6 && (
+                <button onClick={() => focus(world.citadels.get(m.kind === 2 ? m.origin : m.target)!)}>show</button>
+              )}
               {left > 0 ? (
                 <span>arrives in {fmtDuration(left)}</span>
               ) : (

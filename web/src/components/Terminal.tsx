@@ -15,6 +15,7 @@ const HELP = `commands:
   scout <from> <to> <dalaa>
   reinforce <from> <to> <sif> [throt] [dreb] [dalaa]
   siege <from> <to> <sif> <throt> <dreb> <dalaa> [pilot]
+  goto <q> <r>                      fly the map to a tile
   resolve <march>      advance <siege>
   dispatch             news       skip <hours> (local chain)       clear`;
 
@@ -52,6 +53,7 @@ export function Terminal({ lines }: { lines: string[] }) {
           const id = n(0);
           const c = world.citadels.get(id);
           if (!c) return log("  not on the grid");
+          g.focus(c);
           const [v, gar, rate] = await Promise.all([
             chain.read<bigint>("game", "vaultOf", [id]),
             chain.read<readonly bigint[]>("game", "garrisonOf", [id]),
@@ -103,7 +105,7 @@ export function Terminal({ lines }: { lines: string[] }) {
           return void (await act(`skip ${a[0]}h`, () => chain.skip(Number(a[0] ?? 1) * 3600)));
         case "goto": {
           const id = world.byTile.get(tileKey(g.ao, Number(a[0]), Number(a[1])));
-          g.select({ q: Number(a[0]), r: Number(a[1]) });
+          g.focus({ q: Number(a[0]), r: Number(a[1]) });
           return log(id !== undefined ? `  CITADEL ${id}` : "  empty tile");
         }
         default:

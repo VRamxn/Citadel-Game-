@@ -3,7 +3,7 @@ import { useGame } from "../App";
 import { BRANCHES, ENGINES, FACTIONS, FACTION_COLORS, KULT, SEKT, SHIELDS, SUBJUGATION, SUBJUGATION_EFFECT, WEAPONS, fmtDk } from "../lib/game";
 
 export function AssetsPanel() {
-  const { chain, player, me, world, act, setPlacing, select } = useGame();
+  const { chain, player, me, world, act, setPlacing, focus } = useGame();
   const [approved, setApproved] = useState<boolean[]>();
   const [lite, setLite] = useState<{ id: bigint; faction: number; research: number; pilots: bigint[] }>();
   const [colFaction, setColFaction] = useState(0);
@@ -49,7 +49,7 @@ export function AssetsPanel() {
       <h3>On the grid</h3>
       {mine.length === 0 && <p className="dim">None yet.</p>}
       {mine.map((c) => (
-        <div key={String(c.id)} className="item" onClick={() => select(c)}>
+        <div key={String(c.id)} className="item click" onClick={() => focus(c)}>
           <i className="dot" style={{ background: FACTION_COLORS[c.faction] }} /> CITADEL {c.id.toString()} · ({c.q},{c.r}) · L
           {c.levels[0]} · {FACTIONS[c.faction]}
           {c.besieged > 0 && <span className="tag red">BESIEGED</span>}

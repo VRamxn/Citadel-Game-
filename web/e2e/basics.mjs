@@ -48,12 +48,8 @@ async function tab(name) {
   await clickText(name, ".tabs button");
   await sleep(400);
 }
-async function clickTile(q, r) {
-  await page.evaluate((k) => document.querySelector(`[data-tile="${k}"]`).dispatchEvent(new MouseEvent("click", { bubbles: true })), `${q},${r}`);
-}
-async function clickCitadel(id) {
-  await page.evaluate((id) => document.querySelector(`[data-citadel="${id}"]`).dispatchEvent(new MouseEvent("click", { bubbles: true })), String(id));
-}
+const clickTile = (q, r) => page.evaluate((q, r) => window.__citadelMap.click(q, r), q, r);
+const clickCitadel = (id) => page.evaluate((id) => window.__citadelMap.clickCitadel(String(id)), String(id));
 const shot = (n) => page.screenshot({ path: `${shots}/ui-${n}.png` });
 const step = async (name, fn) => {
   process.stdout.write(`• ${name} … `);

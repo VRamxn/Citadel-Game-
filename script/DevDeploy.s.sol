@@ -5,14 +5,17 @@ import {Deploy} from "./Deploy.s.sol";
 import {EconomyModule} from "../src/game/EconomyModule.sol";
 import {ViewModule} from "../src/game/ViewModule.sol";
 import {GameStorage} from "../src/game/GameStorage.sol";
+import {Hex} from "../src/lib/Hex.sol";
 
 /// @notice LOCAL ONLY (anvil). Deploys the system, then seeds a living world: eight anvil accounts take their faucet
 /// kit, light CITADEL around the grid in all four factions and start building. Uses the real trait snapshot if
-/// data/citadel-traits.bin exists, synthetic traits otherwise.
+/// data/citadel-traits.bin exists, synthetic traits otherwise. The grid is the full 36-radius map with 40 players.
 ///   anvil &  forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300
 /// (forge simulates all seeding txs in one block, which underestimates gas once they land in separate blocks)
 contract DevDeploy is Deploy {
     string constant MNEMONIC = "test test test test test test test test test test test junk";
+    uint16 constant RADIUS = 36;
+    uint256 constant BOTS = 32; // extra players scattered over the frontier (anvil accounts 20..51)
 
     function run() external override returns (Deployment memory d) {
         uint256 adminKey = vm.deriveKey(MNEMONIC, 0);
@@ -24,7 +27,7 @@ contract DevDeploy is Deploy {
 
         vm.startBroadcast(adminKey);
         address admin = vm.addr(adminKey);
-        d = _deploy(admin, admin, 12);
+        d = _deploy(admin, admin, RADIUS);
         _loadTraits(d.citadel, traits);
         // a quicker world for local play: faster claims and sieges
         GameStorage.Config memory c = ViewModule(address(d.game)).getConfig();
@@ -66,7 +69,48 @@ contract DevDeploy is Deploy {
             eco.build(citadelId, 5); // FLEET ACADEMY
             vm.stopBroadcast();
         }
+        _seedFrontier(d, adminKey);
         _write(d);
+    }
+
+    /// @dev BOTS more players, each with one CITADEL lit somewhere between 9 and 33 tiles out (the centre stays free for
+    /// the e2e playtests), in all four factions. Anvil only funds its first 10 accounts, so the admin pays their gas.
+    function _seedFrontier(Deployment memory d, uint256 adminKey) internal {
+        EconomyModule eco = EconomyModule(address(d.game));
+        ViewModule v = ViewModule(address(d.game));
+        for (uint256 i; i < BOTS; ++i) {
+            uint256 key = vm.deriveKey(MNEMONIC, uint32(20 + i));
+            address bot = vm.addr(key);
+            vm.broadcast(adminKey);
+            payable(bot).transfer(5 ether);
+
+            uint256 firstPilot = d.pilot.totalMinted();
+            uint256 from = d.faucet.nextCitadel();
+            vm.startBroadcast(key);
+            d.faucet.drip();
+            d.citadel.setApprovalForAll(address(d.game), true);
+            d.pilot.setApprovalForAll(address(d.game), true);
+            uint256 citadelId = from;
+            while (d.citadel.ownerOf(citadelId) != bot) ++citadelId;
+            (int16 q, int16 r) = _frontierTile(v, i);
+            uint256[] memory pilots = new uint256[](1);
+            pilots[0] = firstPilot;
+            eco.lite(citadelId, 0, q, r, uint8(i % 4), d.citadel.traitsOf(citadelId).tech, pilots);
+            eco.build(citadelId, 5);
+            vm.stopBroadcast();
+        }
+    }
+
+    function _frontierTile(ViewModule v, uint256 i) internal view returns (int16 q, int16 r) {
+        for (uint256 n;; ++n) {
+            uint256 h = uint256(keccak256(abi.encode(i, n)));
+            q = int16(int256(h % 67) - 33);
+            r = int16(int256((h >> 16) % 67) - 33);
+            uint256 dist = Hex.fromCenter(q, r);
+            if (dist < 9 || dist > 33) continue;
+            (bool occupied,) = v.citadelAt(0, q, r);
+            if (!occupied) return (q, r);
+        }
     }
 
     /// @dev SEKT by id band like the mainnet supply (64 / 128 / 256 / 576); components weighted to the weak tiers.
