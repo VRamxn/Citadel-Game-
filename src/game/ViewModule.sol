@@ -60,8 +60,13 @@ contract ViewModule is GameBase, IGameView {
         return config;
     }
 
-    function citadel(uint256 citadelId) external view returns (Citadel memory) {
-        return _citadels[citadelId];
+    /// @notice A CITADEL's state, with a finished construction applied even before it is settled on-chain.
+    function citadel(uint256 citadelId) external view returns (Citadel memory c) {
+        c = _citadels[citadelId];
+        if (c.lit) {
+            c.levels = _levelsNow(citadelId);
+            c.vault = uint128(_vaultNow(citadelId));
+        }
     }
 
     function statsOf(uint256 citadelId) external view returns (Stats memory) {
@@ -82,8 +87,10 @@ contract ViewModule is GameBase, IGameView {
         return _training[citadelId];
     }
 
-    function constructionOf(uint256 citadelId) external view returns (Construction memory) {
-        return _construction[citadelId];
+    /// @notice The construction in progress, or an empty one if none (or if it has already finished).
+    function constructionOf(uint256 citadelId) external view returns (Construction memory k) {
+        k = _construction[citadelId];
+        if (k.end != 0 && k.end <= block.timestamp) delete k;
     }
 
     /// @notice Garrison including units whose training has finished but not yet been settled on-chain.
@@ -95,11 +102,9 @@ contract ViewModule is GameBase, IGameView {
         }
     }
 
-    /// @notice Unclaimed DK including mining since the last on-chain sync (ignores unsettled construction).
+    /// @notice Unclaimed DK including mining since the last on-chain sync.
     function vaultOf(uint256 citadelId) external view returns (uint256) {
-        Citadel storage c = _citadels[citadelId];
-        if (!c.lit) return 0;
-        return c.vault + _miningPerDay(c, _stats(citadelId)) * (block.timestamp - c.lastSync) / 1 days;
+        return _citadels[citadelId].lit ? _vaultNow(citadelId) : 0;
     }
 
     function citadelAt(uint8 ao, int16 q, int16 r) external view returns (bool occupied, uint256 citadelId) {

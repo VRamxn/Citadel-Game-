@@ -15,7 +15,7 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
         uint256 mineBps; // production bonus over 100%
         uint256 offBps;
         uint256 defBps;
-        uint256 fortBps;
+        uint256 fortBps; // fortification bonus of stationed MHRUDVOG THROT
         uint256 repairBps;
         uint256 siegeDefBps;
         uint256 scoutBps;
@@ -102,7 +102,18 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
 
     // ------------------------------------------------------------------ stats
 
-    function _stats(uint256 id) internal view returns (Stats memory s) {
+    /// @dev Building levels with a finished-but-unsettled construction applied.
+    function _levelsNow(uint256 id) internal view returns (uint8[6] memory lv) {
+        lv = _citadels[id].levels;
+        Construction storage k = _construction[id];
+        if (k.end != 0 && k.end <= block.timestamp) lv[k.building] = k.level;
+    }
+
+    function _stats(uint256 id) internal view returns (Stats memory) {
+        return _statsAt(id, _levelsNow(id));
+    }
+
+    function _statsAt(uint256 id, uint8[6] memory lv) internal view returns (Stats memory s) {
         Citadel storage c = _citadels[id];
         uint64 bits = techTree.bits(c.faction);
         uint256 power = Traits.genPowerBps(c.generation);
@@ -116,7 +127,6 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
             s.mineBps += mm;
             s.scoutBps += a;
         }
-        uint8[6] memory lv = c.levels;
         uint256 shield = _scaled(Traits.shieldBps(c.shield), lv[B_SHIELD], power, amp);
         uint256 recharge = _scaled(Traits.engineRechargeBps(c.engine), lv[B_ENGINE], power, amp);
         s.repairBps = _scaled(Traits.engineRepairBps(c.engine), lv[B_ENGINE], power, amp);
@@ -124,8 +134,7 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
         s.offBps = _scaled(Traits.weaponBps(c.weapon), lv[B_WEAPON], power, amp) + c.pilotOff;
         (uint8 wt, uint256 wb) = Traits.weaponSecondary(c.weapon);
         s.typeOff[wt] += wb * power / BPS;
-        s.fortBps = config.fortificationBps;
-        s.typeDef[Traits.MHRUDVOG_THROT] += 2_500; // fortification specialists
+        s.fortBps = config.fortificationBps; // applies to MHRUDVOG THROT only (BattleBase._defense)
         s.mineBps += c.pilotMine + 1_000 * uint256(lv[B_MINE]);
         s.scoutBps += c.pilotScout;
         s.structure = uint256(config.structureDp) * (uint256(lv[B_CITADEL]) + 1) ** 2 * power / BPS;
@@ -225,6 +234,19 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
         return c.doomRiot ? rate * 2 : rate;
     }
 
+    /// @dev Unclaimed DK as of now, settling a finished construction at its end time (view of what _sync does).
+    function _vaultNow(uint256 id) internal view returns (uint256 v) {
+        Citadel storage c = _citadels[id];
+        v = c.vault;
+        uint256 from = c.lastSync;
+        Construction storage k = _construction[id];
+        if (k.end != 0 && k.end <= block.timestamp && k.end > from) {
+            v += _miningPerDay(c, _statsAt(id, c.levels)) * (k.end - from) / 1 days;
+            from = k.end;
+        }
+        if (block.timestamp > from) v += _miningPerDay(c, _stats(id)) * (block.timestamp - from) / 1 days;
+    }
+
     function _accrue(Citadel storage c, Stats memory s, uint256 until) private {
         if (until <= c.lastSync) return;
         c.vault += uint128(_miningPerDay(c, s) * (until - c.lastSync) / 1 days);
@@ -234,14 +256,12 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
     /// @dev Settles mining into the vault, finished construction into levels and finished training into the garrison.
     function _sync(uint256 id) internal {
         Citadel storage c = _citadels[id];
-        Stats memory s = _stats(id);
         Construction storage k = _construction[id];
         if (k.end != 0 && k.end <= block.timestamp) {
-            _accrue(c, s, k.end);
+            _accrue(c, _statsAt(id, c.levels), k.end);
             _completeConstruction(id);
-            s = _stats(id);
         }
-        _accrue(c, s, block.timestamp);
+        _accrue(c, _stats(id), block.timestamp);
         for (uint8 t; t < FLEET_TYPES; ++t) {
             Batch storage b = _training[id][t];
             uint64 fin = _finished(b);

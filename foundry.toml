@@ -11,6 +11,7 @@ remappings = [
   "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
   "forge-std/=lib/forge-std/src/",
 ]
+gas_limit = "100000000000" # the 30-day playtest is long
 fs_permissions = [{ access = "read", path = "./data" }, { access = "read-write", path = "./deployments" }]
 
 [rpc_endpoints]

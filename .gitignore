@@ -7,3 +7,4 @@ deployments/31337.json
 broadcast/
 web/node_modules/
 web/dist/
+web/tsconfig.tsbuildinfo

@@ -364,7 +364,7 @@ contract WarModule is BattleBase {
         uint64[4] memory gar = _garrison[toId];
         uint8 S = Traits.DALAA_MAX;
         uint256 atk = uint256(units[S]) * (BPS + sa.scoutBps);
-        uint256 def = uint256(gar[S]) * (BPS + sd.scoutBps + sd.fortBps);
+        uint256 def = uint256(gar[S]) * (BPS + sd.scoutBps);
         uint64[4] memory attLost;
         uint64[4] memory defLost;
         bool success = atk > def;

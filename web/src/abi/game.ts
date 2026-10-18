@@ -2173,7 +2173,7 @@ export default [
   ],
   "outputs": [
    {
-    "name": "",
+    "name": "c",
     "type": "tuple",
     "internalType": "struct GameStorage.Citadel",
     "components": [
@@ -2368,7 +2368,7 @@ export default [
   ],
   "outputs": [
    {
-    "name": "",
+    "name": "k",
     "type": "tuple",
     "internalType": "struct GameStorage.Construction",
     "components": [

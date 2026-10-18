@@ -77,7 +77,9 @@ abstract contract BattleBase is GameBase {
     function _defense(Stats memory sd, uint64[4] memory gar, bool siege_) internal view returns (uint256 d) {
         uint256 extra = siege_ ? sd.siegeDefBps : 0;
         for (uint8 t; t < FLEET_TYPES; ++t) {
-            d += uint256(gar[t]) * fleetTypes[t].dp * (BPS + sd.fortBps + sd.defBps + sd.typeDef[t] + extra) / BPS;
+            // Only MHRUDVOG THROT fortify (0xCITADEL alpha post); everything else defends at its base DP.
+            uint256 fort = t == Traits.MHRUDVOG_THROT ? sd.fortBps : 0;
+            d += uint256(gar[t]) * fleetTypes[t].dp * (BPS + fort + sd.defBps + sd.typeDef[t] + extra) / BPS;
         }
         d += sd.structure * (BPS + sd.defBps + extra) / BPS;
     }
