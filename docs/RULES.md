@@ -232,6 +232,9 @@ target's garrison**. There's no recall **[designed]**. A CITADEL under siege can
   passes within 7 days, and anyone can then execute.
 - To hand the levers over, the game owner calls `transferOwnership(council)` and the council passes a proposal calling
   `acceptOwnership()`.
+- **Upgrades:** the game owner can `install` a new module, re-routing its functions. That's how rule fixes ship without
+  migrating state, and it's also the most powerful lever there is. Handing ownership to the council puts upgrades to a
+  sovereign vote too.
 
 ## Seasons and astronomical objects
 

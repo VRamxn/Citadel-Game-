@@ -10,7 +10,7 @@ for i in $(seq 0 1023); do
   while :; do
     code=$(curl -s -m 30 -D /tmp/citadel-hdr.$$ -o "$f" -w '%{http_code}' "$BASE/$i")
     if [ "$code" = 200 ] && grep -q attributes "$f"; then break; fi
-    wait=$(grep -i '^retry-after:' /tmp/citadel-hdr.$$ | tr -dc '0-9'); wait=${wait:-60}
+    wait=$(grep -i "^retry-after:" /tmp/citadel-hdr.$$ | tr -dc "0-9"); wait=${wait:-60}; [ "$wait" -lt 30 ] && wait=30
     echo "$(date +%T) id $i: HTTP $code, waiting ${wait}s"
     sleep "$wait"
   done
