@@ -130,6 +130,17 @@ contract WarTest is Base {
         assertEq(view_.citadel(2).incoming, 0);
     }
 
+    function test_noFleetPointsForFightingYourself() public {
+        _give(alice, 5);
+        _lite(alice, 5, 4, 0, 0); // adjacent to alice's CITADEL 0
+        _army(alice, 0, SIF, 200);
+        _army(alice, 5, SIF, 50);
+        vm.prank(alice);
+        war.raid(0, 5, _units(200, 0, 0, 0));
+        assertEq(view_.garrisonOf(5)[SIF], 0);
+        assertEq(d.game.fleetPoints(0), 0);
+    }
+
     function testFuzz_raidOneSideWiped(uint64 att, uint64 def) public {
         att = uint64(bound(att, 1, 400));
         def = uint64(bound(def, 0, 200));

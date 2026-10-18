@@ -89,7 +89,9 @@ abstract contract BattleBase is GameBase {
         for (uint8 t; t < FLEET_TYPES; ++t) {
             gar[t] -= defLost[t];
         }
-        // FLEET POINTS = DK value of enemy fleet destroyed, in whole DK.
+        // FLEET POINTS = DK value of enemy fleet destroyed, in whole DK. Fighting yourself earns nothing, so FLEET
+        // POINTS (and the PILOT they mint) can't simply be bought by feeding one of your CITADEL to another.
+        if (_citadels[fromId].owner == _citadels[toId].owner) return;
         fleetPoints[fromId] += uint128(_value(defLost) / 1 ether);
         fleetPoints[toId] += uint128(_value(attLost) / 1 ether);
     }
