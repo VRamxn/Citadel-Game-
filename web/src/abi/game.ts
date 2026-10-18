@@ -2382,6 +2382,167 @@ export default [
  },
  {
   "type": "function",
+  "name": "citadelsOf",
+  "inputs": [
+   {
+    "name": "ids",
+    "type": "uint256[]",
+    "internalType": "uint256[]"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "out",
+    "type": "tuple[]",
+    "internalType": "struct GameStorage.Citadel[]",
+    "components": [
+     {
+      "name": "owner",
+      "type": "address",
+      "internalType": "address"
+     },
+     {
+      "name": "lit",
+      "type": "bool",
+      "internalType": "bool"
+     },
+     {
+      "name": "doomRiot",
+      "type": "bool",
+      "internalType": "bool"
+     },
+     {
+      "name": "ao",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "q",
+      "type": "int16",
+      "internalType": "int16"
+     },
+     {
+      "name": "r",
+      "type": "int16",
+      "internalType": "int16"
+     },
+     {
+      "name": "faction",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "research",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "generation",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "sekt",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "shield",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "engine",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "weapon",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "tech",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "lastSync",
+      "type": "uint64",
+      "internalType": "uint64"
+     },
+     {
+      "name": "lastClaim",
+      "type": "uint64",
+      "internalType": "uint64"
+     },
+     {
+      "name": "pilotOff",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "pilotDef",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "pilotMine",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "pilotHermetic",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "pilotScout",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "pilotResearch",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "incoming",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "outgoing",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "besieged",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "vault",
+      "type": "uint128",
+      "internalType": "uint128"
+     },
+     {
+      "name": "mentat",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "levels",
+      "type": "uint8[6]",
+      "internalType": "uint8[6]"
+     }
+    ]
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "constructionOf",
   "inputs": [
    {
@@ -2612,6 +2773,82 @@ export default [
     "name": "",
     "type": "tuple",
     "internalType": "struct GameStorage.March",
+    "components": [
+     {
+      "name": "kind",
+      "type": "uint8",
+      "internalType": "enum GameStorage.MarchKind"
+     },
+     {
+      "name": "done",
+      "type": "bool",
+      "internalType": "bool"
+     },
+     {
+      "name": "arriveAt",
+      "type": "uint64",
+      "internalType": "uint64"
+     },
+     {
+      "name": "origin",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "target",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "originEpoch",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "targetEpoch",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "units",
+      "type": "uint64[4]",
+      "internalType": "uint64[4]"
+     },
+     {
+      "name": "loot",
+      "type": "uint128",
+      "internalType": "uint128"
+     },
+     {
+      "name": "sender",
+      "type": "address",
+      "internalType": "address"
+     },
+     {
+      "name": "pilot",
+      "type": "uint256",
+      "internalType": "uint256"
+     }
+    ]
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "marchesOf",
+  "inputs": [
+   {
+    "name": "ids",
+    "type": "uint256[]",
+    "internalType": "uint256[]"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "out",
+    "type": "tuple[]",
+    "internalType": "struct GameStorage.March[]",
     "components": [
      {
       "name": "kind",
@@ -3025,6 +3262,87 @@ export default [
     "name": "",
     "type": "tuple",
     "internalType": "struct GameStorage.Siege",
+    "components": [
+     {
+      "name": "active",
+      "type": "bool",
+      "internalType": "bool"
+     },
+     {
+      "name": "attacker",
+      "type": "address",
+      "internalType": "address"
+     },
+     {
+      "name": "faction",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "origin",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "target",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "originEpoch",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "targetEpoch",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "pilot",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "start",
+      "type": "uint64",
+      "internalType": "uint64"
+     },
+     {
+      "name": "waves",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "progress",
+      "type": "int32",
+      "internalType": "int32"
+     },
+     {
+      "name": "units",
+      "type": "uint64[4]",
+      "internalType": "uint64[4]"
+     }
+    ]
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "siegesOf",
+  "inputs": [
+   {
+    "name": "ids",
+    "type": "uint256[]",
+    "internalType": "uint256[]"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "out",
+    "type": "tuple[]",
+    "internalType": "struct GameStorage.Siege[]",
     "components": [
      {
       "name": "active",

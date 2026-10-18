@@ -16,6 +16,7 @@ import {
 import { useVision } from "../lib/vision";
 import type { Citadel } from "../lib/world";
 import { Minimap } from "./Minimap";
+import { Terrain } from "./Terrain";
 
 const MARCH_COLORS = ["", "#ff6b6b", "#8ab4f8", "#3fb950", "#c9d1d9", "#ff3b3b", "#ff9b3b"];
 const K_MAX = 3; // closest zoom (screen px per map unit)
@@ -98,21 +99,6 @@ export function HexMap() {
     }
     return ok;
   }, [placing, tiles, world.byTile, inAo, world.aoStates, ao]);
-
-  const tilePaths = useMemo(() => {
-    const groups = new Map<string, string[]>();
-    for (const t of tiles) {
-      const { x, y } = hexToPixel(t);
-      const fogged = visible && !visible.has(tileKey(ao, t.q, t.r));
-      const can = placeable?.has(hexKey(t.q, t.r));
-      const cls = `tile b${defaultTileBps(t, world.radius)}${fogged ? " fog" : ""}${can ? " can" : ""}${placing && !can ? " cant" : ""}`;
-      const pts = hexCorners(x, y, HEX_SIZE - 1);
-      let list = groups.get(cls);
-      if (!list) groups.set(cls, (list = []));
-      list.push(`M${pts.replace(/ /g, "L")}Z`);
-    }
-    return [...groups].map(([cls, d]) => ({ cls, d: d.join("") }));
-  }, [tiles, visible, placeable, placing, ao, world.radius]);
 
   // ---------------------------------------------------------------- input
   const toMap = (clientX: number, clientY: number) => {
@@ -255,6 +241,7 @@ export function HexMap() {
       onPointerCancel={onUp}
       onPointerLeave={() => setHover(undefined)}
     >
+      <Terrain radius={world.radius} ao={ao} view={{ ...vb, k: view.k }} size={size} visible={visible} placeable={placeable} />
       <svg viewBox={`${vb.x} ${vb.y} ${vb.w} ${vb.h}`} className={detail} role="img" aria-label="CITADEL grid">
         <defs>
           <radialGradient id="core">
@@ -262,10 +249,7 @@ export function HexMap() {
             <stop offset="1" stopColor="#e8a33d" stopOpacity="0" />
           </radialGradient>
         </defs>
-        <circle cx={0} cy={0} r={HEX_SIZE * (world.radius / 4 + 4)} fill="url(#core)" />
-        {tilePaths.map((p) => (
-          <path key={p.cls} d={p.d} className={p.cls} />
-        ))}
+        <circle cx={0} cy={0} r={HEX_SIZE * (world.radius / 4 + 4)} fill="url(#core)" pointerEvents="none" />
         {[...world.marches.values()].map((m) => {
           const a = world.citadels.get(m.origin);
           const tgtId = m.kind === 6 ? world.sieges.get(m.target)?.target : m.target;

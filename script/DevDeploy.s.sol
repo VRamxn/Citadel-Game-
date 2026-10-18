@@ -9,13 +9,13 @@ import {Hex} from "../src/lib/Hex.sol";
 
 /// @notice LOCAL ONLY (anvil). Deploys the system, then seeds a living world: eight anvil accounts take their faucet
 /// kit, light CITADEL around the grid in all four factions and start building. Uses the real trait snapshot if
-/// data/citadel-traits.bin exists, synthetic traits otherwise. The grid is the full 36-radius map with 40 players.
+/// data/citadel-traits.bin exists, synthetic traits otherwise. The grid is the full 80-radius map with 128 players.
 ///   anvil &  forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300
 /// (forge simulates all seeding txs in one block, which underestimates gas once they land in separate blocks)
 contract DevDeploy is Deploy {
     string constant MNEMONIC = "test test test test test test test test test test test junk";
-    uint16 constant RADIUS = 36;
-    uint256 constant BOTS = 32; // extra players scattered over the frontier (anvil accounts 20..51)
+    uint16 constant RADIUS = 80;
+    uint256 constant BOTS = 120; // extra players scattered over the frontier (anvil accounts 20..139)
 
     function run() external override returns (Deployment memory d) {
         uint256 adminKey = vm.deriveKey(MNEMONIC, 0);
@@ -73,7 +73,7 @@ contract DevDeploy is Deploy {
         _write(d);
     }
 
-    /// @dev BOTS more players, each with one CITADEL lit somewhere between 9 and 33 tiles out (the centre stays free for
+    /// @dev BOTS more players, each with one CITADEL lit somewhere between 9 and 76 tiles out (the centre stays free for
     /// the e2e playtests), in all four factions. Anvil only funds its first 10 accounts, so the admin pays their gas.
     function _seedFrontier(Deployment memory d, uint256 adminKey) internal {
         EconomyModule eco = EconomyModule(address(d.game));
@@ -104,10 +104,10 @@ contract DevDeploy is Deploy {
     function _frontierTile(ViewModule v, uint256 i) internal view returns (int16 q, int16 r) {
         for (uint256 n;; ++n) {
             uint256 h = uint256(keccak256(abi.encode(i, n)));
-            q = int16(int256(h % 67) - 33);
-            r = int16(int256((h >> 16) % 67) - 33);
+            q = int16(int256(h % 153) - 76);
+            r = int16(int256((h >> 16) % 153) - 76);
             uint256 dist = Hex.fromCenter(q, r);
-            if (dist < 9 || dist > 33) continue;
+            if (dist < 9 || dist > 76) continue;
             (bool occupied,) = v.citadelAt(0, q, r);
             if (!occupied) return (q, r);
         }

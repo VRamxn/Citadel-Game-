@@ -53,7 +53,8 @@ main { display: grid; grid-template-columns: 1fr 440px; min-height: 0; }
 
 .mapwrap { position: absolute; inset: 0; outline: none; touch-action: none; cursor: grab; user-select: none; }
 .mapwrap:active { cursor: grabbing; }
-.mapwrap svg { width: 100%; height: 100%; display: block; }
+.mapwrap > svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.mapwrap .terrain { position: absolute; inset: 0; display: block; }
 .tile { fill: #0f141b; stroke: #1b232e; stroke-width: 1; }
 .tile.b10500 { fill: #16140f; }
 .tile.b11000 { fill: #1e1a10; }
@@ -61,8 +62,8 @@ main { display: grid; grid-template-columns: 1fr 440px; min-height: 0; }
 .tile.b12000 { fill: #2e220d; }
 .tile.b12500 { fill: #3a2a0e; }
 .tile.fog { opacity: 0.32; }
-.mapwrap svg.far .tile { stroke: none; }
-.mapwrap svg .tile { shape-rendering: optimizeSpeed; }
+
+
 .unknown-far { fill: none; stroke: #6e7b8b; }
 .tile.can { fill: #10301a; stroke: var(--green); stroke-width: 1.5; }
 .tile.cant { opacity: 0.35; }

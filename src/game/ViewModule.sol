@@ -23,7 +23,7 @@ contract ViewModule is GameBase, IGameView {
     constructor() GameStorage(msg.sender) {}
 
     function selectors() external pure returns (bytes4[] memory s) {
-        s = new bytes4[](29);
+        s = new bytes4[](32);
         s[0] = this.getConfig.selector;
         s[1] = this.citadel.selector;
         s[2] = this.statsOf.selector;
@@ -53,9 +53,35 @@ contract ViewModule is GameBase, IGameView {
         s[26] = this.researchRate.selector;
         s[27] = this.controllerOfMentat.selector;
         s[28] = this.savedLevels.selector;
+        s[29] = this.citadelsOf.selector;
+        s[30] = this.marchesOf.selector;
+        s[31] = this.siegesOf.selector;
     }
 
     // ================================================================ views
+
+    /// @notice Batch of `citadel(id)` for map clients: thousands of CITADEL load in a handful of calls.
+    function citadelsOf(uint256[] calldata ids) external view returns (Citadel[] memory out) {
+        out = new Citadel[](ids.length);
+        for (uint256 i; i < ids.length; ++i) {
+            out[i] = _citadels[ids[i]];
+            if (out[i].lit) out[i].levels = _levelsNow(ids[i]);
+        }
+    }
+
+    function marchesOf(uint256[] calldata ids) external view returns (March[] memory out) {
+        out = new March[](ids.length);
+        for (uint256 i; i < ids.length; ++i) {
+            out[i] = _marches[ids[i]];
+        }
+    }
+
+    function siegesOf(uint256[] calldata ids) external view returns (Siege[] memory out) {
+        out = new Siege[](ids.length);
+        for (uint256 i; i < ids.length; ++i) {
+            out[i] = _sieges[ids[i]];
+        }
+    }
 
     function getConfig() external view returns (Config memory) {
         return config;

@@ -19,6 +19,16 @@ contract EconomyTest is Base {
         assertTrue(Hex.key(0, 1, -1) != Hex.key(1, 1, -1));
     }
 
+    function test_batchedViews() public {
+        _lite(alice, 0, 4, 4, 0);
+        _lite(bob, 1, -4, 4, 1);
+        uint256[] memory ids = new uint256[](3);
+        (ids[0], ids[1], ids[2]) = (0, 1, 2);
+        GameStorage.Citadel[] memory cs = view_.citadelsOf(ids);
+        assertTrue(cs[0].lit && cs[1].lit && !cs[2].lit);
+        assertEq(cs[1].owner, bob);
+    }
+
     function test_unknownSelectorReverts() public {
         (bool ok,) = address(d.game).call(abi.encodeWithSignature("nope()"));
         assertFalse(ok);

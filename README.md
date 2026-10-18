@@ -11,7 +11,8 @@ mint, and shipped a Goerli alpha before disbanding. This repo builds the game th
 
 ## What's in the game
 
-- **Grid:** light CITADEL and PILOT to a 3,997-tile hex grid. The golden core and six outer mining fields produce the
+- **Grid:** light CITADEL and PILOT to a 19,441-tile hex grid, sized so the 1,024 GEN0 and the generations they spawn
+  saturate it around the third generation. The golden core and six outer mining fields produce the
   most DRAKMA, and that's where the war is.
 - **Economy:** mine DRAKMA; build MINES, SHIELD / ENGINE / WEAPON SYSTEM, FLEET ACADEMY and CITADEL levels; hurry with DK.
 - **Fleet:** train SIF GATTACA raiders, MHRUDVOG THROT fortifications, DREBENTRAAKHT siege ships and DALAA MAX scouts.
@@ -49,7 +50,7 @@ Requires [Foundry](https://getfoundry.sh) (`mise install` picks up the pinned ve
 ```sh
 git clone --recursive https://github.com/VRamxn/Citadel-Game-.git && cd Citadel-Game-
 anvil &                                                          # local chain
-forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300  # deploy + seed 40 players
+forge script script/DevDeploy.s.sol --rpc-url local --broadcast --gas-estimate-multiplier 300  # deploy + seed 128 players (~8 min)
 npm --prefix web install && npm --prefix web run dev             # http://localhost:5173
 node keeper/keeper.ts &                                          # optional: auto-resolve marches and sieges
 ```

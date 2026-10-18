@@ -6,12 +6,12 @@ import {Stack} from "./Stack.sol";
 
 /// @notice Deploys the full system, loads the mainnet CITADEL traits and writes deployments/<chainid>.json.
 ///   forge script script/Deploy.s.sol --rpc-url sepolia --account deployer --broadcast --verify
-/// Env: GRID_RADIUS (default 36: 3,997 tiles), TREASURY (default: deployer).
+/// Env: GRID_RADIUS (default 80: 19,441 tiles), TREASURY (default: deployer).
 contract Deploy is Script, Stack {
     function run() external virtual returns (Deployment memory d) {
         bytes memory traits = vm.readFileBinary("data/citadel-traits.bin");
         require(traits.length == 1024 * 6, "run script/pack_traits.py first");
-        uint16 radius = uint16(vm.envOr("GRID_RADIUS", uint256(36)));
+        uint16 radius = uint16(vm.envOr("GRID_RADIUS", uint256(80)));
 
         vm.startBroadcast();
         address admin = msg.sender;

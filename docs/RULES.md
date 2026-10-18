@@ -29,9 +29,15 @@ Contents: [Assets](#assets) · [Grid](#grid) · [Mining](#mining) · [Buildings]
 
 ## Grid
 
-- Each astronomical object (AO) is a hexagon of tiles in axial coordinates `(q, r)`. The default radius is 36
-  (**3,997 tiles**), set at deploy with `GRID_RADIUS`. That's room for the 1,024 GEN0 CITADEL and the generations that
-  follow, with most of the map still to be conquered. Crossing it takes over a day for SIF GATTACA.
+- Each astronomical object (AO) is a hexagon of tiles in axial coordinates `(q, r)`. The default radius is 80
+  (**19,441 tiles**), set at deploy with `GRID_RADIUS`.
+  - **Sizing:** only 1,024 GEN0 CITADEL will ever exist (about 3 each for 300 players, 30 for the biggest holders).
+    The rest of the map is filled by the generations they spawn: GEN0 found GEN1, which found GEN2. With the PILOT
+    cost curve and colonization cost, a realistic expansion is roughly 1,024 GEN0, ~5,000 GEN1 and ~10,000 GEN2, so
+    **the grid saturates around the second and third generation**. That's when expansion has to turn into conquest.
+    When an AO saturates, the whitepaper's answer is to open the next one.
+  - **Distance:** crossing the map is 160 tiles, about 80 hours for SIF GATTACA (whitepaper: raids "take tens of hours
+    to resolve (depending on distance)"). Speed is a *lever*.
 - **Mining multiple per tile [designed]** scales with the radius, so contested ground is spread across the map
   (*lever* per tile; the posts gave 1×–1.25× with the center as the hotspot):
   - **The core:** 1.25× within radius/12 of the center, 1.15× within twice that, and a 1.05× halo out to three times.

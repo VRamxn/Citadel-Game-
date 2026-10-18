@@ -178,9 +178,12 @@ export class WorldSync {
     // ---- re-read what changed (everything on the first load)
     const ids = this.w.ready ? touched : new Set([...touched, ...this.w.citadels.keys()]);
     for (const id of this.w.citadels.keys()) if (!this.w.ready) ids.add(id);
-    await Promise.all(
-      [...ids].map(async (id) => {
-        const s = (await c.read("game", "citadel", [id])) as any;
+    const BATCH = 200;
+    const chunks = <T,>(xs: T[]) => Array.from({ length: Math.ceil(xs.length / BATCH) }, (_, i) => xs.slice(i * BATCH, (i + 1) * BATCH));
+    for (const part of chunks([...ids])) {
+      const rows = (await c.read("game", "citadelsOf", [part])) as any[];
+      part.forEach((id, i) => {
+        const s = rows[i];
         const prev = this.w.citadels.get(id);
         if (prev) this.w.byTile.delete(tileKey(prev.ao, prev.q, prev.r));
         if (!s.lit) {
@@ -190,25 +193,27 @@ export class WorldSync {
         const cit: Citadel = { ...s, id, levels: [...s.levels] };
         this.w.citadels.set(id, cit);
         this.w.byTile.set(tileKey(cit.ao, cit.q, cit.r), id);
-      }),
-    );
+      });
+    }
     // marches: re-read new/changed and every still-open one whose arrival has passed
     for (const [id, m] of this.w.marches) if (!m.done && Number(m.arriveAt) <= Number(head.timestamp) + 5) marchIds.add(id);
-    await Promise.all(
-      [...marchIds].map(async (id) => {
-        const m = (await c.read("game", "march", [id])) as any;
+    for (const part of chunks([...marchIds])) {
+      const rows = (await c.read("game", "marchesOf", [part])) as any[];
+      part.forEach((id, i) => {
+        const m = rows[i];
         if (m.done) this.w.marches.delete(id);
         else this.w.marches.set(id, { ...m, id, sentAt: this.sentAt.get(id) ?? Number(head.timestamp) });
-      }),
-    );
+      });
+    }
     for (const [id] of this.w.sieges) siegeIds.add(id);
-    await Promise.all(
-      [...siegeIds].map(async (id) => {
-        const g = (await c.read("game", "siegeOf", [id])) as any;
+    for (const part of chunks([...siegeIds])) {
+      const rows = (await c.read("game", "siegesOf", [part])) as any[];
+      part.forEach((id, i) => {
+        const g = rows[i];
         if (!g.active) this.w.sieges.delete(id);
         else this.w.sieges.set(id, { ...g, id, waves: Number(g.waves), progress: Number(g.progress) });
-      }),
-    );
+      });
+    }
     this.w.techBits = await Promise.all([0, 1, 2, 3].map((f) => c.read<bigint>("techTree", "bits", [f])));
     this.w.aoStates = await Promise.all([0, 1, 2, 3, 4, 5, 6, 7].map(async (a) => Number(await c.read("game", "aoState", [a]))));
 
