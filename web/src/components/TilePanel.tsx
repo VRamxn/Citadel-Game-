@@ -20,8 +20,8 @@ import {
   fmtDuration,
   fmtPct,
   hexDistance,
-  hexKey,
   short,
+  tileKey,
 } from "../lib/game";
 import type { Citadel } from "../lib/world";
 import { pilotInfo, type PilotInfo } from "../lib/player";
@@ -85,9 +85,9 @@ function useDetail(c?: Citadel) {
 }
 
 export function TilePanel() {
-  const { world, selected } = useGame();
+  const { world, selected, ao } = useGame();
   if (!selected) return <p className="dim">Select a tile on the grid.</p>;
-  const id = world.byTile.get(hexKey(selected.q, selected.r));
+  const id = world.byTile.get(tileKey(ao, selected.q, selected.r));
   const c = id !== undefined ? world.citadels.get(id) : undefined;
   return c ? <CitadelView c={c} /> : <EmptyTile />;
 }
@@ -148,7 +148,7 @@ function CitadelView({ c }: { c: Citadel }) {
         {c.doomRiot && <span className="tag red">DOOM RIOT</span>}
       </h2>
       <p>
-        <b style={{ color: FACTION_COLORS[c.faction] }}>{FACTIONS[c.faction]}</b> · {own ? "yours" : short(c.owner)} · (
+        <b style={{ color: FACTION_COLORS[c.faction] }}>{FACTIONS[c.faction]}</b> · {own ? "yours" : short(c.owner)} · AO {c.ao} (
         {c.q}, {c.r}) · researching {BRANCHES[c.research]}
       </p>
       <div className="grid2">
@@ -388,9 +388,10 @@ function ForeignActions({ c }: { c: Citadel }) {
   const src = world.citadels.get(BigInt(from || (mine[0]?.id ?? 0n)));
   if (!mine.length) return <p className="dim">Light a CITADEL to the grid to interact with others.</p>;
   const units = u.map((x) => BigInt(x || "0"));
-  const dist = src ? (src.ao === c.ao ? hexDistance(src, c) : NaN) : 0;
+  const sameAo = !src || src.ao === c.ao;
+  const dist = src ? hexDistance(src, c) + (sameAo ? 0 : Number(world.config?.aoGapTiles ?? 12)) : 0;
   const slowest = Math.max(...units.map((n, i) => (n > 0n ? world.fleetTypes[i]?.secsPerTile ?? 0 : 0)));
-  const eta = dist <= 1 || world.config?.distortion ? 0 : dist * slowest;
+  const eta = (sameAo && dist <= 1) || world.config?.distortion ? 0 : dist * slowest;
   const ally = src && src.faction === c.faction;
   const s = src!.id;
   return (

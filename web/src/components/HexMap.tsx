@@ -9,6 +9,7 @@ import {
   hexKey,
   hexToPixel,
   hexesWithin,
+  tileKey,
   type Hex,
 } from "../lib/game";
 import { useVision } from "../lib/vision";
@@ -16,7 +17,7 @@ import { useVision } from "../lib/vision";
 const MARCH_COLORS = ["", "#ff6b6b", "#8ab4f8", "#3fb950", "#c9d1d9", "#ff3b3b", "#ff9b3b"];
 
 export function HexMap() {
-  const { world, me, selected, select, placing, setPlacing, act, chain, fog, setFog } = useGame();
+  const { world, me, selected, select, placing, setPlacing, act, chain, fog, setFog, ao, setAo } = useGame();
   const [view, setView] = useState({ x: 0, y: 0, k: 1 });
   const { tiles: visible, seen } = useVision();
   const drag = useRef<{ x: number; y: number; vx: number; vy: number; moved: boolean } | null>(null);
@@ -31,17 +32,17 @@ export function HexMap() {
     if (!placing) return null;
     const ok = new Set<string>();
     for (const t of tiles) {
-      if (world.byTile.has(hexKey(t.q, t.r))) continue;
+      if (world.byTile.has(tileKey(ao, t.q, t.r)) || world.aoStates[ao] === 0) continue;
       if (placing.kind === "colonize") {
         const near = [...world.citadels.values()].some(
-          (c) => c.ao === 0 && c.faction === placing.faction && hexDistance(c, t) <= 2,
+          (c) => c.ao === ao && c.faction === placing.faction && hexDistance(c, t) <= 2,
         );
         if (!near) continue;
       }
       ok.add(hexKey(t.q, t.r));
     }
     return ok;
-  }, [placing, tiles, world.byTile, world.citadels]);
+  }, [placing, tiles, world.byTile, world.citadels, world.aoStates, ao]);
 
   const extent = (world.radius + 1) * HEX_SIZE * 1.45;
 
@@ -52,11 +53,11 @@ export function HexMap() {
       setPlacing(undefined);
       if (p.kind === "lite")
         act(`lite CITADEL ${p.citadelId} at (${t.q}, ${t.r})`, () =>
-          chain.write("game", "lite", [p.citadelId, 0, t.q, t.r, p.faction, p.research, p.pilots]),
+          chain.write("game", "lite", [p.citadelId, ao, t.q, t.r, p.faction, p.research, p.pilots]),
         );
       else
         act(`colonize (${t.q}, ${t.r}) with PILOT ${p.pilotId}`, () =>
-          chain.write("game", "colonize", [p.pilotId, 0, t.q, t.r, p.faction]),
+          chain.write("game", "colonize", [p.pilotId, ao, t.q, t.r, p.faction]),
         );
       select(t);
       return;
@@ -111,7 +112,7 @@ export function HexMap() {
           const { x, y } = hexToPixel(t);
           const k = hexKey(t.q, t.r);
           const bps = defaultTileBps(t);
-          const fogged = visible && !visible.has(k);
+          const fogged = visible && !visible.has(tileKey(ao, t.q, t.r));
           const can = placeable?.has(k);
           return (
             <polygon
@@ -127,7 +128,7 @@ export function HexMap() {
           const a = world.citadels.get(m.origin);
           const tgtId = m.kind === 6 ? world.sieges.get(m.target)?.target : m.target;
           const b = tgtId !== undefined ? world.citadels.get(tgtId) : undefined;
-          if (!a || !b || a.ao || b.ao) return null;
+          if (!a || !b || a.ao !== ao || b.ao !== ao) return null;
           const [from, to] = m.kind === 2 ? [b, a] : [a, b];
           const pa = hexToPixel(from),
             pb = hexToPixel(to);
@@ -143,7 +144,7 @@ export function HexMap() {
           );
         })}
         {[...world.citadels.values()].map((c) => {
-          if (c.ao !== 0) return null;
+          if (c.ao !== ao) return null;
           const { x, y } = hexToPixel(c);
           if (!seen(c))
             return (
@@ -177,6 +178,16 @@ export function HexMap() {
           />
         )}
       </svg>
+      <div className="aos">
+        {world.aoStates.map((st, i) =>
+          st === 0 ? null : (
+            <button key={i} className={i === ao ? "on" : ""} onClick={() => setAo(i)}>
+              AO {i}
+              {st === 1 ? " · isolated" : ""}
+            </button>
+          ),
+        )}
+      </div>
       <div className="maptools">
         <button onClick={() => setView((v) => ({ ...v, k: Math.min(4, v.k * 1.3) }))}>+</button>
         <button onClick={() => setView((v) => ({ ...v, k: Math.max(0.35, v.k / 1.3) }))}>−</button>

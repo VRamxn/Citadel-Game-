@@ -30,6 +30,8 @@ export type Ctx = {
   log: (line: string) => void;
   fog: boolean;
   setFog: (f: boolean) => void;
+  ao: number;
+  setAo: (ao: number) => void;
 };
 export type Placing =
   | { kind: "lite"; citadelId: bigint; pilots: bigint[]; faction: number; research: number }
@@ -67,6 +69,7 @@ function Game({ dep }: { dep: NonNullable<ReturnType<typeof pickDeployment>> }) 
   const [termLines, setTermLines] = useState<string[]>(["CITADEL OS v0.2 — type `help`."]);
   const [err, setErr] = useState<string>();
   const [fog, setFog] = useState(true);
+  const [ao, setAo] = useState(0);
   const busy = useRef(false);
 
   const log = useCallback((line: string) => setTermLines((l) => [...l.slice(-400), line]), []);
@@ -132,7 +135,10 @@ function Game({ dep }: { dep: NonNullable<ReturnType<typeof pickDeployment>> }) 
     if (h) setTab("TILE");
   };
 
-  const ctx: Ctx = { chain, world, player, me, selected, select: onSelect, placing, setPlacing, act, refresh, log, fog, setFog };
+  const ctx: Ctx = { chain, world, player, me, selected, select: onSelect, placing, setPlacing, act, refresh, log, fog, setFog, ao, setAo: (a: number) => {
+    setAo(a);
+    select(undefined);
+  } };
 
   return (
     <AppCtx.Provider value={ctx}>

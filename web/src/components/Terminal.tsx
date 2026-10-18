@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { useGame } from "../App";
-import { BUILDINGS, FACTIONS, FLEET_SHORT, fmtDk, hexKey } from "../lib/game";
+import { BUILDINGS, FACTIONS, FLEET_SHORT, fmtDk, tileKey } from "../lib/game";
 
 const HELP = `commands:
   mine                              your CITADEL on the grid
@@ -66,7 +66,7 @@ export function Terminal({ lines }: { lines: string[] }) {
           return void (await act("drip", () => chain.write("faucet", "drip")));
         case "lite":
           return void (await act(`lite ${a[0]}`, () =>
-            chain.write("game", "lite", [n(0), 0, Number(a[1]), Number(a[2]), Number(a[3]), Number(a[4] ?? 0), a.slice(5).map(BigInt)]),
+            chain.write("game", "lite", [n(0), g.ao, Number(a[1]), Number(a[2]), Number(a[3]), Number(a[4] ?? 0), a.slice(5).map(BigInt)]),
           ));
         case "build": {
           const b = BUILDINGS.findIndex((x) => x.toLowerCase().startsWith((a[1] ?? "").toLowerCase()));
@@ -102,7 +102,7 @@ export function Terminal({ lines }: { lines: string[] }) {
           if (!chain.isDev) return log("  only on the local chain");
           return void (await act(`skip ${a[0]}h`, () => chain.skip(Number(a[0] ?? 1) * 3600)));
         case "goto": {
-          const id = world.byTile.get(hexKey(Number(a[0]), Number(a[1])));
+          const id = world.byTile.get(tileKey(g.ao, Number(a[0]), Number(a[1])));
           g.select({ q: Number(a[0]), r: Number(a[1]) });
           return log(id !== undefined ? `  CITADEL ${id}` : "  empty tile");
         }

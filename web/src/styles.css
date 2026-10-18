@@ -71,6 +71,7 @@ main { display: grid; grid-template-columns: 1fr 440px; min-height: 0; }
 .march line { stroke-width: 1.5; stroke-dasharray: 4 3; opacity: 0.8; }
 .maptools { position: absolute; right: 10px; top: 10px; display: flex; flex-direction: column; gap: 2px; background: #0d1117cc; padding: 4px; border: 1px solid var(--line); }
 .maptools button { width: 30px; margin: 0; }
+.aos { position: absolute; left: 10px; top: 10px; display: flex; gap: 2px; }
 .placing { position: absolute; left: 50%; top: 10px; transform: translateX(-50%); background: #10301a; border: 1px solid var(--green); padding: 6px 10px; }
 .legend { position: absolute; left: 10px; bottom: 8px; display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: var(--dim); background: #07090ccc; padding: 4px 8px; }
 .legend i { display: inline-block; width: 9px; height: 9px; margin-right: 3px; vertical-align: middle; }

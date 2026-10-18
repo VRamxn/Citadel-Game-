@@ -25,17 +25,25 @@ export type Player = {
 
 const transfer = parseAbiItem("event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)");
 
+type OwnedCache = { from: bigint; ids: Set<bigint> };
+const ownedCache = new Map<string, OwnedCache>();
+const traitCache = new Map<string, CitadelTraits>();
+
+/** Token ids `who` received, scanned incrementally (only new blocks each call), then filtered by current ownerOf. */
 async function owned(c: Chain_, token: "citadel" | "pilot" | "mentat", who: Address): Promise<bigint[]> {
+  const key = `${c.dep.chainId}:${c.dep[token]}:${who}`.toLowerCase();
+  const cache = ownedCache.get(key) ?? { from: BigInt(c.dep.block ?? 0), ids: new Set<bigint>() };
   const head = await c.pub.getBlockNumber();
-  const ids = new Set<bigint>();
-  for (let s = BigInt(c.dep.block ?? 0); s <= head; s += 9_000n) {
+  for (let s = cache.from; s <= head; s += 9_000n) {
     const e = s + 8_999n < head ? s + 8_999n : head;
     const logs = await c.pub.getLogs({ address: c.dep[token], event: transfer, args: { to: who }, fromBlock: s, toBlock: e });
-    for (const l of logs) ids.add(l.args.tokenId!);
+    for (const l of logs) cache.ids.add(l.args.tokenId!);
   }
+  cache.from = head + 1n;
+  ownedCache.set(key, cache);
   const out: bigint[] = [];
   await Promise.all(
-    [...ids].map(async (id) => {
+    [...cache.ids].map(async (id) => {
       try {
         const o = await c.read<Address>(token, "ownerOf", [id]);
         if (o.toLowerCase() === who.toLowerCase()) out.push(id);
@@ -45,6 +53,12 @@ async function owned(c: Chain_, token: "citadel" | "pilot" | "mentat", who: Addr
     }),
   );
   return out.sort((a, b) => (a < b ? -1 : 1));
+}
+
+async function citadelTraits(c: Chain_, id: bigint): Promise<CitadelTraits> {
+  const k = `${c.dep.chainId}:${id}`;
+  if (!traitCache.has(k)) traitCache.set(k, (await c.read("citadel", "traitsOf", [id])) as CitadelTraits);
+  return traitCache.get(k)!;
 }
 
 export async function pilotInfo(c: Chain_, id: bigint): Promise<PilotInfo> {
@@ -66,7 +80,7 @@ export async function loadPlayer(c: Chain_, who: Address): Promise<Player> {
   const walletCitadels = await Promise.all(
     cits.map(async (id) => ({
       id,
-      traits: (await c.read("citadel", "traitsOf", [id])) as CitadelTraits,
+      traits: await citadelTraits(c, id),
       pilotClaimed: id < 1024n ? await c.read<boolean>("technocracy", "citadelClaimedPilot", [id]) : true,
     })),
   );

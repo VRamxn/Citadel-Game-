@@ -8,3 +8,4 @@ broadcast/
 web/node_modules/
 web/dist/
 web/tsconfig.tsbuildinfo
+web/e2e/shots/

@@ -1,6 +1,6 @@
 import { parseEventLogs, type Address, type Log } from "viem";
 import { abis, type Chain_ } from "./chain";
-import { FACTIONS, FLEET_SHORT, MARCH_KIND, BUILDINGS, hexKey } from "./game";
+import { FACTIONS, FLEET_SHORT, MARCH_KIND, BUILDINGS, tileKey } from "./game";
 
 export type Citadel = {
   id: bigint;
@@ -73,7 +73,8 @@ export type World = {
   config: any;
   fleetTypes: any[];
   citadels: Map<bigint, Citadel>;
-  byTile: Map<string, bigint>; // AO 0 only, for the map
+  byTile: Map<string, bigint>; // tileKey(ao, q, r) => CITADEL
+  aoStates: number[]; // per AO 0..7: 0 closed, 1 isolated, 2 connected
   marches: Map<bigint, March>;
   sieges: Map<bigint, Siege>;
   techBits: bigint[];
@@ -90,6 +91,7 @@ export const emptyWorld = (): World => ({
   fleetTypes: [],
   citadels: new Map(),
   byTile: new Map(),
+  aoStates: [2, 0, 0, 0, 0, 0, 0, 0],
   marches: new Map(),
   sieges: new Map(),
   techBits: [0n, 0n, 0n, 0n],
@@ -179,14 +181,14 @@ export class WorldSync {
       [...ids].map(async (id) => {
         const s = (await c.read("game", "citadel", [id])) as any;
         const prev = this.w.citadels.get(id);
-        if (prev && prev.ao === 0) this.w.byTile.delete(hexKey(prev.q, prev.r));
+        if (prev) this.w.byTile.delete(tileKey(prev.ao, prev.q, prev.r));
         if (!s.lit) {
           this.w.citadels.delete(id);
           return;
         }
         const cit: Citadel = { ...s, id, levels: [...s.levels] };
         this.w.citadels.set(id, cit);
-        if (cit.ao === 0) this.w.byTile.set(hexKey(cit.q, cit.r), id);
+        this.w.byTile.set(tileKey(cit.ao, cit.q, cit.r), id);
       }),
     );
     // marches: re-read new/changed and every still-open one whose arrival has passed
@@ -207,6 +209,7 @@ export class WorldSync {
       }),
     );
     this.w.techBits = await Promise.all([0, 1, 2, 3].map((f) => c.read<bigint>("techTree", "bits", [f])));
+    this.w.aoStates = await Promise.all([0, 1, 2, 3, 4, 5, 6, 7].map(async (a) => Number(await c.read("game", "aoState", [a]))));
 
     this.w.block = head.number!;
     this.w.now = Number(head.timestamp);

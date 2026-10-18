@@ -62,6 +62,8 @@ export type Hex = { q: number; r: number };
 export const hexDistance = (a: Hex, b: Hex) =>
   (Math.abs(a.q - b.q) + Math.abs(a.q + a.r - b.q - b.r) + Math.abs(a.r - b.r)) / 2;
 export const hexKey = (q: number, r: number) => `${q},${r}`;
+/** A tile on a specific astronomical object. */
+export const tileKey = (ao: number, q: number, r: number) => `${ao}:${q},${r}`;
 
 export function hexesWithin(radius: number): Hex[] {
   const out: Hex[] = [];
