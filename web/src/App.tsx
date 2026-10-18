@@ -110,11 +110,11 @@ function Game({ dep }: { dep: NonNullable<ReturnType<typeof pickDeployment>> }) 
       log(`> ${label}`);
       try {
         await fn();
+        busy.current = false;
+        await refresh(); // show the new state before saying done, so buttons can't act on stale state
         setToasts((t) => t.filter((x) => x.id !== id));
         toast(`${label}: done`, "ok");
         log(`  ok`);
-        busy.current = false;
-        await refresh();
         return true;
       } catch (e) {
         setToasts((t) => t.filter((x) => x.id !== id));

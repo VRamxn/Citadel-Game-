@@ -160,6 +160,7 @@ contract Technocracy is Ownable {
         delete _seatDebt[pilotId];
         delete lastCollected[pilotId];
         sovereignCount--;
+        if (boughtSeats > 0) boughtSeats--; // the seat can be bought again
         emit SeatVacated(pilotId);
     }
 

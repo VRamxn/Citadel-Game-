@@ -96,8 +96,14 @@ abstract contract GameBase is GameStorage, ReentrancyGuardTransient {
         return d + config.aoGapTiles;
     }
 
+    /// @dev Subgrid distortion: adjacent CITADEL (or any two, during grid-wide distortion) fight without travel.
+    /// Grid-wide distortion never crosses into an isolated AO.
     function _instant(Citadel storage a, Citadel storage b) internal view returns (bool) {
-        return config.distortion || (a.ao == b.ao && Hex.distance(a.q, a.r, b.q, b.r) <= 1);
+        if (a.ao != b.ao) {
+            _distance(a, b); // reverts if the AOs aren't connected
+            return config.distortion;
+        }
+        return config.distortion || Hex.distance(a.q, a.r, b.q, b.r) <= 1;
     }
 
     // ------------------------------------------------------------------ stats

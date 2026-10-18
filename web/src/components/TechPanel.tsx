@@ -5,7 +5,7 @@ import { BRANCHES, BRANCH_FIRST, FACTIONS, FACTION_COLORS, TECHS, hasTech } from
 type Pool = { points: bigint; rate: bigint; keys: bigint; completed: bigint; next: bigint };
 
 export function TechPanel() {
-  const { chain, world, me } = useGame();
+  const { chain, world, me, act } = useGame();
   const myFaction = [...world.citadels.values()].find((c) => c.owner === me)?.faction ?? 0;
   const [faction, setFaction] = useState(myFaction);
   const [pools, setPools] = useState<Pool[]>([]);
@@ -48,6 +48,17 @@ export function TechPanel() {
                 </span>
               )}
             </h3>
+            {p && p.next === 0n &&
+              [...world.citadels.values()]
+                .filter((c) => c.owner === me && c.faction === faction && c.generation === 0 && c.sekt === 0 && c.tech === i && c.research === i)
+                .map((c) => (
+                  <button
+                    key={String(c.id)}
+                    onClick={() => act(`claim branch MENTAT with RELIK ${c.id}`, () => chain.write("techTree", "claimBranchMentat", [i, c.id]))}
+                  >
+                    claim branch MENTAT (RELIK {c.id.toString()})
+                  </button>
+                ))}
             <ol>
               {TECHS[i].map(([name, effect], k) => (
                 <li key={name} className={hasTech(bits, BRANCH_FIRST[i] + k) ? "done" : ""} title={effect}>

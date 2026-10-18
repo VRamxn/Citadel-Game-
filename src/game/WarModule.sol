@@ -282,10 +282,11 @@ contract WarModule is BattleBase {
     function _returnTravel(uint256 origin, uint256 from, uint64[4] memory units) private view returns (uint256) {
         Citadel storage home = _citadels[origin];
         Citadel storage there = _citadels[from];
-        if (!there.lit || _instant(home, there)) return 0;
+        if (!there.lit) return 0;
         if (home.ao != there.ao && (aoState[home.ao] != AOState.Connected || aoState[there.ao] != AOState.Connected)) {
             return 0;
         }
+        if (_instant(home, there)) return 0;
         return _distance(home, there) * _secsPerTile(units, _stats(origin));
     }
 

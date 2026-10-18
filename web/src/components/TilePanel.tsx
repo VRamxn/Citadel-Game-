@@ -39,6 +39,8 @@ type Detail = {
   fleetPoints: bigint;
   pilotCost: bigint;
   costs: [bigint, bigint][];
+  pilotClaimed: boolean;
+  mentatClaimed: boolean;
 };
 
 function useDetail(c?: Citadel) {
@@ -68,7 +70,12 @@ function useDetail(c?: Citadel) {
           lv >= 10 ? Promise.resolve([0n, 0n] as [bigint, bigint]) : chain.read<[bigint, bigint]>("game", "buildCost", [b, lv + 1]),
         ),
       );
-      if (live) setD({ vault, rate, research, garrison, training, construction, stats, pilots, fleetPoints, pilotCost, costs });
+      const [pilotClaimed, mentatClaimed] = await Promise.all([
+        id < 1024n ? chain.read<boolean>("technocracy", "citadelClaimedPilot", [id]) : true,
+        c.generation === 0 && c.sekt === 0 ? chain.read<boolean>("techTree", "relikMentatClaimed", [id]) : true,
+      ]);
+      if (live)
+        setD({ vault, rate, research, garrison, training, construction, stats, pilots, fleetPoints, pilotCost, costs, pilotClaimed, mentatClaimed });
     })().catch(() => {});
     return () => {
       live = false;
@@ -86,7 +93,7 @@ export function TilePanel() {
 }
 
 function EmptyTile() {
-  const { selected, player, world, setPlacing } = useGame();
+  const { selected, player, world } = useGame();
   const t = selected!;
   const inGrid = hexDistance(t, { q: 0, r: 0 }) <= world.radius;
   return (
@@ -112,9 +119,6 @@ function EmptyTile() {
       {inGrid && player && player.walletPilots.length > 0 && (
         <p className="dim">PILOT in your wallet can found a GEN1 CITADEL within 2 tiles of your faction (ASSETS → colonize).</p>
       )}
-      <button className="link" onClick={() => setPlacing(undefined)} hidden>
-        {" "}
-      </button>
     </div>
   );
 }
@@ -357,6 +361,16 @@ function OwnActions({ c, d }: { c: Citadel; d: Detail }) {
             </button>
           ))}
         {c.mentat > 0n && <span className="tag">MENTAT #{(c.mentat - 1n).toString()}</span>}
+        {!d.pilotClaimed && (
+          <button onClick={() => act(`claim PILOT for CITADEL ${id}`, () => chain.write("technocracy", "claimPilot", [id]))}>
+            claim PILOT (64k DK)
+          </button>
+        )}
+        {!d.mentatClaimed && (
+          <button onClick={() => act(`claim MENTAT for RELIK ${id}`, () => chain.write("techTree", "claimRelikMentat", [id]))}>
+            claim RELIK MENTAT
+          </button>
+        )}
         <button className="danger" onClick={() => act(`unlite CITADEL ${id}`, () => chain.write("game", "unlite", [id]))}>
           unlite
         </button>

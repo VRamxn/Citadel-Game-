@@ -245,6 +245,22 @@ contract EconomyTest is Base {
         assertEq(view_.march(m).arriveAt, block.timestamp + 12 * 30 minutes); // 0 tiles + 12 AO gap
     }
 
+    function test_distortionDoesNotCrossIsolatedAOs() public {
+        vm.prank(admin);
+        view_.setAOState(1, GameStorage.AOState.Isolated);
+        _lite(alice, 0, 0, 0, 0);
+        vm.prank(bob);
+        eco.lite(1, 1, 0, 0, 1, 0, none);
+        _army(alice, 0, SIF, 10);
+        GameStorage.Config memory c = _cfg();
+        c.distortion = true;
+        vm.prank(admin);
+        view_.setConfig(c);
+        vm.prank(alice);
+        vm.expectRevert(GameBase.Unreachable.selector);
+        war.raid(0, 1, _units(10, 0, 0, 0));
+    }
+
     // ------------------------------------------------------------ MENTAT
 
     function test_relikMentatBoostsProduction() public {
