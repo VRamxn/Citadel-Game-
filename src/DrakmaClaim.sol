@@ -13,6 +13,10 @@ import {IOPMessenger} from "./bridge/IOPMessenger.sol";
 /// DrakmaClaimRelayL1, which tells this contract who they are via the rollup messenger and where to send the DRAKMA.
 contract DrakmaClaim is Ownable {
     bytes32 public immutable root;
+    /// @notice The terms the root was built with, on-chain so anyone can rebuild it with script/snapshot.mjs and check.
+    uint256 public immutable snapshotBlock; // Ethereum block of the old-DRAKMA and NFT-holder snapshot
+    uint256 public immutable maxCarryOver; // old DRAKMA carried over per wallet, at most (wei)
+    uint256 public immutable flatPerWallet; // equal share for every included wallet (wei)
     IDrakma public immutable drakma;
     IOPMessenger public immutable messenger;
     address public l1Relay;
@@ -25,8 +29,18 @@ contract DrakmaClaim is Ownable {
     error NotRelay();
     error AlreadySet();
 
-    constructor(address owner_, bytes32 root_, IDrakma drakma_, IOPMessenger messenger_) Ownable(owner_) {
-        root = root_;
+    struct Terms {
+        bytes32 root;
+        uint256 snapshotBlock;
+        uint256 maxCarryOver;
+        uint256 flatPerWallet;
+    }
+
+    constructor(address owner_, Terms memory terms, IDrakma drakma_, IOPMessenger messenger_) Ownable(owner_) {
+        root = terms.root;
+        snapshotBlock = terms.snapshotBlock;
+        maxCarryOver = terms.maxCarryOver;
+        flatPerWallet = terms.flatPerWallet;
         drakma = drakma_;
         messenger = messenger_;
     }

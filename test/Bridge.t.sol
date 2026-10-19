@@ -7,10 +7,11 @@ import {Stack} from "../script/Stack.sol";
 import {LocalMessenger} from "../src/bridge/LocalMessenger.sol";
 import {CitadelVaultL1} from "../src/bridge/CitadelVaultL1.sol";
 import {CitadelBridgeL2} from "../src/bridge/CitadelBridgeL2.sol";
-import {MockOriginal} from "../src/TestnetFaucet.sol";
+import {MockOriginal, MockOriginalPilot} from "../src/TestnetFaucet.sol";
 import {DrakmaClaim} from "../src/DrakmaClaim.sol";
 import {EconomyModule} from "../src/game/EconomyModule.sol";
 import {Traits} from "../src/lib/Traits.sol";
+import {PilotNFT} from "../src/PilotNFT.sol";
 
 /// @notice Originals on "L1" (mock collections in a vault) and their copies on "L2", linked by a LocalMessenger that
 /// delivers both directions instantly — the same contracts that run on Ethereum and Base.
@@ -20,7 +21,7 @@ contract BridgeTest is Test, Stack {
     address bob = makeAddr("bob");
     LocalMessenger messenger;
     MockOriginal origCitadel;
-    MockOriginal origPilot;
+    MockOriginalPilot origPilot;
     Deployment d;
     L1Deployment l1;
 
@@ -28,16 +29,24 @@ contract BridgeTest is Test, Stack {
         vm.startPrank(admin);
         messenger = new LocalMessenger();
         origCitadel = new MockOriginal("CITADEL", "CITADEL", 1024, admin);
-        origPilot = new MockOriginal("PILOT", "PILOT", 2048, admin);
-        d = _deployL2(admin, admin, 12, messenger, _root(), false);
+        origPilot = new MockOriginalPilot(admin);
+        d = _deployL2(
+            admin, admin, 12, messenger, DrakmaClaim.Terms(_root(), 123, 50_000_000 ether, 250_000 ether), false
+        );
         l1 = _deployL1(admin, messenger, IERC721(address(origCitadel)), IERC721(address(origPilot)), address(d.claim));
         _linkL1(l1, address(d.bridge));
         _linkL2(d, address(l1.vault), address(l1.claimRelay));
         d.citadel.setTraits(0, hex"000300000000000300000000");
-        d.pilot.setTraits(0, abi.encodePacked(uint8(2), uint8(5), uint8(7), uint8(1), uint8(0))); // lvl 7 sovereign
+        d.pilot.setTraits(0, abi.encodePacked(uint8(2), uint8(0), uint8(4), uint8(1))); // #0 DREDGE, #1 CRHONA + DEATH
+        _lockTraits(d);
+        // mainnet record: #0 is a level 7 sovereign that bribed KULT 5; #1 is a plain level 2
+        origPilot.setRecord(0, 7, true, 2, 5);
+        origPilot.setRecord(1, 2, false, 0, 0);
+        origPilot.setSovereignCounter(62);
         origCitadel.mint(alice, 0);
         origCitadel.mint(alice, 1);
         origPilot.mint(alice, 0);
+        origPilot.mint(alice, 1);
         vm.stopPrank();
     }
 
@@ -64,29 +73,64 @@ contract BridgeTest is Test, Stack {
         d.citadel.ownerOf(0);
     }
 
-    function test_pilotKeepsWhatItBought() public {
+    function test_pilotArrivesWithItsMainnetRecord() public {
         _deposit(alice, 1, 0, alice);
         Traits.PilotTraits memory t = d.pilot.traitsOf(0);
-        assertEq(t.level, 7);
+        assertEq(t.level, 7); // read on L1 from the original contract
         assertTrue(t.sovereign);
-        assertEq(t.subjugation, 2);
-        // a round trip keeps the traits
+        assertEq(t.kult, 5);
+        assertEq(t.subjugation, 2); // from the locked metadata snapshot
+        assertEq(d.technocracy.sovereignCount(), 1); // seated on arrival
+        assertEq(d.technocracy.originalBought(), 62);
+
+        _deposit(alice, 1, 1, alice);
+        Traits.PilotTraits memory u = d.pilot.traitsOf(1);
+        assertEq(u.level, 2);
+        assertFalse(u.sovereign);
+        assertTrue(u.death);
+        assertEq(u.kult, d.pilot.rolledKult(1)); // never recorded: rolled on-chain
+    }
+
+    function test_roundTripKeepsTheL2State() public {
+        _deposit(alice, 1, 0, alice);
         uint256[] memory ids = new uint256[](1);
         vm.prank(alice);
         d.bridge.withdraw(1, ids, alice);
+        // mainnet record changes while it's home; the PILOT's own L2 state wins when it returns
+        vm.prank(admin);
+        origPilot.setRecord(0, 0, false, 0, 0);
         _deposit(alice, 1, 0, alice);
         assertEq(d.pilot.traitsOf(0).level, 7);
+        assertTrue(d.pilot.traitsOf(0).sovereign);
+        assertEq(d.technocracy.sovereignCount(), 1); // not seated twice
+    }
+
+    function test_traitsAreLocked() public {
+        vm.prank(admin);
+        vm.expectRevert(PilotNFT.Locked.selector);
+        d.pilot.setTraits(5, abi.encodePacked(uint8(0), uint8(0)));
+        vm.prank(admin);
+        vm.expectRevert();
+        d.citadel.setTraits(5, hex"000300000000");
+    }
+
+    function test_claimTermsAreOnChain() public view {
+        assertEq(d.claim.snapshotBlock(), 123);
+        assertEq(d.claim.maxCarryOver(), 50_000_000 ether);
+        assertEq(d.claim.flatPerWallet(), 250_000 ether);
     }
 
     function test_onlyTheVaultCanMintAndOnlyTheBridgeCanRelease() public {
         uint256[] memory ids = new uint256[](1);
         vm.expectRevert(CitadelBridgeL2.NotVault.selector);
-        d.bridge.finalizeDeposit(0, ids, alice);
+        d.bridge.finalizeDeposit(0, ids, alice, "");
         vm.expectRevert(CitadelVaultL1.NotBridge.selector);
         l1.vault.finalizeWithdrawal(0, ids, alice);
         // a message from anyone else through the messenger is refused too
         vm.expectRevert();
-        messenger.sendMessage(address(d.bridge), abi.encodeCall(CitadelBridgeL2.finalizeDeposit, (0, ids, alice)), 0);
+        messenger.sendMessage(
+            address(d.bridge), abi.encodeCall(CitadelBridgeL2.finalizeDeposit, (0, ids, alice, "")), 0
+        );
     }
 
     function test_cantWithdrawWhatYouDontHoldOrWhatIsLit() public {

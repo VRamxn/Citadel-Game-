@@ -139,6 +139,25 @@ export default [
  },
  {
   "type": "function",
+  "name": "arrived",
+  "inputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "",
+    "type": "bool",
+    "internalType": "bool"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "balanceOf",
   "inputs": [
    {
@@ -182,9 +201,42 @@ export default [
     "name": "id",
     "type": "uint256",
     "internalType": "uint256"
+   },
+   {
+    "name": "o",
+    "type": "tuple",
+    "internalType": "struct PilotOrigin",
+    "components": [
+     {
+      "name": "level",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "sovereign",
+      "type": "bool",
+      "internalType": "bool"
+     },
+     {
+      "name": "charges",
+      "type": "uint8",
+      "internalType": "uint8"
+     },
+     {
+      "name": "kult",
+      "type": "uint8",
+      "internalType": "uint8"
+     }
+    ]
    }
   ],
-  "outputs": [],
+  "outputs": [
+   {
+    "name": "arrivedSovereign",
+    "type": "bool",
+    "internalType": "bool"
+   }
+  ],
   "stateMutability": "nonpayable"
  },
  {
@@ -316,6 +368,13 @@ export default [
    }
   ],
   "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "lockTraits",
+  "inputs": [],
+  "outputs": [],
+  "stateMutability": "nonpayable"
  },
  {
   "type": "function",
@@ -453,6 +512,25 @@ export default [
   ],
   "outputs": [],
   "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "rolledKult",
+  "inputs": [
+   {
+    "name": "id",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint8",
+    "internalType": "uint8"
+   }
+  ],
+  "stateMutability": "pure"
  },
  {
   "type": "function",
@@ -606,6 +684,19 @@ export default [
     "name": "",
     "type": "string",
     "internalType": "string"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "traitsLocked",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "bool",
+    "internalType": "bool"
    }
   ],
   "stateMutability": "view"
@@ -1013,6 +1104,11 @@ export default [
     "internalType": "uint256"
    }
   ]
+ },
+ {
+  "type": "error",
+  "name": "Locked",
+  "inputs": []
  },
  {
   "type": "error",

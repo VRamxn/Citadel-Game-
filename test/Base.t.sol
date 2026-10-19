@@ -12,6 +12,8 @@ import {GameStorage} from "../src/game/GameStorage.sol";
 import {GameBase} from "../src/game/GameBase.sol";
 import {Traits} from "../src/lib/Traits.sol";
 import {LocalMessenger} from "../src/bridge/LocalMessenger.sol";
+import {PilotOrigin} from "../src/bridge/IOPMessenger.sol";
+import {DrakmaClaim} from "../src/DrakmaClaim.sol";
 
 /// @notice Shared fixture: the full system, with hand-picked GEN0 traits for CITADEL #0..15:
 ///  #0  RELIK, tech PROPULSION      #1  ELEKT, tech PRESERVATIVE   #2  ELEKT, tech MILITANT
@@ -46,7 +48,7 @@ abstract contract Base is Test, Stack {
     function setUp() public virtual {
         vm.startPrank(admin);
         messenger = new LocalMessenger();
-        d = _deployL2(admin, treasury, 12, messenger, bytes32(0), true);
+        d = _deployL2(admin, treasury, 12, messenger, DrakmaClaim.Terms(bytes32(0), 0, 0, 0), true);
         // tests stand in for the bridge when they need a bridged original
         d.citadel.grantRole(d.citadel.BRIDGE_ROLE(), admin);
         d.pilot.grantRole(d.pilot.BRIDGE_ROLE(), admin);
@@ -99,13 +101,18 @@ abstract contract Base is Test, Stack {
         vm.startPrank(admin);
         if (t.generation == 0) {
             id = nextOriginalPilot++;
-            uint8 flags = (t.sovereign ? 1 : 0) | (t.death ? 2 : 0);
-            d.pilot.setTraits(id, abi.encodePacked(t.subjugation, t.kult, t.level, flags, uint8(0)));
-            d.pilot.bridgeMint(who, id);
+            d.pilot.setTraits(id, abi.encodePacked(t.subjugation, t.death ? uint8(1) : uint8(0)));
+            // what the vault would read from the original contract (a KULT counts as recorded: 1 charge)
+            bool seat = d.pilot.bridgeMint(who, id, PilotOrigin(t.level, t.sovereign, 1, t.kult));
+            vm.stopPrank();
+            if (seat) {
+                vm.prank(address(d.bridge));
+                d.technocracy.seatArrival(id);
+            }
         } else {
             id = d.pilot.mint(who, t);
+            vm.stopPrank();
         }
-        vm.stopPrank();
     }
 
     function _lite(address who, uint256 id, int16 q, int16 r, uint8 faction) internal {

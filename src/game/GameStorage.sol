@@ -63,6 +63,7 @@ abstract contract GameStorage is Ownable2Step {
         uint16 hurryBps; // hurry price as a share of the remaining part of the original cost
         uint16 aoGapTiles; // extra distance when marching between connected AOs
         uint128 researchPerDay; // research points per CITADEL per day, before SEKT/generation multipliers
+        uint128 waveBounty; // DK (wei) paid to whoever fights a due siege wave, so sieges never wait on anyone
     }
 
     struct Citadel {

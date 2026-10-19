@@ -1060,6 +1060,11 @@ export default [
       "name": "researchPerDay",
       "type": "uint128",
       "internalType": "uint128"
+     },
+     {
+      "name": "waveBounty",
+      "type": "uint128",
+      "internalType": "uint128"
      }
     ]
    }
@@ -2752,6 +2757,11 @@ export default [
       "name": "researchPerDay",
       "type": "uint128",
       "internalType": "uint128"
+     },
+     {
+      "name": "waveBounty",
+      "type": "uint128",
+      "internalType": "uint128"
      }
     ]
    }
@@ -3142,6 +3152,11 @@ export default [
      },
      {
       "name": "researchPerDay",
+      "type": "uint128",
+      "internalType": "uint128"
+     },
+     {
+      "name": "waveBounty",
       "type": "uint128",
       "internalType": "uint128"
      }

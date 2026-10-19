@@ -9,7 +9,8 @@ import {ViewModule} from "../src/game/ViewModule.sol";
 import {GameStorage} from "../src/game/GameStorage.sol";
 import {Hex} from "../src/lib/Hex.sol";
 import {LocalMessenger} from "../src/bridge/LocalMessenger.sol";
-import {MockOriginal, MockOriginalsFaucet} from "../src/TestnetFaucet.sol";
+import {MockOriginal, MockOriginalPilot, MockOriginalsFaucet} from "../src/TestnetFaucet.sol";
+import {DrakmaClaim} from "../src/DrakmaClaim.sol";
 
 /// @notice LOCAL ONLY (anvil). Both sides of the bridge on one chain — stand-ins for the original CITADEL and PILOT, the
 /// L1 vault, the L2 game — linked by a LocalMessenger that delivers instantly. Then it seeds a living world the way real
@@ -24,7 +25,7 @@ contract DevDeploy is Script, Stack {
     Deployment d;
     L1Deployment l1;
     MockOriginal origCitadel;
-    MockOriginal origPilot;
+    MockOriginalPilot origPilot;
     MockOriginalsFaucet origFaucet;
     uint256 adminKey;
 
@@ -35,17 +36,20 @@ contract DevDeploy is Script, Stack {
         vm.startBroadcast(adminKey);
         LocalMessenger messenger = new LocalMessenger();
         origCitadel = new MockOriginal("CITADEL (local original)", "CITADEL", 1024, admin);
-        origPilot = new MockOriginal("PILOT (local original)", "PILOT", 2048, admin);
+        origPilot = new MockOriginalPilot(admin);
         origFaucet = new MockOriginalsFaucet(origCitadel, origPilot);
         origCitadel.setFaucet(address(origFaucet));
         origPilot.setFaucet(address(origFaucet));
-        d = _deployL2(admin, admin, RADIUS, messenger, bytes32(0), true);
+        d = _deployL2(admin, admin, RADIUS, messenger, DrakmaClaim.Terms(bytes32(0), 0, 0, 0), true);
         l1 = _deployL1(admin, messenger, IERC721(address(origCitadel)), IERC721(address(origPilot)), address(d.claim));
         _linkL1(l1, address(d.bridge));
         _linkL2(d, address(l1.vault), address(l1.claimRelay));
         _loadTraits(d.citadel, _citadelTraits());
         _loadPilotTraits(d.pilot, _pilotTraits());
-        _seedSovereigns();
+        _mirrorPilotRecords();
+        _lockTraits(d);
+        _fundCouncil(d, admin, 1_000_000_000 ether);
+        _councilIsTreasury(d);
         GameStorage.Config memory c = ViewModule(address(d.game)).getConfig();
         c.claimInterval = 1 hours; // a quicker world for local play
         ViewModule(address(d.game)).setConfig(c);
@@ -117,10 +121,19 @@ contract DevDeploy is Script, Stack {
         }
     }
 
-    function _seedSovereigns() internal {
-        try vm.readFile("data/sovereigns.json") returns (string memory s) {
-            d.technocracy.seedSovereigns(vm.parseJsonUintArray(s, ".ids"), vm.parseJsonUint(s, ".bought"));
-        } catch {}
+    /// @dev Give the local stand-in originals the mainnet PILOT record (levels, sovereignty), so bridging carries it.
+    function _mirrorPilotRecords() internal {
+        bytes memory r;
+        try vm.readFileBinary("data/pilot-onchain.bin") returns (bytes memory b) {
+            r = b;
+        } catch {
+            return;
+        }
+        for (uint256 id; id < 140 && id * 4 + 3 < r.length; ++id) {
+            uint256 o = id * 4;
+            origPilot.setRecord(id, uint8(r[o]), r[o + 1] != 0, uint8(r[o + 2]), uint8(r[o + 3]));
+        }
+        origPilot.setSovereignCounter(62);
     }
 
     function _citadelTraits() internal view returns (bytes memory t) {
@@ -141,11 +154,9 @@ contract DevDeploy is Script, Stack {
         try vm.readFileBinary("data/pilot-traits.bin") returns (bytes memory b) {
             if (b.length > 0) return b;
         } catch {}
-        t = new bytes(1140 * 5); // synthetic until the snapshot is packed
+        t = new bytes(1140 * 2); // synthetic until the snapshot is packed
         for (uint256 i; i < 1140; ++i) {
-            uint256 s = uint256(keccak256(abi.encode("pilot", i)));
-            t[i * 5] = bytes1(uint8(s % 8));
-            t[i * 5 + 1] = bytes1(uint8((s >> 8) % 8));
+            t[i * 2] = bytes1(uint8(uint256(keccak256(abi.encode("pilot", i))) % 8));
         }
     }
 

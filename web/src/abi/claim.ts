@@ -8,9 +8,31 @@ export default [
     "internalType": "address"
    },
    {
-    "name": "root_",
-    "type": "bytes32",
-    "internalType": "bytes32"
+    "name": "terms",
+    "type": "tuple",
+    "internalType": "struct DrakmaClaim.Terms",
+    "components": [
+     {
+      "name": "root",
+      "type": "bytes32",
+      "internalType": "bytes32"
+     },
+     {
+      "name": "snapshotBlock",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "maxCarryOver",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "flatPerWallet",
+      "type": "uint256",
+      "internalType": "uint256"
+     }
+    ]
    },
    {
     "name": "drakma_",
@@ -105,6 +127,19 @@ export default [
  },
  {
   "type": "function",
+  "name": "flatPerWallet",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "l1Relay",
   "inputs": [],
   "outputs": [
@@ -112,6 +147,19 @@ export default [
     "name": "",
     "type": "address",
     "internalType": "address"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "maxCarryOver",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
    }
   ],
   "stateMutability": "view"
@@ -174,6 +222,19 @@ export default [
   ],
   "outputs": [],
   "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "snapshotBlock",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "stateMutability": "view"
  },
  {
   "type": "function",

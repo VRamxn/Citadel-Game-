@@ -10,6 +10,7 @@ type Mine = PilotInfo & { bribes: bigint; collective: bigint; kult: number; kult
 export function PoliticsPanel() {
   const { chain, world, me, player, act } = useGame();
   const [count, setCount] = useState<[bigint, bigint]>([0n, 0n]);
+  const [treasury, setTreasury] = useState<bigint>(0n);
   const [pilots, setPilots] = useState<Mine[]>([]);
   const [target, setTarget] = useState("");
   const [cost, setCost] = useState<bigint>();
@@ -19,7 +20,13 @@ export function PoliticsPanel() {
 
   useEffect(() => {
     (async () => {
-      setCount([await chain.read("technocracy", "sovereignCount"), await chain.read("technocracy", "boughtSeats")]);
+      const [sc, bought, orig] = await Promise.all([
+        chain.read<bigint>("technocracy", "sovereignCount"),
+        chain.read<bigint>("technocracy", "boughtSeats"),
+        chain.read<bigint>("technocracy", "originalBought"),
+      ]);
+      setCount([sc, bought + orig]);
+      setTreasury(await chain.read<bigint>("drakma", "balanceOf", [chain.dep.council]));
       if (!me || !player) return;
       const lit = [...world.citadels.values()].filter((c) => c.owner === me);
       const litPilots = (
@@ -123,6 +130,10 @@ export function PoliticsPanel() {
       </label>
 
       <h2>GRID MAELSTROM council</h2>
+      <p>
+        Treasury: <b className="dk">{fmtDk(treasury)} DRAKMA</b> — spent only by sovereign vote (propose a{" "}
+        <code>drakma.transfer</code>).
+      </p>
       <p className="dim small">
         Sovereigns vote on the game's levers (one vote per seat; a majority of seats passes). The council controls the game
         once its owner hands over ownership.

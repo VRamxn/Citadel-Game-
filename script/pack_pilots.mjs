@@ -1,4 +1,6 @@
-// Builds data/pilot-traits.bin (5 bytes per original PILOT id, for PilotNFT.setTraits) and data/pilot-traits.json.
+// Builds data/pilot-traits.bin (2 bytes per original PILOT id: subjugation, death — for PilotNFT.setTraits) and
+// data/pilot-traits.json (a readable preview of every PILOT as it will arrive, incl. what the bridge carries).
+// Also data/pilot-onchain.bin (4 bytes: level, sovereign, charges, kult), used only to mirror mainnet locally.
 //   inputs: data/pilots/<id>.json  (original metadata, script/fetch_pilots.sh)
 //           data/pilot-onchain.json (level + sovereignty from the original contract)
 // SUBJUGATION and DEATH come from each PILOT's original metadata (every PILOT's traits are revealed there: HERMETIC
@@ -19,7 +21,8 @@ const pick = (roll, w) => {
 
 const onchain = JSON.parse(readFileSync("data/pilot-onchain.json", "utf8"));
 const n = Object.keys(onchain).length;
-const out = Buffer.alloc(n * 5);
+const out = Buffer.alloc(n * 2);
+const rec = Buffer.alloc(n * 4);
 const table = {};
 let named = 0;
 for (let id = 0; id < n; id++) {
@@ -36,13 +39,14 @@ for (let id = 0; id < n; id++) {
   // a KULT is only on record for a sovereign that bribed one (chargeCount > 0); otherwise it's the unset default
   const recorded = oc.sovereign && oc.charges > 0;
   const kult = recorded ? oc.kult : pick(Number((seed >> 16n) % 2048n), KULT_W);
-  out.set([subj, kult, oc.level, (oc.sovereign ? 1 : 0) | (death ? 2 : 0), 0], id * 5);
+  out.set([subj, death ? 1 : 0], id * 2);
+  rec.set([oc.level, oc.sovereign ? 1 : 0, oc.charges, oc.kult], id * 4);
   table[id] = { name: meta.name, subjugation: SUBJ[subj], kult, kultRolled: !recorded, level: oc.level, sovereign: oc.sovereign, death };
 }
 writeFileSync("data/pilot-traits.bin", out);
+writeFileSync("data/pilot-onchain.bin", rec);
 writeFileSync("data/pilot-traits.json", JSON.stringify(table, null, 1));
 const sovereigns = Object.entries(table).filter(([, t]) => t.sovereign).map(([id]) => Number(id));
 const born = new Set(JSON.parse(readFileSync("data/born-sovereigns.json", "utf8")).map((b) => b.pilot));
 const bought = sovereigns.filter((id) => !born.has(id)).length;
-writeFileSync("data/sovereigns.json", JSON.stringify({ ids: sovereigns, bought }));
 console.log(`packed ${n} PILOT (${named} named): ${table ? Object.values(table).filter((t) => t.death).length : 0} DEATH, ${sovereigns.length} sovereign (${bought} bought seats), KULT rolled for ${Object.values(table).filter((t) => t.kultRolled).length}`);

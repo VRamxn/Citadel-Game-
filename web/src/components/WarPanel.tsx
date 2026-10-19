@@ -38,7 +38,9 @@ export function WarPanel() {
                 disabled={due <= 0}
                 onClick={() => act(`advance siege ${s.id}`, () => chain.write("game", "advanceSiege", [s.id, 24n]))}
               >
-                {due > 0 ? `fight ${Math.min(due, 24)} due wave${due > 1 ? "s" : ""}` : `next wave in ${fmtDuration(wave - ((world.now - Number(s.start)) % wave))}`}
+                {due > 0
+                  ? `fight ${Math.min(due, 24)} due wave${due > 1 ? "s" : ""} (earn ${fmtDk(BigInt(world.config?.waveBounty ?? 0) * BigInt(Math.min(due, 24)))} DK)`
+                  : `next wave in ${fmtDuration(wave - ((world.now - Number(s.start)) % wave))}`}
               </button>
             </div>
           </div>
@@ -76,7 +78,7 @@ export function WarPanel() {
         );
       })}
       <p className="dim small">
-        Anyone can resolve an arrived march or fight due siege waves. Resolving a raid pays {Number(world.config?.resolverFeeBps ?? 0) / 100}% of its
+        Anyone can resolve an arrived march or fight due siege waves — each wave pays {fmtDk(BigInt(world.config?.waveBounty ?? 0))} DK. Resolving a raid pays {Number(world.config?.resolverFeeBps ?? 0) / 100}% of its
         loot. A raid left unresolved for {fmtDuration(Number(world.config?.defectionWindow ?? 0))} defects to the defender.
       </p>
     </div>

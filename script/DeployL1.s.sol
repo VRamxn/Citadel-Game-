@@ -5,7 +5,7 @@ import {Script, console} from "forge-std/Script.sol";
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import {Stack} from "./Stack.sol";
 import {IOPMessenger} from "../src/bridge/IOPMessenger.sol";
-import {MockOriginal, MockOriginalsFaucet} from "../src/TestnetFaucet.sol";
+import {MockOriginal, MockOriginalPilot, MockOriginalsFaucet} from "../src/TestnetFaucet.sol";
 
 /// @notice Step 2 of 3 — the vault on Ethereum (or Sepolia), pointed at the L2 deployment from step 1.
 ///   L2_DEPLOYMENT=deployments/84532.json forge script script/DeployL1.s.sol --rpc-url sepolia --account deployer --broadcast --verify
@@ -30,7 +30,7 @@ contract DeployL1 is Script, Stack {
         address faucet;
         if (!mainnet) {
             MockOriginal c = new MockOriginal("CITADEL (testnet original)", "CITADEL", 1024, admin);
-            MockOriginal p = new MockOriginal("PILOT (testnet original)", "PILOT", 2048, admin);
+            MockOriginalPilot p = new MockOriginalPilot(admin);
             MockOriginalsFaucet f = new MockOriginalsFaucet(c, p);
             c.setFaucet(address(f));
             p.setFaucet(address(f));

@@ -63,9 +63,14 @@ to bridge in. Open **GUIDE** in the client for a walkthrough.
 ## Launch: originals on Ethereum, game on Base
 
 The game runs on **Base**. Holders bridge their **original** CITADEL and PILOT from Ethereum through a vault (the
-canonical OP Stack messenger, no admin keys) and bring them home whenever they like. PILOT keep the levels and
-sovereignty they bought on mainnet. DRAKMA is a new token: old balances held in people's wallets carry over 1:1,
-plus an equal share for every holder wallet, through a Merkle claim. GEN1+ CITADEL and PILOT are native to Base.
+canonical OP Stack messenger, no admin keys) and bring them home whenever they like.
+
+- **On-chain record:** the vault reads each PILOT's level and sovereignty from the original contract as it crosses, and
+  sovereigns take their seats on arrival.
+- **New DRAKMA:** old balances in people's wallets carry over 1:1 up to 50M per wallet, plus an equal 250k share for
+  every holder wallet, through a Merkle claim whose terms are recorded on-chain.
+- **Council treasury:** a 1B DRAKMA treasury belongs to the sovereigns' council and moves only by vote.
+- **GEN1+:** GEN1+ CITADEL and PILOT are native to Base.
 
 Deploy order, the snapshot scripts and what carries over: [`docs/LAUNCH.md`](docs/LAUNCH.md). On Sepolia ↔ Base
 Sepolia the same scripts deploy stand-ins for the originals, with faucets, so the whole flow can be tested first.

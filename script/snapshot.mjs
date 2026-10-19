@@ -1,6 +1,6 @@
 // Builds the DRAKMA carry-over claim at one Ethereum block: the old DRAKMA in people's wallets 1:1 (EOAs and Safe
 // multisigs; DRAKMA held by any other contract stays behind), plus an equal flat share for every such wallet that held
-// old DRAKMA, an original CITADEL or an original PILOT.
+// old DRAKMA, an original CITADEL or an original PILOT. Each wallet's old balance carries over up to maxCarryOver.
 //   node script/snapshot.mjs [block]   (default: latest)   RPC_URL=... to override the mainnet RPC
 // Writes data/claims.json: { block, root, flatPerWallet, wallets, total, claims: { address: { amount, proof } } }.
 // Leaves are OpenZeppelin standard Merkle leaves of (address, uint256), as DrakmaClaim verifies.
@@ -101,6 +101,10 @@ await inBatches([...wallets], async (w) => {
   }
 });
 const flat = BigInt(config.flatPerWallet) * 10n ** 18n;
+const cap = BigInt(config.maxCarryOver ?? "0") * 10n ** 18n; // 0 = no cap
+const carried = (b) => (cap > 0n && b > cap ? cap : b);
+let cappedWallets = 0;
+let cappedAway = 0n;
 const claims = [];
 const leftOut = [];
 for (const w of wallets) {
@@ -108,7 +112,9 @@ for (const w of wallets) {
     if (balances.get(w)) leftOut.push([w, balances.get(w), config.exclude[getAddress(w)] ?? "contract"]);
     continue;
   }
-  claims.push([getAddress(w), (balances.get(w) ?? 0n) + flat]);
+  const old = balances.get(w) ?? 0n;
+  if (carried(old) < old) (cappedWallets++, (cappedAway += old - carried(old)));
+  claims.push([getAddress(w), carried(old) + flat]);
 }
 claims.sort((a, b) => (a[0].toLowerCase() < b[0].toLowerCase() ? -1 : 1));
 
@@ -133,11 +139,12 @@ const proofOf = (index) => {
   return proof;
 };
 const total = claims.reduce((s, [, v]) => s + v, 0n);
-const out = { block: block.toString(), preview, root, flatPerWallet: config.flatPerWallet, wallets: claims.length, total: total.toString(), claims: {} };
+const out = { block: block.toString(), preview, root, maxCarryOver: config.maxCarryOver, flatPerWallet: config.flatPerWallet, wallets: claims.length, total: total.toString(), claims: {} };
 claims.forEach(([a, v], i) => (out.claims[a] = { amount: v.toString(), proof: proofOf(i) }));
 writeFileSync("data/claims.json", JSON.stringify(out, null, 1));
 console.log(`root ${root}\n${claims.length} wallets, ${(Number(total / 10n ** 18n)).toLocaleString()} DRAKMA claimable (cap 10B)`);
 const dk = (v) => Number(v / 10n ** 18n).toLocaleString();
+if (cap > 0n) console.log(`capped at ${dk(cap)} DK: ${cappedWallets} wallets, ${dk(cappedAway)} DK not carried over`);
 console.log(`left out (not people's wallets): ${leftOut.length}, ${dk(leftOut.reduce((s, [, b]) => s + b, 0n))} DK`);
 for (const [a, b, why] of leftOut.sort((x, y) => (y[1] > x[1] ? 1 : -1)).slice(0, 8)) console.log(`  ${a} ${dk(b)} DK (${why})`);
 console.log("largest claims:");

@@ -6,13 +6,15 @@ import {Stack} from "../script/Stack.sol";
 import {ViewModule} from "../src/game/ViewModule.sol";
 import {Hex} from "../src/lib/Hex.sol";
 import {LocalMessenger} from "../src/bridge/LocalMessenger.sol";
+import {DrakmaClaim} from "../src/DrakmaClaim.sol";
 
 /// @notice The default 36-radius grid: 3,997 tiles with a golden core and six outer mining fields.
 contract BigGridTest is Test, Stack {
     function test_hotspotLayoutAtRadius36() public {
         address admin = makeAddr("admin");
         vm.startPrank(admin);
-        Deployment memory d = _deployL2(admin, admin, 36, new LocalMessenger(), bytes32(0), true);
+        Deployment memory d =
+            _deployL2(admin, admin, 36, new LocalMessenger(), DrakmaClaim.Terms(bytes32(0), 0, 0, 0), true);
         vm.stopPrank();
         ViewModule v = ViewModule(address(d.game));
         uint256 tiles;

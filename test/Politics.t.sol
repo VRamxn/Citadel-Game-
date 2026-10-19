@@ -73,62 +73,36 @@ contract TechnocracyTest is Base {
         t = d.technocracy;
     }
 
-    /// @dev A carried-over sovereign: an original PILOT whose traits say sovereign, seated at launch.
-    function _born(address who) internal returns (uint256 id) {
-        id = _pilotT(
+    /// @dev A carried-over sovereign: an original PILOT that arrives sovereign over the bridge and takes its seat.
+    function _born(address who) internal returns (uint256) {
+        return _pilotT(
             who, Traits.PilotTraits({generation: 0, subjugation: 0, kult: 0, level: 0, sovereign: true, death: false})
         );
-        uint256[] memory ids = new uint256[](1);
-        ids[0] = id;
-        vm.prank(admin);
-        t.seedSovereigns(ids, 0);
     }
 
-    function test_carriedOverSovereignsAreSeatedOnce() public {
+    function test_arrivingSovereignsTakeTheirSeatsOnce() public {
         uint256 a = _pilotT(
             alice, Traits.PilotTraits({generation: 0, subjugation: 0, kult: 3, level: 4, sovereign: true, death: false})
         );
-        uint256 b = _pilotT(
-            bob, Traits.PilotTraits({generation: 0, subjugation: 1, kult: 2, level: 0, sovereign: true, death: false})
-        );
-        uint256 plain = _pilot(carol, 0, 0);
-        uint256[] memory ids = new uint256[](2);
-        (ids[0], ids[1]) = (a, b);
-        vm.prank(admin);
-        t.seedSovereigns(ids, 1); // b bought its seat on mainnet
-        assertEq(t.sovereignCount(), 2);
-        assertEq(t.boughtSeats(), 1);
-        assertEq(d.pilot.traitsOf(a).level, 4); // bought levels carried over
-        vm.prank(admin);
-        vm.expectRevert(Technocracy.AlreadyClaimed.selector);
-        t.seedSovereigns(ids, 1);
-        assertFalse(d.pilot.traitsOf(plain).sovereign);
+        assertEq(t.sovereignCount(), 1);
+        assertEq(d.pilot.traitsOf(a).level, 4);
+        vm.prank(address(d.bridge));
+        t.seatArrival(a); // a second notice changes nothing
+        assertEq(t.sovereignCount(), 1);
+        vm.expectRevert(Technocracy.NotController.selector);
+        t.seatArrival(a); // only the bridge
     }
 
-    function test_seedRejectsNonSovereigns() public {
-        uint256 plain = _pilot(carol, 0, 0);
-        uint256[] memory ids = new uint256[](1);
-        ids[0] = plain;
-        vm.prank(admin);
-        vm.expectRevert(Technocracy.NotSovereign.selector);
-        t.seedSovereigns(ids, 0);
-    }
-
-    function test_unbridgedSovereignCanStillBeOverthrown() public {
-        // a carried-over sovereign that never crossed to L2 holds its seat; an insurgent can still take it
-        vm.startPrank(admin);
-        d.pilot.setTraits(500, abi.encodePacked(uint8(0), uint8(0), uint8(0), uint8(1), uint8(0)));
-        uint256[] memory ids = new uint256[](1);
-        ids[0] = 500;
-        t.seedSovereigns(ids, 0);
-        vm.stopPrank();
-        uint256 c = _pilot(carol, 0, 0);
+    function test_seatsSoldOnMainnetCountAgainstTheSixtyFour() public {
+        vm.prank(address(d.bridge));
+        t.noteOriginalBought(63);
+        uint256 p = _pilot(bob, 0, 0);
+        vm.prank(bob);
+        t.becomeSovereign(p); // the 64th
+        uint256 q = _pilot(carol, 0, 0);
         vm.prank(carol);
-        t.overthrow(500, c);
-        assertTrue(d.pilot.traitsOf(c).sovereign);
-        assertFalse(d.pilot.traitsOf(500).sovereign);
-        vm.expectRevert(); // originals' seats are never vacated
-        t.vacate(500);
+        vm.expectRevert(Technocracy.SeatsFull.selector);
+        t.becomeSovereign(q);
     }
 
     function test_buySeatBribeAndOverthrow() public {
@@ -262,6 +236,26 @@ contract TechnocracyTest is Base {
         vm.prank(carol);
         vm.expectRevert(); // voting closed
         d.council.vote(id, c, true);
+    }
+
+    function test_councilTreasurySpendsBySovereignVote() public {
+        vm.startPrank(admin);
+        _fundCouncil(d, admin, 1_000_000_000 ether);
+        _councilIsTreasury(d);
+        vm.stopPrank();
+        assertEq(d.drakma.balanceOf(address(d.council)), 1_000_000_000 ether);
+        assertFalse(d.drakma.hasRole(d.drakma.MINTER_ROLE(), admin));
+        assertEq(d.game.treasury(), address(d.council));
+
+        uint256 a = _born(alice);
+        vm.prank(alice);
+        uint256 id = d.council
+            .propose(
+                a, address(d.drakma), abi.encodeCall(d.drakma.transfer, (carol, 5_000_000 ether)), "season 1 prize"
+            );
+        uint256 before = d.drakma.balanceOf(carol);
+        d.council.execute(id); // 1 of 1 seats
+        assertEq(d.drakma.balanceOf(carol) - before, 5_000_000 ether);
     }
 
     function test_nonSovereignCannotPropose() public {

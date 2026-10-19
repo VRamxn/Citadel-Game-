@@ -20,7 +20,7 @@ Contents: [Assets](#assets) · [Grid](#grid) · [Mining](#mining) · [Buildings]
 | **CITADEL** | ERC-721 | 1024 GEN0, capped forever: the **original mainnet CITADEL**, bridged to Base. GEN1+ are created in-game on Base | Traits from the original metadata |
 | **PILOT** | ERC-721 | 1140 GEN0 minted on mainnet (2048 max): the **original PILOT**, bridged. GEN1+ minted in-game with FLEET POINTS | SUBJUGATION, KULT, LEVEL, SOVEREIGNTY, DEATH; mainnet levels and sovereignty carry over |
 | **MENTAT** | ERC-721 | 128 GEN0 | Claimed by RELIK, or earned by completing tech branches |
-| **DRAKMA (DK)** | ERC-20 | Capped at 10B | **New token.** Old balances in people's wallets carry over by claim, plus an equal share per holder wallet. Then mined, looted, and burned by most actions |
+| **DRAKMA (DK)** | ERC-20 | Capped at 10B | **New token.** Old balances in people's wallets carry over by claim (up to 50M each), plus 250k per holder wallet; 1B council treasury. Then mined, looted, and burned by most actions |
 
 See [`LAUNCH.md`](LAUNCH.md) for the bridge and the carry-over.
 
@@ -170,7 +170,8 @@ target's garrison**. There's no recall **[designed]**. A CITADEL under siege can
 - **`siege(from, to, units, pilot+1)`** marches an army, optionally led by a PILOT from your wallet. On arrival
   (instant if adjacent) the siege starts.
 - **A CITADEL hosting a sovereign PILOT can't be sieged.**
-- **Waves:** one battle per hour (*lever*); anyone calls `advanceSiege(id, maxWaves)`. Each wave:
+- **Waves:** one battle per hour (*lever*). Anyone calls `advanceSiege(id, maxWaves)` and is paid 250 DK per wave
+  fought (*lever* `waveBounty`). Each wave:
   - Attack uses siege rules: DREBENTRAAKHT hit twice as hard, shield siege-defense bonuses apply, and the PILOT adds
     +(20% + 2% × level), ×2 if sovereign. The defense is the live garrison plus structure, so reinforcements and fleet
     the defender trains (and hurries) during the siege count.
@@ -225,7 +226,8 @@ target's garrison**. There's no recall **[designed]**. A CITADEL under siege can
 `Technocracy.sol` (THE WARLORD TECHNOCRACY post):
 
 - **Carried over:** the 118 sovereigns of the original PILOT contract keep their seats: 56 PILOT claimed by RELIK
-  (**born sovereign**) and 62 seats bought with old DRAKMA (`Technocracy.seedSovereigns`). Their levels carry over too.
+  (**born sovereign**) and 62 seats bought with old DRAKMA. Each takes its seat when it arrives over the bridge (the
+  vault reads the original contract on L1). Seats sold on mainnet count against the 64 for sale.
 - **Sovereignty:** 128 seats = 64 born + 64 bought for **4M DK**.
 - **Sovereign powers:** can't be sieged, leads sieges at 2×, and takes a cut of the DK sinks.
   - Seat purchases and overthrows pay 70% to the collective, 25% to the treasury, and burn 5%.

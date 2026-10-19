@@ -16,7 +16,7 @@ contract SiegeModule is BattleBase {
         s[0] = this.advanceSiege.selector;
     }
 
-    /// @notice Fight every siege wave that is due (up to maxWaves). Callable by anyone.
+    /// @notice Fight every siege wave that is due (up to maxWaves). Callable by anyone, for waveBounty DK per wave.
     function advanceSiege(uint256 siegeId, uint256 maxWaves) external nonReentrant {
         Siege storage g = _sieges[siegeId];
         if (!g.active) revert BadSiege();
@@ -39,10 +39,15 @@ contract SiegeModule is BattleBase {
             if (p.sovereign) pilotMult *= 2;
         }
         uint256 n = Math.min(due - g.waves, maxWaves);
+        uint256 fought;
         for (uint256 i; i < n; ++i) {
             g.waves++;
-            if (_wave(siegeId, g, sa, sd, pilotMult)) return;
+            ++fought;
+            if (_wave(siegeId, g, sa, sd, pilotMult)) break;
         }
+        // whoever keeps the war moving is paid for it
+        uint256 bounty = uint256(config.waveBounty) * fought;
+        if (bounty != 0) drakma.mint(msg.sender, bounty);
     }
 
     /// @dev One hourly siege battle. Each side loses attrition x (enemy power / own power) of its units, capped at all

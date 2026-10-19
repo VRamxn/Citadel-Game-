@@ -59,6 +59,33 @@ contract MockOriginal is ERC721, Ownable {
     }
 }
 
+/// @notice TESTNET ONLY (L1): stand-in for the original PILOT, with the same on-chain record the vault reads at deposit
+/// (levels, sovereignty, sovereignCounter). The owner sets them to mirror test scenarios.
+contract MockOriginalPilot is MockOriginal {
+    mapping(uint256 => uint8) public levels;
+    mapping(uint256 => bool) private _sovereign;
+    mapping(uint256 => uint8) private _charges;
+    mapping(uint256 => uint8) private _kult;
+    uint8 public sovereignCounter;
+
+    constructor(address owner_) MockOriginal("PILOT (testnet original)", "PILOT", 2048, owner_) {}
+
+    function setRecord(uint256 id, uint8 level, bool sovereign, uint8 charges, uint8 kult) external onlyOwner {
+        levels[id] = level;
+        _sovereign[id] = sovereign;
+        _charges[id] = charges;
+        _kult[id] = kult;
+    }
+
+    function setSovereignCounter(uint8 n) external onlyOwner {
+        sovereignCounter = n;
+    }
+
+    function getSovereign(uint256 id) external view returns (bool, uint8, uint8) {
+        return (_sovereign[id], _charges[id], _kult[id]);
+    }
+}
+
 /// @notice TESTNET ONLY (L1): 2 original-style CITADEL and 2 PILOT once per address, the next free ids.
 contract MockOriginalsFaucet {
     MockOriginal public immutable citadel;

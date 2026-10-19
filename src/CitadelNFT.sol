@@ -21,6 +21,7 @@ contract CitadelNFT is ERC721, AccessControl {
     mapping(uint256 => Traits.CitadelTraits) private _traits;
     uint256 public nextGenerated = MAX_CITADEL;
     string private _base;
+    bool public traitsLocked;
 
     error UnknownCitadel(uint256 id);
     error BadTraits();
@@ -33,6 +34,7 @@ contract CitadelNFT is ERC721, AccessControl {
     /// @notice Loads packed GEN0 traits for ids [startId, startId + data.length / 6).
     /// Each record is 6 bytes: generation, sekt, shield, engine, weapon, tech.
     function setTraits(uint256 startId, bytes calldata data) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        if (traitsLocked) revert BadTraits();
         if (data.length % TRAIT_BYTES != 0) revert BadTraits();
         uint256 n = data.length / TRAIT_BYTES;
         if (startId + n > MAX_CITADEL) revert BadTraits();
@@ -50,6 +52,11 @@ contract CitadelNFT is ERC721, AccessControl {
             _validate(t);
             _traits[startId + i] = t;
         }
+    }
+
+    /// @notice Freeze the GEN0 traits forever.
+    function lockTraits() external onlyRole(DEFAULT_ADMIN_ROLE) {
+        traitsLocked = true;
     }
 
     /// @notice Mint the L2 copy of an original CITADEL deposited in the L1 vault.

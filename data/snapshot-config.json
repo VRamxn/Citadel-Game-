@@ -1,5 +1,6 @@
 {
-  "comment": "Inputs for script/snapshot.mjs. Only DRAKMA held in people's wallets carries over: ordinary wallets (EOAs, incl. EIP-7702 delegated) and Safe multisigs. Every other contract is left out automatically. flatPerWallet is whole DRAKMA added for every included wallet that held old DRAKMA, an original CITADEL or an original PILOT. `exclude` removes specific wallets on top of that.",
+  "comment": "Inputs for script/snapshot.mjs. Only DRAKMA held in people's wallets carries over: ordinary wallets (EOAs, incl. EIP-7702 delegated) and Safe multisigs; every other contract is left out automatically. Each wallet carries over its old balance up to maxCarryOver, plus flatPerWallet for every included wallet that held old DRAKMA, an original CITADEL or an original PILOT (whole DRAKMA). `exclude` removes specific wallets on top of that.",
+  "maxCarryOver": "50000000",
   "flatPerWallet": "250000",
   "exclude": {
     "0x0000000000000000000000000000000000000000": "zero address",

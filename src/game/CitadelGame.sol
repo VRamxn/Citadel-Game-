@@ -65,7 +65,8 @@ contract CitadelGame is GameStorage {
             pilotFleetPoints: 10_000,
             hurryBps: 20_000,
             aoGapTiles: 12,
-            researchPerDay: 4_000
+            researchPerDay: 4_000,
+            waveBounty: 250 ether
         });
     }
 

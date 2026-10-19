@@ -194,6 +194,19 @@ export default [
  },
  {
   "type": "function",
+  "name": "bridge",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "address",
+    "internalType": "address"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "claimCollective",
   "inputs": [
    {
@@ -335,6 +348,32 @@ export default [
  },
  {
   "type": "function",
+  "name": "noteOriginalBought",
+  "inputs": [
+   {
+    "name": "count",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "originalBought",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
   "name": "overthrow",
   "inputs": [
    {
@@ -456,15 +495,10 @@ export default [
  },
  {
   "type": "function",
-  "name": "seedSovereigns",
+  "name": "seatArrival",
   "inputs": [
    {
-    "name": "pilotIds",
-    "type": "uint256[]",
-    "internalType": "uint256[]"
-   },
-   {
-    "name": "bought",
+    "name": "pilotId",
     "type": "uint256",
     "internalType": "uint256"
    }
@@ -474,16 +508,16 @@ export default [
  },
  {
   "type": "function",
-  "name": "seeded",
-  "inputs": [],
-  "outputs": [
+  "name": "setBridge",
+  "inputs": [
    {
-    "name": "",
-    "type": "bool",
-    "internalType": "bool"
+    "name": "bridge_",
+    "type": "address",
+    "internalType": "address"
    }
   ],
-  "stateMutability": "view"
+  "outputs": [],
+  "stateMutability": "nonpayable"
  },
  {
   "type": "function",

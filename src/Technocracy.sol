@@ -9,7 +9,7 @@ import {Traits} from "./lib/Traits.sol";
 /// @notice 128 sovereign PILOT form the SOVEREIGN COLLECTIVE: 64 born sovereign when claimed by a RELIK, 64 seats bought
 /// for 4M DK. Sovereigns can't be sieged and lead sieges at 2x; they take a cut of the game's DK sinks. Any PILOT can
 /// overthrow a sovereign for 4M + 1M per active bribe; sovereigns protect themselves by bribing the 8 KULT, and bribes
-/// decay after 90 days. Sovereigns from the original PILOT contract are seeded into their seats at launch.
+/// decay after 90 days. Sovereigns of the original PILOT contract take their seats as they arrive over the bridge.
 contract Technocracy is Ownable {
     uint256 public constant SEATS = 128;
     uint256 public constant BOUGHT_SEATS = 64;
@@ -28,7 +28,8 @@ contract Technocracy is Ownable {
 
     uint256 public sovereignCount;
     uint256 public boughtSeats;
-    bool public seeded;
+    address public bridge;
+    uint256 public originalBought; // seats bought on the original PILOT contract (count against BOUGHT_SEATS)
     mapping(uint256 => uint64[16]) private _bribes; // expiry timestamps, ring buffer
     mapping(uint256 => uint8) private _bribeCursor;
 
@@ -73,17 +74,24 @@ contract Technocracy is Ownable {
         treasury = treasury_;
     }
 
-    /// @notice Seat the sovereigns carried over from the original PILOT contract (RELIK-born and bought), once, before
-    /// play starts. Their PilotNFT traits already say sovereign; this fills their seats in the collective.
-    function seedSovereigns(uint256[] calldata pilotIds, uint256 bought) external onlyOwner {
-        if (seeded) revert AlreadyClaimed();
-        seeded = true;
-        for (uint256 i; i < pilotIds.length; ++i) {
-            if (!pilot.traitsOf(pilotIds[i]).sovereign) revert NotSovereign();
-            _seat(pilotIds[i]);
-        }
-        boughtSeats = bought;
-        if (sovereignCount > SEATS || boughtSeats > BOUGHT_SEATS) revert SeatsFull();
+    /// @notice The L2 bridge, once. It seats sovereigns as they arrive from L1.
+    function setBridge(address bridge_) external onlyOwner {
+        if (bridge != address(0)) revert AlreadyClaimed();
+        bridge = bridge_;
+    }
+
+    /// @notice An original PILOT arrived from L1 sovereign on the original contract: it takes its seat.
+    function seatArrival(uint256 pilotId) external {
+        if (msg.sender != bridge) revert NotController();
+        if (lastCollected[pilotId] != 0 || sovereignCount >= SEATS) return; // already seated / collective full
+        _seat(pilotId);
+        emit SovereignSeated(pilotId, address(0), 0);
+    }
+
+    /// @notice Seats sold on the original contract count against the 64 for sale (its sovereignCounter, read on L1).
+    function noteOriginalBought(uint256 count) external {
+        if (msg.sender != bridge) revert NotController();
+        if (count > originalBought) originalBought = count;
     }
 
     // ------------------------------------------------------------------ the collective
@@ -92,7 +100,7 @@ contract Technocracy is Ownable {
     function becomeSovereign(uint256 pilotId) external {
         _requireController(pilotId);
         if (pilot.traitsOf(pilotId).sovereign) revert AlreadySovereign();
-        if (boughtSeats >= BOUGHT_SEATS || sovereignCount >= SEATS) revert SeatsFull();
+        if (boughtSeats + originalBought >= BOUGHT_SEATS || sovereignCount >= SEATS) revert SeatsFull();
         boughtSeats++;
         _pay(SEAT_COST);
         pilot.setSovereign(pilotId, true);

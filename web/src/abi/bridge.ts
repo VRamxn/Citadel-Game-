@@ -20,7 +20,12 @@ export default [
    {
     "name": "pilot_",
     "type": "address",
-    "internalType": "contract IBridgeableNFT"
+    "internalType": "contract IBridgedPilot"
+   },
+   {
+    "name": "technocracy_",
+    "type": "address",
+    "internalType": "contract ISeatKeeper"
    }
   ],
   "stateMutability": "nonpayable"
@@ -121,6 +126,11 @@ export default [
     "name": "to",
     "type": "address",
     "internalType": "address"
+   },
+   {
+    "name": "origins",
+    "type": "bytes",
+    "internalType": "bytes"
    }
   ],
   "outputs": [],
@@ -173,7 +183,7 @@ export default [
    {
     "name": "",
     "type": "address",
-    "internalType": "contract IBridgeableNFT"
+    "internalType": "contract IBridgedPilot"
    }
   ],
   "stateMutability": "view"
@@ -197,6 +207,19 @@ export default [
   ],
   "outputs": [],
   "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "technocracy",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "address",
+    "internalType": "contract ISeatKeeper"
+   }
+  ],
+  "stateMutability": "view"
  },
  {
   "type": "function",

@@ -2,7 +2,14 @@
 pragma solidity ^0.8.24;
 
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
-import {IOPMessenger, IBridgeableNFT, ICitadelVaultL1} from "./IOPMessenger.sol";
+import {
+    IOPMessenger,
+    IBridgeableNFT,
+    IBridgedPilot,
+    ISeatKeeper,
+    ICitadelVaultL1,
+    PilotOrigin
+} from "./IOPMessenger.sol";
 
 /// @title CITADEL bridge (L2)
 /// @notice Mints the L2 copies of original CITADEL and PILOT when the L1 vault says they were deposited, and burns them
@@ -17,7 +24,8 @@ contract CitadelBridgeL2 is Ownable {
 
     IOPMessenger public immutable messenger;
     IBridgeableNFT public immutable citadel;
-    IBridgeableNFT public immutable pilot;
+    IBridgedPilot public immutable pilot;
+    ISeatKeeper public immutable technocracy;
     address public l1Vault;
 
     event DepositFinalized(address indexed to, uint8 collection, uint256[] ids);
@@ -29,12 +37,17 @@ contract CitadelBridgeL2 is Ownable {
     error NotOwner(uint256 id);
     error AlreadySet();
 
-    constructor(address owner_, IOPMessenger messenger_, IBridgeableNFT citadel_, IBridgeableNFT pilot_)
-        Ownable(owner_)
-    {
+    constructor(
+        address owner_,
+        IOPMessenger messenger_,
+        IBridgeableNFT citadel_,
+        IBridgedPilot pilot_,
+        ISeatKeeper technocracy_
+    ) Ownable(owner_) {
         messenger = messenger_;
         citadel = citadel_;
         pilot = pilot_;
+        technocracy = technocracy_;
     }
 
     function setL1Vault(address l1Vault_) external onlyOwner {
@@ -43,11 +56,22 @@ contract CitadelBridgeL2 is Ownable {
         renounceOwnership();
     }
 
-    function finalizeDeposit(uint8 collection, uint256[] calldata ids, address to) external {
+    /// @notice Mint the copies. For PILOT, `origins` is what the original contract records (read by the vault on L1):
+    /// it is applied on a PILOT's first arrival, and a PILOT that arrives sovereign takes its seat in the collective.
+    function finalizeDeposit(uint8 collection, uint256[] calldata ids, address to, bytes calldata origins) external {
         if (msg.sender != address(messenger) || messenger.xDomainMessageSender() != l1Vault) revert NotVault();
-        IBridgeableNFT t = _token(collection);
-        for (uint256 i; i < ids.length; ++i) {
-            t.bridgeMint(to, ids[i]);
+        if (collection == CITADEL) {
+            for (uint256 i; i < ids.length; ++i) {
+                citadel.bridgeMint(to, ids[i]);
+            }
+        } else if (collection == PILOT) {
+            (PilotOrigin[] memory o, uint8 counter) = abi.decode(origins, (PilotOrigin[], uint8));
+            technocracy.noteOriginalBought(counter);
+            for (uint256 i; i < ids.length; ++i) {
+                if (pilot.bridgeMint(to, ids[i], o[i])) technocracy.seatArrival(ids[i]);
+            }
+        } else {
+            revert BadCollection();
         }
         emit DepositFinalized(to, collection, ids);
     }
@@ -56,10 +80,16 @@ contract CitadelBridgeL2 is Ownable {
     /// After the rollup's challenge period, prove and finalize the withdrawal on L1 to receive them.
     function withdraw(uint8 collection, uint256[] calldata ids, address to) external {
         if (ids.length == 0 || ids.length > MAX_BATCH) revert BadBatch();
-        IBridgeableNFT t = _token(collection);
         for (uint256 i; i < ids.length; ++i) {
-            if (t.ownerOf(ids[i]) != msg.sender) revert NotOwner(ids[i]);
-            t.bridgeBurn(ids[i]);
+            if (collection == CITADEL) {
+                if (citadel.ownerOf(ids[i]) != msg.sender) revert NotOwner(ids[i]);
+                citadel.bridgeBurn(ids[i]);
+            } else if (collection == PILOT) {
+                if (pilot.ownerOf(ids[i]) != msg.sender) revert NotOwner(ids[i]);
+                pilot.bridgeBurn(ids[i]);
+            } else {
+                revert BadCollection();
+            }
         }
         messenger.sendMessage(
             l1Vault,
@@ -67,11 +97,5 @@ contract CitadelBridgeL2 is Ownable {
             BASE_GAS + GAS_PER_TOKEN * uint32(ids.length)
         );
         emit WithdrawalInitiated(msg.sender, to, collection, ids);
-    }
-
-    function _token(uint8 collection) private view returns (IBridgeableNFT) {
-        if (collection == CITADEL) return citadel;
-        if (collection == PILOT) return pilot;
-        revert BadCollection();
     }
 }

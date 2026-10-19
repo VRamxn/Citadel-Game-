@@ -273,6 +273,13 @@ export default [
  },
  {
   "type": "function",
+  "name": "lockTraits",
+  "inputs": [],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
   "name": "mintGenerated",
   "inputs": [
    {
@@ -560,6 +567,19 @@ export default [
     "name": "",
     "type": "string",
     "internalType": "string"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "traitsLocked",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "bool",
+    "internalType": "bool"
    }
   ],
   "stateMutability": "view"

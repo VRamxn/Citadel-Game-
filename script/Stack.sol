@@ -18,7 +18,7 @@ import {TestnetFaucet} from "../src/TestnetFaucet.sol";
 import {DrakmaClaim, DrakmaClaimRelayL1} from "../src/DrakmaClaim.sol";
 import {CitadelBridgeL2} from "../src/bridge/CitadelBridgeL2.sol";
 import {CitadelVaultL1} from "../src/bridge/CitadelVaultL1.sol";
-import {IOPMessenger, IBridgeableNFT} from "../src/bridge/IOPMessenger.sol";
+import {IOPMessenger, IBridgeableNFT, IBridgedPilot, ISeatKeeper} from "../src/bridge/IOPMessenger.sol";
 import {IDrakma, IGameView, ICitadelNFT, IPilotNFT, IMentatNFT} from "../src/interfaces/IGameAssets.sol";
 
 /// @notice Deploys and wires CITADEL. The game runs on an OP Stack L2 (Base); the original CITADEL and PILOT stay in a
@@ -57,7 +57,7 @@ abstract contract Stack {
         address treasury,
         uint16 radius,
         IOPMessenger messenger,
-        bytes32 claimRoot,
+        DrakmaClaim.Terms memory claimTerms,
         bool testnet
     ) internal returns (Deployment memory d) {
         d.drakma = new Drakma(admin);
@@ -90,9 +90,15 @@ abstract contract Stack {
         d.council = new SovereignCouncil(
             IPilotNFT(address(d.pilot)), IGameView(address(d.game)), ISovereignCount(address(d.technocracy))
         );
-        d.bridge =
-            new CitadelBridgeL2(admin, messenger, IBridgeableNFT(address(d.citadel)), IBridgeableNFT(address(d.pilot)));
-        d.claim = new DrakmaClaim(admin, claimRoot, IDrakma(address(d.drakma)), messenger);
+        d.bridge = new CitadelBridgeL2(
+            admin,
+            messenger,
+            IBridgeableNFT(address(d.citadel)),
+            IBridgedPilot(address(d.pilot)),
+            ISeatKeeper(address(d.technocracy))
+        );
+        d.technocracy.setBridge(address(d.bridge));
+        d.claim = new DrakmaClaim(admin, claimTerms, IDrakma(address(d.drakma)), messenger);
         if (testnet) d.faucet = new TestnetFaucet(admin, d.drakma);
 
         Drakma dk = d.drakma;
@@ -115,6 +121,22 @@ abstract contract Stack {
         p.grantRole(p.POLITICS_ROLE(), address(d.technocracy));
 
         d.mentat.grantRole(d.mentat.MINTER_ROLE(), address(d.techTree));
+    }
+
+    /// @dev The community treasury: DRAKMA held by the GRID MAELSTROM council, spent only by sovereign vote (a proposal
+    /// that calls drakma.transfer). It replaces the whitepaper's share "withheld by the development team". The admin
+    /// mints it once and gives the minter role straight back.
+    function _fundCouncil(Deployment memory d, address admin, uint256 amount) internal {
+        Drakma dk = d.drakma;
+        dk.grantRole(dk.MINTER_ROLE(), admin);
+        dk.mint(address(d.council), amount);
+        dk.renounceRole(dk.MINTER_ROLE(), admin);
+    }
+
+    /// @dev Route the game's and the technocracy's fee share (25-30% of seats, overthrows and bribes) to the council too.
+    function _councilIsTreasury(Deployment memory d) internal {
+        ViewModule(address(d.game)).setTreasury(address(d.council));
+        d.technocracy.setTreasury(address(d.council));
     }
 
     /// @dev The L1 side: the vault for the originals and the claim relay for L1-only wallets.
@@ -143,9 +165,15 @@ abstract contract Stack {
         _chunks(address(citadel), traits, 6, 128);
     }
 
-    /// @dev 5-byte records per original PILOT id: subjugation, kult, level, flags (1 sovereign | 2 death), generation.
+    /// @dev 2-byte records per original PILOT id: subjugation, death. Levels, sovereignty and KULT arrive over the bridge.
     function _loadPilotTraits(PilotNFT pilot, bytes memory traits) internal {
-        _chunks(address(pilot), traits, 5, 200);
+        _chunks(address(pilot), traits, 2, 400);
+    }
+
+    /// @dev Freeze the metadata traits of both collections.
+    function _lockTraits(Deployment memory d) internal {
+        d.citadel.lockTraits();
+        d.pilot.lockTraits();
     }
 
     function _chunks(address nft, bytes memory data, uint256 recordBytes, uint256 perTx) private {

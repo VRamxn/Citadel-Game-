@@ -39,7 +39,9 @@ contract SiegeTest is Base {
         assertLt(view_.siegeOf(1).progress, 10_000);
 
         uint256 aliceDk = d.drakma.balanceOf(alice);
+        uint256 keeperDk = d.drakma.balanceOf(address(this));
         _advanceAll(1);
+        assertGt(d.drakma.balanceOf(address(this)), keeperDk); // the wave bounty pays whoever fights them
         GameStorage.Siege memory g = view_.siegeOf(1);
         assertFalse(g.active);
         assertGe(g.waves, 48);
